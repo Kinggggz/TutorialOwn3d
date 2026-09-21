@@ -1,0 +1,149 @@
+<html>
+<head>
+<title>LADMO - Calculadora Rank U</title>
+<HTA:APPLICATION
+  ID="LADMOCalc"
+  APPLICATIONNAME="Calculadora Arena Infinita - Rank U LADMO"
+  BORDER="thin"
+  CAPTION="yes"
+  MAXIMIZEBUTTON="yes"
+  MINIMIZEBUTTON="yes"
+  SCROLL="yes"
+  SINGLEINSTANCE="yes"
+  SYSMENU="yes"
+  WINDOWSTATE="normal">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<style>
+body{font-family:Segoe UI,Arial;background:#101318;color:#eee;margin:0;padding:24px}
+.wrap{max-width:1000px;margin:auto}
+h1{margin:0 0 5px;font-size:28px}.sub{color:#aeb7c4;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.card{background:#191e27;border:1px solid #303846;border-radius:14px;padding:16px;margin-bottom:12px}
+h2{font-size:17px;margin:0 0 12px}
+label{display:block;color:#b7c0cc;font-size:13px;margin:9px 0 5px}
+input,select{width:100%;box-sizing:border-box;background:#0d1117;color:#fff;border:1px solid #3a4351;border-radius:8px;padding:10px;font-size:15px}
+button{background:#4b86ff;color:white;border:0;border-radius:9px;padding:12px 18px;font-weight:700;cursor:pointer;margin-top:10px}
+.result{font-size:28px;font-weight:800}.small{color:#adb6c3;font-size:13px;line-height:1.55}
+table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px}
+td,th{border-bottom:1px solid #303846;padding:8px;text-align:left}
+.good{font-weight:700}.warn{color:#ffd27a}
+@media(max-width:850px){.grid{grid-template-columns:1fr}}
+</style>
+<script>
+function n(id){var x=parseFloat(document.getElementById(id).value); return isFinite(x)?x:0;}
+function fmtTime(sec){
+ if(sec<60) return sec.toFixed(0)+" s";
+ var m=sec/60; if(m<60) return m.toFixed(1)+" min";
+ var h=m/60; if(h<24) return h.toFixed(2)+" h";
+ return (h/24).toFixed(2)+" dias";
+}
+function calc(){
+ var currentV=n("currentV"), currentF=n("currentF"), currentE=n("currentE");
+ var rounds=n("rounds"), secRound=n("secRound"), attempts=n("attempts");
+ var roundsAttempt=n("roundsAttempt"), vestRun=n("vestRun"), fragRun=n("fragRun"), emblemRun=n("emblemRun");
+ var vestPeriod=n("vestPeriod"), fragPeriod=n("fragPeriod"), emblemPeriod=n("emblemPeriod"), transPeriod=n("transPeriod");
+ var rank=document.getElementById("rank").value;
+ var targetV=9000; // 80 emblems + 1 transcendence; transcendence costs 10 emblems => 90 emblems => 900 fragments => 9000 vestiges
+ var directVest = vestRun*attempts + vestPeriod;
+ var directFrag = fragRun*attempts + fragPeriod;
+ var directEmb = emblemRun*attempts + emblemPeriod;
+ var directTrans = transPeriod;
+ var totalEmblems = currentE + Math.floor(currentF/10) + Math.floor((currentV + directVest + Math.max(0,Math.floor((currentF+directFrag)/10)*0))/1000000);
+ // Calculate exact conversion path with integer units:
+ var V=currentV+directVest, F=currentF+directFrag, E=currentE+directEmb, T=directTrans;
+ var newF=Math.floor(V/10); V=V%10; F+=newF;
+ var newE=Math.floor(F/10); F=F%10; E+=newE;
+ var newT=Math.floor(E/10); E=E%10; T+=newT;
+ var needE=80, needT=1;
+ var totalEEquivalent=E+T*10;
+ var missing=Math.max(0,90-totalEEquivalent);
+ var attemptsNeeded = missing>0 ? Math.ceil(missing/Math.max(1, (vestRun/100))) : 0;
+ // Better estimate using all regular rewards per attempt converted to emblem-equivalent.
+ var eqPerAttempt = vestRun/100 + fragRun/10 + emblemRun + transPeriod/Math.max(1,attempts);
+ var eqDirect = E + T*10;
+ var remainEq=Math.max(0,90-eqDirect);
+ var needAttempts = eqPerAttempt>0 ? Math.ceil(remainEq/eqPerAttempt) : 0;
+ var totalSeconds = needAttempts * roundsAttempt * secRound;
+ var days = attempts>0 ? Math.ceil(needAttempts/attempts) : 0;
+ var weeks = days/7;
+ document.getElementById("result").innerHTML = remainEq<=0 ? "VOCÊ JÁ TEM MATERIAL SUFICIENTE" : days+" dia(s)";
+ document.getElementById("details").innerHTML =
+   "<b>Custo da Caixa Rank U:</b> 80 Emblemas da Glória + 1 Emblema da Transcendência. " +
+   "Como 10 Emblemas da Glória viram 1 Transcendência, o equivalente é 90 Emblemas da Glória = 900 Fragmentos = 9.000 Vestígios.<br><br>"+
+   "<b>Após conversão do seu estoque + recompensas informadas:</b> "+E+" Emblemas, "+T+" Transcendência, "+F+" Fragmentos e "+V+" Vestígios.<br>"+
+   "<b>Faltam aproximadamente:</b> "+remainEq.toFixed(1)+" Emblemas equivalentes.<br>"+
+   "<b>Tentativas estimadas:</b> "+needAttempts+" | <b>Tempo dentro da Arena:</b> "+fmtTime(totalSeconds)+" | <b>Ritmo:</b> "+weeks.toFixed(2)+" semana(s).";
+ var rows=[
+  ["Vestígio de Glória","10","1 Fragmento"],
+  ["Fragmento da Glória","10","1 Emblema"],
+  ["Emblema da Glória","10","1 Transcendência"],
+  ["Caixa Rank U","80 Emblemas + 1 Transcendência",""]
+ ];
+ var html="<table><tr><th>Conversão</th><th>Custo</th><th>Resultado</th></tr>";
+ for(var i=0;i<rows.length;i++) html+="<tr><td>"+rows[i][0]+"</td><td>"+rows[i][1]+"</td><td>"+rows[i][2]+"</td></tr>";
+ html+="</table>";
+ document.getElementById("table").innerHTML=html;
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+<h1>Calculadora Arena Infinita — Rank U LADMO</h1>
+<div class="sub">Calcula Vestígios, Fragmentos, Emblemas, Transcendências, tentativas e tempo estimado.</div>
+
+<div class="grid">
+<div class="card"><h2>1. Seu estoque</h2>
+<label>Vestígio de Glória</label><input id="currentV" type="number" value="0" min="0">
+<label>Fragmento da Glória</label><input id="currentF" type="number" value="0" min="0">
+<label>Emblema da Glória</label><input id="currentE" type="number" value="0" min="0">
+</div>
+
+<div class="card"><h2>2. Sua tentativa</h2>
+<label>Rodadas alcançadas por tentativa</label><input id="roundsAttempt" type="number" value="30" min="1">
+<label>Tempo médio por rodada (segundos)</label><input id="secRound" type="number" value="60" min="1" step="0.1">
+<label>Tentativas por dia</label><input id="attempts" type="number" value="1" min="1">
+</div>
+
+<div class="card"><h2>3. Recompensa por tentativa</h2>
+<label>Vestígios por tentativa</label><input id="vestRun" type="number" value="0" min="0">
+<label>Fragmentos por tentativa</label><input id="fragRun" type="number" value="0" min="0">
+<label>Emblemas por tentativa</label><input id="emblemRun" type="number" value="0" min="0">
+</div>
+</div>
+
+<div class="card">
+<h2>4. Recompensa do período / ranking</h2>
+<div class="grid">
+<div><label>Faixa de ranking</label>
+<select id="rank">
+<option value="0-5">0–5%</option><option value="6-39">6–39%</option>
+<option value="40-69">40–69%</option><option value="70-100">70–100%</option>
+</select></div>
+<div><label>Vestígios recebidos no período</label><input id="vestPeriod" type="number" value="100" min="0"></div>
+<div><label>Fragmentos recebidos no período</label><input id="fragPeriod" type="number" value="50" min="0"></div>
+<div><label>Emblemas recebidos no período</label><input id="emblemPeriod" type="number" value="10" min="0"></div>
+<div><label>Transcendências recebidas no período</label><input id="transPeriod" type="number" value="0" min="0"></div>
+</div>
+<div class="small">Você pode substituir os valores acima conforme a recompensa do período que estiver calculando. A calculadora separa recompensas por tentativa das recompensas de ranking.</div>
+</div>
+
+<div class="card">
+<button onclick="calc()">CALCULAR TEMPO PARA O RANK U</button>
+<div style="margin-top:18px" class="small">Estimativa</div>
+<div id="result" class="result">—</div>
+<div id="details" class="small" style="margin-top:10px"></div>
+<div id="table"></div>
+</div>
+
+<div class="card">
+<h2>Como a conta funciona</h2>
+<div class="small">
+10 Vestígios de Glória → 1 Fragmento da Glória.<br>
+10 Fragmentos da Glória → 1 Emblema da Glória.<br>
+10 Emblemas da Glória → 1 Emblema da Transcendência.<br>
+A Caixa de Seleção: Digimon Rank U custa 80 Emblemas da Glória + 1 Emblema da Transcendência.
+</div>
+</div>
+</div>
+</body>
+</html>
