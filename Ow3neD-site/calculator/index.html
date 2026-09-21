@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Calculadora Rank U | Ow3neD</title>
+<meta name="description" content="Calcule quanto tempo falta para obter sua caixa selecionável de Rank U na Arena Infinita do LADMO.">
+<meta name="theme-color" content="#0b1020">
+<link rel="icon" href="../assets/logo.png" type="image/png">
+<style>
+:root{
+  --bg:#0b1020; --panel:#121a2f; --panel2:#18223b; --text:#eef3ff; --muted:#9aa8c7;
+  --line:#283654; --accent:#7c9cff; --accent2:#56d7b0; --warn:#ffc857; --danger:#ff6b7a;
+  --shadow:0 18px 50px rgba(0,0,0,.28); --radius:18px;
+}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at top,#162344 0,#0b1020 38%,#080c18 100%);color:var(--text);min-height:100vh}.guildNav{width:min(1180px,calc(100% - 28px));margin:0 auto;padding:14px 0;border-bottom:1px solid rgba(124,156,255,.18);display:flex;align-items:center;justify-content:space-between;gap:16px}.guildBrand{display:flex;align-items:center;gap:10px;color:#eef3ff;text-decoration:none;font-weight:850}.guildBrand img{width:38px;height:35px;object-fit:contain}.guildLinks{display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end}.guildLinks a{color:#aebbd6;text-decoration:none;font-size:13px;font-weight:700;padding:9px 10px;border-radius:9px}.guildLinks a:hover,.guildLinks a:focus-visible,.guildLinks a.active{color:#fff;background:rgba(124,156,255,.12)}
+.wrap{width:min(1180px,calc(100% - 28px));margin:34px auto 60px}.hero{display:flex;gap:18px;justify-content:space-between;align-items:flex-end;margin-bottom:22px}.hero h1{font-size:clamp(28px,4vw,46px);margin:0;letter-spacing:-.04em}.badge{white-space:nowrap;background:rgba(124,156,255,.12);border:1px solid rgba(124,156,255,.35);padding:10px 13px;border-radius:999px;color:#c8d3ff;font-size:13px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:linear-gradient(180deg,rgba(24,34,59,.96),rgba(18,26,47,.96));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}.card.full{grid-column:1/-1}.card h2{font-size:18px;margin:0 0 6px}.sub{color:var(--muted);font-size:13px;line-height:1.45;margin-bottom:17px}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field label{display:block;color:#c8d2e8;font-size:12px;margin:0 0 7px}.field input,.field select{width:100%;border:1px solid #344665;background:#0e1629;color:var(--text);padding:12px 12px;border-radius:12px;font-size:14px;outline:none}.field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(124,156,255,.13)}.field select:disabled{opacity:1;color:#dfe6fa;background:#151f35;cursor:default}.hint{font-size:11px;color:var(--muted);margin-top:6px}.autoPhase{color:#8cf0d1;font-weight:700}.rankingMemo{margin:8px 0 17px;padding:11px 13px;border:1px solid rgba(124,156,255,.32);background:rgba(124,156,255,.09);border-radius:12px;color:#cfd9f3;font-size:12px;line-height:1.5}.rankingMemo strong{color:#eef3ff}.currentTag{display:none;align-items:center;margin-left:6px;padding:2px 6px;border-radius:999px;background:rgba(86,215,176,.14);border:1px solid rgba(86,215,176,.28);color:#8cf0d1;font-size:9px;font-weight:850;letter-spacing:.04em;vertical-align:middle}.currentTag.show{display:inline-flex}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.btn{border:0;border-radius:12px;padding:12px 17px;font-weight:750;cursor:pointer}.btn.primary{background:linear-gradient(135deg,#7898ff,#9c7cff);color:white}.btn.secondary{background:#202c48;color:#dfe6fa;border:1px solid #334463}.btn:focus-visible{outline:3px solid rgba(124,156,255,.55);outline-offset:2px}.result{display:none}.result.show{display:block}.resultTop{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}.big{padding:22px;border-radius:16px;background:linear-gradient(145deg,rgba(124,156,255,.16),rgba(86,215,176,.08));border:1px solid rgba(124,156,255,.3)}.big .kicker{font-size:12px;color:#b9c7e8;text-transform:uppercase;letter-spacing:.11em}.big .number{font-size:clamp(34px,6vw,62px);font-weight:850;letter-spacing:-.055em;margin:6px 0}.big .desc{color:#ccd6ef;line-height:1.5}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px}.metric{background:#0e1629;border:1px solid #2d3d5b;border-radius:14px;padding:14px}.metric .v{font-size:22px;font-weight:800}.metric .l{font-size:11px;color:var(--muted);margin-top:4px}.progress{height:11px;background:#0d1424;border:1px solid #2d3d5b;border-radius:999px;overflow:hidden;margin:18px 0 8px}.bar{height:100%;width:0;background:linear-gradient(90deg,#7c9cff,#56d7b0);transition:width .35s ease}.progressLabel{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}.timeline{margin-top:18px}.timeline h3{font-size:14px;margin:0 0 10px}.row{display:grid;grid-template-columns:110px 1fr 120px;gap:10px;align-items:center;padding:10px 0;border-top:1px solid #263652;font-size:13px}.row:first-of-type{border-top:0}.pill{display:inline-flex;align-items:center;justify-content:center;padding:6px 9px;border-radius:999px;font-size:11px;font-weight:800;background:#243250;color:#dbe4ff}.pill.season{background:rgba(86,215,176,.14);color:#8cf0d1}.muted{color:var(--muted)}.ok{color:#83efc9}.error{display:none;margin-top:12px;background:rgba(255,107,122,.1);border:1px solid rgba(255,107,122,.35);color:#ffb8c0;padding:11px 13px;border-radius:12px;font-size:13px}.error.show{display:block}@media(max-width:820px){.grid,.resultTop{grid-template-columns:1fr}.hero{align-items:flex-start;flex-direction:column}.card.full{grid-column:auto}.fields{grid-template-columns:1fr}.row{grid-template-columns:90px 1fr}.row .when{grid-column:2}.badge{white-space:normal}}@media(max-width:480px){.wrap{width:min(100% - 18px,1180px);margin-top:18px}.card{padding:15px}.metrics{grid-template-columns:1fr 1fr}}
+.skip-link{position:fixed;top:10px;left:10px;z-index:1000;padding:10px 14px;border-radius:9px;background:#fff;color:#07101e;font-weight:800;text-decoration:none;transform:translateY(-150%)}.skip-link:focus{transform:translateY(0)}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="guildNav">
+  <a class="guildBrand" href="../" aria-label="Ow3neD - página inicial"><img src="../assets/logo.png" alt=""><span>Ow3neD</span></a>
+  <nav class="guildLinks" aria-label="Navegação principal"><a href="../">Início</a><a class="active" href="./" aria-current="page">Calculadora Rank U</a><a href="../guide/">Guia de Progressão</a></nav>
+</header>
+<main class="wrap" id="conteudo">
+  <div class="hero">
+    <div>
+      <h1>Calculadora Rank U</h1>
+    </div>
+    <div class="badge">Base oficial • Atualização 30/07/2026</div>
+  </div>
+
+  <div class="grid">
+    <section class="card">
+      <h2>Estoque</h2>
+      <div class="sub">Informe os materiais que você já possui. A calculadora faz as conversões automaticamente.</div>
+      <div class="fields">
+        <div class="field"><label for="vest">Vestígio da Glória</label><input id="vest" type="number" min="0" step="1" inputmode="numeric" value="0"></div>
+        <div class="field"><label for="frag">Fragmento da Glória</label><input id="frag" type="number" min="0" step="1" inputmode="numeric" value="0"></div>
+        <div class="field"><label for="emb">Emblema da Glória</label><input id="emb" type="number" min="0" step="1" inputmode="numeric" value="0"></div>
+        <div class="field"><label for="trans">Emblema da Transcendência</label><input id="trans" type="number" min="0" step="1" inputmode="numeric" value="0"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Ranking</h2>
+      <div class="rankingMemo" id="rankingMemo" role="status" aria-live="polite">Detectando qual ranking corresponde ao período atual…</div>
+      <div class="fields">
+        <div class="field">
+          <label for="offRank">Off-Season — ranking percentual esperado <span class="currentTag" id="offRankTag">PERÍODO ATUAL</span></label>
+          <select id="offRank">
+            <option value="90">0–9% → 90 Vestígios</option>
+            <option value="60">10–29% → 60 Vestígios</option>
+            <option value="30">30–69% → 30 Vestígios</option>
+            <option value="0">70–100% → sem material de Glória</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="seasonRank">Season — ranking percentual esperado <span class="currentTag" id="seasonRankTag">PERÍODO ATUAL</span></label>
+          <select id="seasonRank">
+            <option value="top5">0–5% → 100 Vestígios + 50 Fragmentos + 10 Emblemas</option>
+            <option value="6to39">6–39% → 100 Vestígios + 50 Fragmentos</option>
+            <option value="40to69">40–69% → 100 Vestígios</option>
+            <option value="70to100">70–100% → sem material de Glória</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="place">Classificação esperada em cada Season <span class="currentTag" id="placeTag">SEASON ATUAL</span></label>
+          <select id="place">
+            <option value="none">Sem recompensa de posição</option>
+            <option value="101-200">101º–200º → +15 Emblemas</option>
+            <option value="11-100">11º–100º → +20 Emblemas + 1 Transcendência</option>
+            <option value="4-10">4º–10º → +30 Emblemas + 1 Transcendência</option>
+            <option value="1-3">1º–3º → +50 Emblemas + 1 Transcendência</option>
+          </select>
+          <div class="hint">Essa posição será considerada em cada Season futura da projeção.</div>
+        </div>
+        <div class="field">
+          <label for="phase">Fase atual (automática)</label>
+          <select id="phase" disabled aria-describedby="phaseHint">
+            <option value="season">Season</option>
+            <option value="off1">Off-Season 1</option>
+            <option value="off2">Off-Season 2</option>
+          </select>
+          <div class="hint" id="phaseHint">Detectando pelo calendário oficial…</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card full">
+      <div class="actions" style="margin-top:0">
+        <button type="button" class="btn primary" id="calc">Calcular tempo restante</button>
+        <button type="button" class="btn secondary" id="reset">Limpar</button>
+      </div>
+      <div id="err" class="error" role="alert"></div>
+    </section>
+
+    <section class="card full result" id="result" aria-live="polite">
+      <div class="resultTop">
+        <div class="big">
+          <div class="kicker">Previsão</div>
+          <div class="number" id="timeBig">—</div>
+          <div class="desc" id="timeDesc">—</div>
+          <div class="progress"><div class="bar" id="bar"></div></div>
+          <div class="progressLabel"><span>Progresso equivalente atual</span><span id="pct">0%</span></div>
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="v" id="mEmb">0</div><div class="l">Emblemas possíveis agora</div></div>
+          <div class="metric"><div class="v" id="mNeed">0</div><div class="l">Emblemas equivalentes ainda necessários</div></div>
+          <div class="metric"><div class="v" id="mEvents">0</div><div class="l">Períodos até a caixa</div></div>
+          <div class="metric"><div class="v" id="mDate">—</div><div class="l">Data estimada a partir de hoje</div></div>
+        </div>
+      </div>
+      <div class="timeline">
+        <h3>Projeção dos próximos períodos</h3>
+        <div id="timeline"></div>
+      </div>
+    </section>
+  </div>
+
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const STORAGE_KEY = 'calcRankU_LADMO';
+const persistentIds = ['vest','frag','emb','trans','offRank','seasonRank','place'];
+const countIds = ['vest','frag','emb','trans'];
+
+function readCount(id){
+  const value = Number($(id).value);
+  if(!Number.isFinite(value) || value < 0) return 0;
+  return Math.min(Number.MAX_SAFE_INTEGER, Math.floor(value));
+}
+
+function normalizeCount(id){
+  $(id).value = String(readCount(id));
+}
+
+function maxGloryEmblems(state){
+  return state.e + Math.floor((state.f + Math.floor(state.v / 10)) / 10);
+}
+
+function ready(state){
+  const emblems = maxGloryEmblems(state);
+  return state.t >= 1 ? emblems >= 80 : emblems >= 90;
+}
+
+function equivalentNeed(state){
+  const emblems = maxGloryEmblems(state);
+  return Math.max(0, (state.t >= 1 ? 80 : 90) - emblems);
+}
+
+function progressPct(state){
+  const equivalent = Math.min(90, maxGloryEmblems(state) + Math.min(1, state.t) * 10);
+  return Math.max(0, Math.min(100, (equivalent / 90) * 100));
+}
+
+function seasonReward(){
+  const rank = $('seasonRank').value;
+  const reward = {v:0,f:0,e:0,t:0};
+
+  if(rank === '40to69') reward.v = 100;
+  if(rank === '6to39') { reward.v = 100; reward.f = 50; }
+  if(rank === 'top5') { reward.v = 100; reward.f = 50; reward.e = 10; }
+
+  const place = $('place').value;
+  if(place === '101-200') reward.e += 15;
+  if(place === '11-100') { reward.e += 20; reward.t += 1; }
+  if(place === '4-10') { reward.e += 30; reward.t += 1; }
+  if(place === '1-3') { reward.e += 50; reward.t += 1; }
+
+  return reward;
+}
+
+function offReward(){
+  const value = Number($('offRank').value);
+  return {v:Number.isFinite(value) && value >= 0 ? Math.floor(value) : 0,f:0,e:0,t:0};
+}
+
+function add(target, reward){
+  target.v += reward.v;
+  target.f += reward.f;
+  target.e += reward.e;
+  target.t += reward.t;
+}
+
+function rewardText(reward){
+  const parts = [];
+  if(reward.v) parts.push(`${reward.v} Vest.`);
+  if(reward.f) parts.push(`${reward.f} Frag.`);
+  if(reward.e) parts.push(`${reward.e} Emb.`);
+  if(reward.t) parts.push(`${reward.t} Trans.`);
+  return parts.length ? parts.join(' • ') : 'Sem materiais de Glória';
+}
+
+function phaseName(phase){
+  return phase === 'season' ? 'Season' : phase === 'off1' ? 'Off-Season 1' : 'Off-Season 2';
+}
+
+function nextPhase(phase){
+  return phase === 'off1' ? 'off2' : phase === 'off2' ? 'season' : 'off1';
+}
+
+function phaseDays(phase){
+  return phase === 'season' ? 14 : 21;
+}
+
+// Âncora oficial da 2ª temporada da Ranking Dungeon:
+// 30/07/2026 → Off-Season 1 (21d) → Off-Season 2 (21d) → Season (14d).
+// O ciclo completo tem 56 dias. Após 24/09/2026, a detecção continua
+// projetando esse mesmo padrão enquanto a GameKing mantiver a estrutura oficial.
+const ARENA_CYCLE_ANCHOR = {year:2026, month:6, day:30}; // mês 6 = julho
+const ARENA_CYCLE_DAYS = 56;
+
+function dateAtNoon(year, month, day){
+  const date = new Date(year, month, day, 12, 0, 0, 0);
+  return date;
+}
+
+function positiveModulo(value, modulo){
+  return ((value % modulo) + modulo) % modulo;
+}
+
+function detectArenaPhase(baseDate = todayAtNoon()){
+  const anchor = dateAtNoon(ARENA_CYCLE_ANCHOR.year, ARENA_CYCLE_ANCHOR.month, ARENA_CYCLE_ANCHOR.day);
+  const oneDay = 24 * 60 * 60 * 1000;
+  const absoluteDays = Math.round((baseDate.getTime() - anchor.getTime()) / oneDay);
+  const cycleDay = positiveModulo(absoluteDays, ARENA_CYCLE_DAYS);
+
+  let phase;
+  let phaseEndDay;
+  if(cycleDay < 21){
+    phase = 'off1';
+    phaseEndDay = 21;
+  }else if(cycleDay < 42){
+    phase = 'off2';
+    phaseEndDay = 42;
+  }else{
+    phase = 'season';
+    phaseEndDay = 56;
+  }
+
+  const daysRemaining = phaseEndDay - cycleDay;
+  const phaseEndDate = new Date(baseDate.getTime());
+  phaseEndDate.setDate(phaseEndDate.getDate() + daysRemaining);
+
+  return {phase, cycleDay, daysRemaining, phaseEndDate};
+}
+
+function updateRankingMemo(phase){
+  const isSeason = phase === 'season';
+  $('offRankTag').classList.toggle('show', !isSeason);
+  $('seasonRankTag').classList.toggle('show', isSeason);
+  $('placeTag').classList.toggle('show', isSeason);
+
+  if(isSeason){
+    $('rankingMemo').innerHTML = '<strong>Período atual: Season.</strong> Preencha o ranking de <b>Season</b> e, se aplicável, a classificação da Season. O ranking de Off-Season será usado automaticamente nos próximos Off-Seasons.';
+  }else{
+    $('rankingMemo').innerHTML = `<strong>Período atual: ${phaseName(phase)}.</strong> Preencha o ranking de <b>Off-Season</b>. Os campos de Season serão usados automaticamente quando chegar a próxima Season.`;
+  }
+}
+
+function updateAutomaticPhase(baseDate = todayAtNoon()){
+  const info = detectArenaPhase(baseDate);
+  $('phase').value = info.phase;
+  const end = info.phaseEndDate.toLocaleDateString('pt-BR', {day:'2-digit', month:'2-digit', year:'numeric'});
+  const remainingText = info.daysRemaining === 1 ? '1 dia restante' : `${info.daysRemaining} dias restantes`;
+  $('phaseHint').innerHTML = `<span class="autoPhase">${phaseName(info.phase)}</span> • ${remainingText} • termina em ${end}`;
+  updateRankingMemo(info.phase);
+  return info;
+}
+
+function formatDays(days){
+  if(days === 0) return 'agora';
+  const weeks = days / 7;
+  return Number.isInteger(weeks)
+    ? `${weeks} ${weeks === 1 ? 'semana' : 'semanas'}`
+    : `${days} dias (${weeks.toFixed(1)} sem.)`;
+}
+
+function todayAtNoon(){
+  const date = new Date();
+  date.setHours(12,0,0,0);
+  return date;
+}
+
+function formatDateFrom(baseDate, days){
+  const date = new Date(baseDate.getTime());
+  date.setDate(date.getDate() + days);
+  return date.toLocaleDateString('pt-BR', {day:'2-digit', month:'2-digit', year:'numeric'});
+}
+
+function isValidSelectValue(id, value){
+  return Array.from($(id).options).some(option => option.value === String(value));
+}
+
+function safeSave(){
+  try{
+    const data = {};
+    persistentIds.forEach(id => data[id] = $(id).value);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    return true;
+  }catch{
+    return false;
+  }
+}
+
+function safeLoad(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(!raw) return false;
+    const data = JSON.parse(raw);
+    if(!data || typeof data !== 'object') return false;
+
+    countIds.forEach(id => {
+      if(data[id] !== undefined){
+        const value = Number(data[id]);
+        if(Number.isFinite(value) && value >= 0) $(id).value = String(Math.floor(value));
+      }
+    });
+
+    ['offRank','seasonRank','place'].forEach(id => {
+      if(data[id] !== undefined && isValidSelectValue(id, data[id])) $(id).value = String(data[id]);
+    });
+
+    return true;
+  }catch{
+    return false;
+  }
+}
+
+function safeClearStorage(){
+  try{
+    localStorage.removeItem(STORAGE_KEY);
+  }catch{}
+}
+
+function hasGloryGain(reward){
+  return reward.v > 0 || reward.f > 0 || reward.e > 0;
+}
+
+function canEverReach(state){
+  const off = offReward();
+  const season = seasonReward();
+
+  if(hasGloryGain(off) || hasGloryGain(season)) return true;
+
+  return maxGloryEmblems(state) >= 80 && (state.t >= 1 || season.t >= 1);
+}
+
+function calculate({scroll = true, persist = true} = {}){
+  $('err').classList.remove('show');
+  $('err').textContent = '';
+
+  countIds.forEach(normalizeCount);
+
+  const state = {
+    v: readCount('vest'),
+    f: readCount('frag'),
+    e: readCount('emb'),
+    t: readCount('trans')
+  };
+  const initial = {...state};
+  const baseDate = todayAtNoon();
+  const phaseInfo = updateAutomaticPhase(baseDate);
+  const start = phaseInfo.phase;
+  let phase = start;
+  let days = phaseInfo.daysRemaining;
+  let events = 0;
+  const rows = [];
+
+  if(ready(state)){
+    render(initial, 0, 0, [], true, baseDate, scroll);
+    if(persist) safeSave();
+    return;
+  }
+
+  if(!canEverReach(state)){
+    $('err').textContent = 'Com as configurações informadas, não existe ganho futuro suficiente de materiais de Glória para alcançar a caixa. Ajuste a faixa de ranking ou a classificação da Season.';
+    $('err').classList.add('show');
+    $('result').classList.remove('show');
+    if(persist) safeSave();
+    return;
+  }
+
+  const MAX_PERIODS = 1000;
+  while(!ready(state) && events < MAX_PERIODS){
+    const reward = phase === 'season' ? seasonReward() : offReward();
+    add(state, reward);
+    events += 1;
+    rows.push({phase, reward, days, ready:ready(state), state:{...state}});
+
+    if(ready(state)) break;
+
+    phase = nextPhase(phase);
+    days += phaseDays(phase);
+  }
+
+  if(!ready(state)){
+    $('err').textContent = 'Não foi possível concluir a projeção com segurança. Revise os valores e tente novamente.';
+    $('err').classList.add('show');
+    $('result').classList.remove('show');
+    return;
+  }
+
+  render(initial, days, events, rows, false, baseDate, scroll);
+  if(persist) safeSave();
+}
+
+function render(initial, days, events, rows, already, baseDate, scroll){
+  $('result').classList.add('show');
+
+  const pct = progressPct(initial);
+  $('bar').style.width = pct.toFixed(1) + '%';
+  $('pct').textContent = pct.toFixed(1).replace('.', ',') + '%';
+  $('mEmb').textContent = maxGloryEmblems(initial);
+  $('mNeed').textContent = equivalentNeed(initial);
+  $('mEvents').textContent = events;
+  $('mDate').textContent = already ? 'Hoje' : formatDateFrom(baseDate, days);
+
+  if(already){
+    $('timeBig').textContent = 'Já dá para trocar';
+    $('timeDesc').innerHTML = 'Seu estoque atual já é suficiente para formar <b>80 Emblemas da Glória + 1 Emblema da Transcendência</b>.';
+  }else{
+    const date = formatDateFrom(baseDate, days);
+    $('timeBig').textContent = formatDays(days);
+    $('timeDesc').innerHTML = `Mantendo as faixas escolhidas, você alcança os materiais necessários após <b>${events} período${events === 1 ? '' : 's'}</b>, aproximadamente em <b>${date}</b>.`;
+  }
+
+  let visibleRows = rows;
+  if(rows.length > 15){
+    visibleRows = [...rows.slice(0,14), {ellipsis:true}, rows[rows.length - 1]];
+  }
+
+  $('timeline').innerHTML = visibleRows.length
+    ? visibleRows.map(item => {
+        if(item.ellipsis){
+          const omitted = rows.length - 15;
+          return `<div class="row"><div></div><div class="muted">… ${omitted} período${omitted === 1 ? '' : 's'} intermediário${omitted === 1 ? '' : 's'} omitido${omitted === 1 ? '' : 's'} …</div><div></div></div>`;
+        }
+        return `<div class="row"><div><span class="pill ${item.phase === 'season' ? 'season' : ''}">${phaseName(item.phase)}</span></div><div><b>${rewardText(item.reward)}</b><div class="muted">Após receber: ${maxGloryEmblems(item.state)} Emblemas possíveis + ${item.state.t} Transc.</div></div><div class="when ${item.ready ? 'ok' : 'muted'}">${item.ready ? 'Meta atingida' : 'em ' + formatDays(item.days)}</div></div>`;
+      }).join('')
+    : '<div class="muted">Nenhum período adicional necessário.</div>';
+
+  if(scroll) $('result').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function resetCalculator(){
+  safeClearStorage();
+
+  $('vest').value = '0';
+  $('frag').value = '0';
+  $('emb').value = '0';
+  $('trans').value = '0';
+  $('offRank').value = '90';
+  $('seasonRank').value = 'top5';
+  $('place').value = 'none';
+  updateAutomaticPhase(todayAtNoon());
+
+  $('err').classList.remove('show');
+  $('err').textContent = '';
+  $('result').classList.remove('show');
+  $('bar').style.width = '0%';
+  $('pct').textContent = '0%';
+  $('timeline').innerHTML = '';
+
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+$('calc').addEventListener('click', () => calculate());
+$('reset').addEventListener('click', resetCalculator);
+
+countIds.forEach(id => {
+  $(id).addEventListener('change', () => {
+    normalizeCount(id);
+    safeSave();
+    if($('result').classList.contains('show')) calculate({scroll:false, persist:false});
+  });
+});
+
+['offRank','seasonRank','place'].forEach(id => {
+  $(id).addEventListener('change', () => {
+    safeSave();
+    if($('result').classList.contains('show')) calculate({scroll:false, persist:false});
+  });
+});
+
+const hadSavedData = safeLoad();
+updateAutomaticPhase(todayAtNoon());
+if(hadSavedData) calculate({scroll:false, persist:false});
+
+function refreshVisibleResultDate(){
+  updateAutomaticPhase(todayAtNoon());
+  if($('result').classList.contains('show')) calculate({scroll:false, persist:false});
+}
+
+window.addEventListener('focus', refreshVisibleResultDate);
+document.addEventListener('visibilitychange', () => {
+  if(document.visibilityState === 'visible') refreshVisibleResultDate();
+});
+
+function scheduleMidnightRefresh(){
+  const now = new Date();
+  const next = new Date(now);
+  next.setHours(24,0,2,0);
+  const delay = Math.max(1000, next.getTime() - now.getTime());
+  setTimeout(() => {
+    refreshVisibleResultDate();
+    scheduleMidnightRefresh();
+  }, delay);
+}
+
+scheduleMidnightRefresh();
+</script>
+</body>
+</html>
