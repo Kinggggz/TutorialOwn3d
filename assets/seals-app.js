@@ -16,6 +16,14 @@
     try { localStorage.setItem(storageKey, JSON.stringify(progress)); $('savedStatus').textContent = 'Progresso salvo neste navegador'; }
     catch { $('savedStatus').textContent = 'Não foi possível salvar automaticamente'; }
   }
+  function normalizeSearch(value) {
+    return String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('pt-BR').replace(/[^a-z0-9]/g, '');
+  }
+  function hideRoute() {
+    $('routePanel').hidden = true;
+    $('routeResults').hidden = true;
+    $('routeEmpty').hidden = true;
+  }
   function clampCount(value) {
     const n = Number(value);
     return Number.isFinite(n) ? Math.max(0, Math.min(3000, Math.floor(n))) : 0;
@@ -58,8 +66,8 @@
     return `Próximo: ${formatInt(thresholds[next])} ${sealWord(thresholds[next])} (+${formatValue(bonusAt(seal, next), seal.percent)})`;
   }
   function renderSeals() {
-    const query = $('search').value.trim().toLocaleLowerCase('pt-BR');
-    const filtered = selectedSeals().filter(seal => seal.name.toLocaleLowerCase('pt-BR').includes(query));
+    const query = normalizeSearch($('search').value.trim());
+    const filtered = selectedSeals().filter(seal => normalizeSearch(seal.name).includes(query));
     $('sealList').innerHTML = filtered.map(seal => {
       const quantity = clampCount(progress[seal.name] || 0);
       const level = levelIndex(quantity);
@@ -75,7 +83,7 @@
     const value = clampCount(event.currentTarget.value);
     event.currentTarget.value = value;
     if (value) progress[name] = value; else delete progress[name];
-    saveProgress(); renderSeals();
+    saveProgress(); renderSeals(); hideRoute();
   }
   function escapeHtml(value) { return String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
   function escapeAttr(value) { return escapeHtml(value); }
@@ -103,6 +111,7 @@
     $('formError').classList.remove('show');
     const target = Number($('target').value);
     if (!Number.isFinite(target) || target < 0) { $('formError').textContent = 'Informe uma meta válida, igual ou maior que zero.'; $('formError').classList.add('show'); return; }
+    $('routePanel').hidden = false;
     const current = currentTotal();
     let missing = Math.max(0, target - current);
     if (missing <= 1e-9) { renderRoute([], current, target, true); return; }
@@ -130,15 +139,39 @@
     const totalSeals = steps.reduce((sum,s) => sum + s.sealsNeeded, 0);
     const totalOpeners = steps.reduce((sum,s) => sum + s.openerCost, 0);
     const totalTickets = steps.reduce((sum,s) => sum + s.ticketCost, 0);
+    const consolidated = [];
+    const bySeal = new Map();
+    steps.forEach(step => {
+      const existing = bySeal.get(step.seal.name);
+      if (existing) {
+        existing.to = step.to;
+        existing.bonus += step.bonus;
+        existing.sealsNeeded += step.sealsNeeded;
+        existing.openerCost += step.openerCost;
+        existing.ticketCost += step.ticketCost;
+      } else {
+        const item = {...step};
+        bySeal.set(step.seal.name, item);
+        consolidated.push(item);
+      }
+    });
     $('routeTotal').textContent = reached ? `Projeção: ${formatValue(projected, percent)}` : `Máximo: ${formatValue(projected, percent)}`;
-    $('routeResults').innerHTML = steps.map(step => `<article class="route-item"><div><h3>${escapeHtml(step.seal.name)}</h3><p>${step.seal.attr} • bônus Master +${formatValue(step.seal.master, step.seal.percent)}</p></div><div class="route-step">${formatInt(thresholds[step.from])} → <strong>${formatInt(thresholds[step.to])}</strong> ${sealWord(thresholds[step.to])}</div><div class="route-metric"><strong>+${formatValue(step.bonus, step.seal.percent)}</strong><span>bônus</span></div><div class="route-metric"><strong>${formatInt(step.sealsNeeded)}</strong><span>${sealWord(step.sealsNeeded)}</span></div><div class="route-metric"><strong>${formatInt(step.openerCost)}</strong><span>openers</span></div></article>`).join('') + `<article class="route-item route-summary"><div><h3>Totais da rota</h3><p>${reached ? 'Meta atendida' : 'Meta acima do máximo cadastrado'}</p></div><div class="route-step">${formatInt(steps.length)} evoluções</div><div class="route-metric"><strong>${formatInt(totalSeals)}</strong><span>${sealWord(totalSeals)}</span></div><div class="route-metric"><strong>${formatInt(totalOpeners)}</strong><span>openers</span></div><div class="route-metric"><strong>${new Intl.NumberFormat('pt-BR',{maximumFractionDigits:1}).format(totalTickets)}</strong><span>Tickets estimados</span></div></article>`;
+    $('routeResults').innerHTML = consolidated.map(step => `<article class="route-item"><div><h3>${escapeHtml(step.seal.name)}</h3><p>${step.seal.attr} • bônus Master +${formatValue(step.seal.master, step.seal.percent)}</p></div><div class="route-step">${formatInt(thresholds[step.from])} → <strong>${formatInt(thresholds[step.to])}</strong> ${sealWord(thresholds[step.to])}</div><div class="route-metric"><strong>+${formatValue(step.bonus, step.seal.percent)}</strong><span>bônus ganho</span></div><div class="route-metric"><strong>${formatInt(step.sealsNeeded)}</strong><span>${sealWord(step.sealsNeeded)}</span></div><div class="route-metric"><strong>${formatInt(step.openerCost)}</strong><span>openers</span></div></article>`).join('') + `<article class="route-item route-summary"><div><h3>Totais da rota</h3><p>${reached ? 'Meta atendida' : 'Meta acima do máximo cadastrado'}</p></div><div class="route-step">${formatInt(consolidated.length)} ${consolidated.length === 1 ? 'selo recomendado' : 'selos recomendados'}</div><div class="route-metric"><strong>${formatInt(totalSeals)}</strong><span>${sealWord(totalSeals)}</span></div><div class="route-metric"><strong>${formatInt(totalOpeners)}</strong><span>openers</span></div><div class="route-metric"><strong>${new Intl.NumberFormat('pt-BR',{maximumFractionDigits:1}).format(totalTickets)}</strong><span>Tickets estimados</span></div></article>`;
   }
 
-  $('attribute').addEventListener('change', () => { $('search').value = ''; renderSeals(); $('routeResults').hidden = true; $('routeEmpty').hidden = false; });
-  $('target').addEventListener('input', updateSummary);
+  $('attribute').addEventListener('change', () => { $('search').value = ''; renderSeals(); hideRoute(); });
+  $('target').addEventListener('input', () => { updateSummary(); hideRoute(); });
+  $('strategy').addEventListener('change', hideRoute);
   $('search').addEventListener('input', renderSeals);
   $('calculate').addEventListener('click', calculateRoute);
-  $('clearProgress').addEventListener('click', () => { if (confirm('Apagar todas as quantidades de selos salvas neste navegador?')) { progress = {}; saveProgress(); renderSeals(); } });
+  $('toggleCodex').addEventListener('click', () => {
+    const willOpen = $('codexPanel').hidden;
+    $('codexPanel').hidden = !willOpen;
+    $('toggleCodex').setAttribute('aria-expanded', String(willOpen));
+    $('toggleCodex').textContent = willOpen ? 'Ocultar meus selos' : 'Cadastrar meus selos';
+    if (willOpen) $('codexPanel').scrollIntoView({behavior:'smooth', block:'start'});
+  });
+  $('clearProgress').addEventListener('click', () => { if (confirm('Apagar todas as quantidades de selos salvas neste navegador?')) { progress = {}; saveProgress(); renderSeals(); hideRoute(); } });
   $('databaseCount').textContent = seals.length;
   renderSeals();
 })();

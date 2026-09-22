@@ -1,0 +1,19 @@
+.codex-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  width: min(500px, 100%);
+}
+
+@media (max-width: 650px) {
+  .codex-actions {
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .codex-actions .search-field {
+    width: 100%;
+  }
+}

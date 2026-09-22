@@ -9,6 +9,7 @@
   <link rel="icon" href="../assets/logo.png" type="image/png">
   <link rel="stylesheet" href="../assets/site.css">
   <link rel="stylesheet" href="../assets/seals.css">
+  <link rel="stylesheet" href="../assets/seals-overrides.css">
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -26,7 +27,7 @@
     </section>
 
     <section class="planner-panel" aria-labelledby="planner-title">
-      <div class="planner-title"><div><h2 id="planner-title">Planejador de meta</h2><p>O valor atual cadastrado nos selos será somado automaticamente.</p></div><button class="seal-button ghost" id="clearProgress" type="button">Limpar progresso</button></div>
+      <div class="planner-title"><div><h2 id="planner-title">Planejador de meta</h2><p>O valor atual cadastrado nos selos será somado automaticamente.</p></div><button class="seal-button ghost" id="toggleCodex" type="button" aria-expanded="false" aria-controls="codexPanel">Cadastrar meus selos</button></div>
       <div class="planner-fields">
         <label>Atributo<select id="attribute"><option>AT</option><option>HP</option><option>DS</option><option>DE</option><option>HT</option><option>CT</option><option>BL</option><option>EV</option></select></label>
         <label>Meta desejada<input id="target" type="number" min="0" step="1" value="1000" inputmode="decimal"><small id="targetUnit">pontos de AT</small></label>
@@ -37,20 +38,19 @@
       <div class="form-error" id="formError" role="alert"></div>
     </section>
 
-    <section class="route-panel" id="routePanel" aria-labelledby="route-title">
+    <section class="route-panel" id="routePanel" aria-labelledby="route-title" hidden>
       <div class="route-heading"><div><p class="eyebrow">ROTA SUGERIDA</p><h2 id="route-title">Recomendação</h2></div><div class="route-total" id="routeTotal">Defina a meta e calcule</div></div>
-      <div id="routeEmpty" class="empty-state">Selecione um atributo, ajuste sua meta e clique em <strong>Calcular rota</strong>.</div>
+      <div id="routeEmpty" class="empty-state" hidden></div>
       <div id="routeResults" class="route-results" hidden></div>
     </section>
 
-    <section class="codex-panel" aria-labelledby="codex-title">
-      <div class="codex-heading"><div><p class="eyebrow">SEUS SELOS</p><h2 id="codex-title">Cadastre seu progresso</h2></div><label class="search-field"><span class="sr-only">Buscar Digimon</span><input id="search" type="search" placeholder="Buscar Digimon..."></label></div>
+    <section class="codex-panel" id="codexPanel" aria-labelledby="codex-title" hidden>
+      <div class="codex-heading"><div><p class="eyebrow">SEUS SELOS</p><h2 id="codex-title">Cadastre seu progresso</h2></div><div class="codex-actions"><label class="search-field"><span class="sr-only">Buscar Digimon</span><input id="search" type="search" placeholder="Buscar Digimon..."></label><button class="seal-button ghost" id="clearProgress" type="button">Limpar progresso</button></div></div>
       <p class="codex-help">Informe a quantidade já aberta de cada selo. O bônus e o próximo nível são calculados automaticamente.</p>
       <div class="seal-list" id="sealList"></div>
       <div class="empty-state" id="noResults" hidden>Nenhum selo encontrado para esta busca.</div>
     </section>
 
-    <aside class="data-note"><strong>Importante:</strong> ferramenta comunitária não oficial. A base contém os selos públicos consultados em setembro de 2026; eventos e atualizações futuras podem alterar a lista.</aside>
   </main>
 
   <footer><div class="footer-brand"><img src="../assets/logo.png" alt="" width="34" height="34"><strong>Ow3neD</strong></div><p>Digimon Masters Online • Ferramenta da guilda</p><p>Feito para a comunidade LADMO</p></footer>
