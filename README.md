@@ -1,6 +1,6 @@
 # Site da guilda Ow3neD
 
-Site estático preparado para GitHub Pages, com a Calculadora Rank U e o Guia de Progressão de Digimon Masters Online.
+Site estático preparado para GitHub Pages, com a Calculadora Rank U, a Calculadora de Selos e o Guia de Progressão de Digimon Masters Online.
 
 ## Publicar no GitHub Pages
 
