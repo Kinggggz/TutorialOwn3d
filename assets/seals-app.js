@@ -47,6 +47,25 @@
   }
   function formatInt(value) { return new Intl.NumberFormat('pt-BR', {maximumFractionDigits: 0}).format(value); }
   function sealWord(value) { return value === 1 ? 'selo' : 'selos'; }
+  function sealStatus(quantity) {
+    if (quantity <= 0) return 'inactive';
+    if (quantity >= 3000) return 'master';
+    return 'progress';
+  }
+  function sealColorTier(quantity) {
+    if (quantity >= 3000) return {key:'3000', label:'Master'};
+    if (quantity >= 1000) return {key:'1000', label:'Platinum'};
+    if (quantity >= 500) return {key:'500', label:'Gold'};
+    if (quantity >= 300) return {key:'300', label:'Silver'};
+    if (quantity >= 200) return {key:'200', label:'Silver'};
+    if (quantity >= 100) return {key:'100', label:'Bronze'};
+    if (quantity >= 50) return {key:'50', label:'Bronze'};
+    if (quantity >= 1) return {key:'1', label:'Normal'};
+    return {key:'0', label:'Não ativado'};
+  }
+  function statusLabel(status) {
+    return status === 'master' ? 'Master' : status === 'progress' ? 'Em evolução' : 'Não ativado';
+  }
   function selectedSeals() { return seals.filter(seal => seal.attr === $('attribute').value); }
   function currentTotal() { return selectedSeals().reduce((sum, seal) => sum + bonusAt(seal, levelIndex(progress[seal.name] || 0)), 0); }
   function updateSummary() {
@@ -67,11 +86,17 @@
   }
   function renderSeals() {
     const query = normalizeSearch($('search').value.trim());
-    const filtered = selectedSeals().filter(seal => normalizeSearch(seal.name).includes(query));
+    const statusFilter = $('statusFilter').value;
+    const filtered = selectedSeals().filter(seal => {
+      const quantity = clampCount(progress[seal.name] || 0);
+      return normalizeSearch(seal.name).includes(query) && (statusFilter === 'all' || sealStatus(quantity) === statusFilter);
+    });
     $('sealList').innerHTML = filtered.map(seal => {
       const quantity = clampCount(progress[seal.name] || 0);
       const level = levelIndex(quantity);
-      return `<article class="seal-row"><div class="seal-info"><div class="seal-name"><span class="attribute-tag">${seal.attr}</span><span>${escapeHtml(seal.name)}</span></div><div class="seal-meta"><span>Atual: <strong>+${formatValue(bonusAt(seal, level), seal.percent)}</strong></span><span>Master: <strong>+${formatValue(seal.master, seal.percent)}</strong></span><span>${escapeHtml(nextText(seal, quantity))}</span></div></div><div class="quantity-wrap"><label for="seal-${sealIndex(seal)}">Quantidade aberta</label><input class="seal-quantity" id="seal-${sealIndex(seal)}" data-name="${escapeAttr(seal.name)}" type="number" min="0" max="3000" step="1" inputmode="numeric" value="${quantity}"></div></article>`;
+      const status = sealStatus(quantity);
+      const colorTier = sealColorTier(quantity);
+      return `<article class="seal-row status-${status} tier-${colorTier.key}"><div class="seal-info"><div class="seal-name"><span class="attribute-tag">${seal.attr}</span><span>${escapeHtml(seal.name)}</span><span class="status-tag tier-${colorTier.key}" title="${statusLabel(status)}">${colorTier.label}</span></div><div class="seal-meta"><span>Atual: <strong>+${formatValue(bonusAt(seal, level), seal.percent)}</strong></span><span>Master: <strong>+${formatValue(seal.master, seal.percent)}</strong></span><span>${escapeHtml(nextText(seal, quantity))}</span></div></div><div class="quantity-wrap"><label for="seal-${sealIndex(seal)}">Quantidade aberta</label><input class="seal-quantity" id="seal-${sealIndex(seal)}" data-name="${escapeAttr(seal.name)}" type="number" min="0" max="3000" step="1" inputmode="numeric" value="${quantity}"></div></article>`;
     }).join('');
     $('noResults').hidden = filtered.length > 0;
     document.querySelectorAll('.seal-quantity').forEach(input => input.addEventListener('change', handleQuantity));
@@ -164,6 +189,7 @@
   $('target').addEventListener('input', () => { updateSummary(); hideRoute(); });
   $('strategy').addEventListener('change', hideRoute);
   $('search').addEventListener('input', renderSeals);
+  $('statusFilter').addEventListener('change', renderSeals);
   $('calculate').addEventListener('click', () => {
     try {
       calculateRoute();

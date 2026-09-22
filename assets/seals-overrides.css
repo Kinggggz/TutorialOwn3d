@@ -3,8 +3,58 @@
   align-items: center;
   justify-content: flex-end;
   gap: 10px;
-  width: min(500px, 100%);
+  width: min(700px, 100%);
 }
+
+.status-filter {
+  width: min(180px, 100%);
+}
+
+.status-filter select {
+  width: 100%;
+  border: 1px solid #344665;
+  background: #0b1322;
+  color: var(--text);
+  border-radius: 11px;
+  padding: 12px;
+  font: inherit;
+  outline: none;
+}
+
+.status-filter select:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(74,156,255,.15);
+}
+
+.status-tag {
+  flex: 0 0 auto;
+  margin-left: auto;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: .63rem;
+  font-weight: 850;
+}
+
+.status-tag.tier-0 { color:#a8b3c7; background:rgba(168,179,199,.11); border-color:rgba(168,179,199,.30); }
+.status-tag.tier-1 { color:#82c8ff; background:rgba(74,156,255,.12); border-color:rgba(74,156,255,.34); }
+.status-tag.tier-50 { color:#76e4f7; background:rgba(34,211,238,.11); border-color:rgba(34,211,238,.34); }
+.status-tag.tier-100 { color:#6ee7b7; background:rgba(52,211,153,.11); border-color:rgba(52,211,153,.34); }
+.status-tag.tier-200 { color:#bef264; background:rgba(163,230,53,.11); border-color:rgba(163,230,53,.34); }
+.status-tag.tier-300 { color:#fde047; background:rgba(250,204,21,.11); border-color:rgba(250,204,21,.34); }
+.status-tag.tier-500 { color:#fbbf24; background:rgba(245,158,11,.12); border-color:rgba(245,158,11,.36); }
+.status-tag.tier-1000 { color:#f0abfc; background:rgba(217,70,239,.11); border-color:rgba(217,70,239,.36); }
+.status-tag.tier-3000 { color:#ffffff; background:linear-gradient(135deg,rgba(139,92,246,.42),rgba(59,130,246,.38)); border-color:#c4b5fd; box-shadow:0 0 12px rgba(139,92,246,.24); }
+
+.seal-row.tier-0 { border-color:rgba(168,179,199,.22); }
+.seal-row.tier-1 { border-color:rgba(74,156,255,.34); }
+.seal-row.tier-50 { border-color:rgba(34,211,238,.38); }
+.seal-row.tier-100 { border-color:rgba(52,211,153,.38); }
+.seal-row.tier-200 { border-color:rgba(163,230,53,.38); }
+.seal-row.tier-300 { border-color:rgba(250,204,21,.40); }
+.seal-row.tier-500 { border-color:rgba(245,158,11,.44); }
+.seal-row.tier-1000 { border-color:rgba(217,70,239,.44); }
+.seal-row.tier-3000 { border-color:#8b5cf6; box-shadow:0 0 0 1px rgba(139,92,246,.18),0 10px 30px rgba(0,0,0,.12); }
 
 @media (max-width: 650px) {
   .codex-actions {
@@ -14,6 +64,10 @@
   }
 
   .codex-actions .search-field {
+    width: 100%;
+  }
+
+  .codex-actions .status-filter {
     width: 100%;
   }
 }

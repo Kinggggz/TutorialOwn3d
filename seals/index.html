@@ -9,7 +9,7 @@
   <link rel="icon" href="../assets/logo.png" type="image/png">
   <link rel="stylesheet" href="../assets/site.css?v=5">
   <link rel="stylesheet" href="../assets/seals.css?v=5">
-  <link rel="stylesheet" href="../assets/seals-overrides.css?v=5">
+  <link rel="stylesheet" href="../assets/seals-overrides.css?v=7">
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -27,7 +27,7 @@
     </section>
 
     <section class="planner-panel" aria-labelledby="planner-title">
-      <div class="planner-title"><div><h2 id="planner-title">Planejador de meta</h2><p>O valor atual cadastrado nos selos será somado automaticamente.</p></div><button class="seal-button ghost" id="toggleCodex" type="button" aria-expanded="false" aria-controls="codexPanel">Cadastrar meus selos</button></div>
+      <div class="planner-title"><div><h2 id="planner-title">Planejador de meta</h2><p>O bônus dos selos ativados conta como progresso e é descontado da meta desejada.</p></div><button class="seal-button ghost" id="toggleCodex" type="button" aria-expanded="false" aria-controls="codexPanel">Cadastrar meus selos</button></div>
       <div class="planner-fields">
         <label>Atributo<select id="attribute"><option>AT</option><option>HP</option><option>DS</option><option>DE</option><option>HT</option><option>CT</option><option>BL</option><option>EV</option></select></label>
         <label>Meta desejada<input id="target" type="number" min="0" step="1" value="1000" inputmode="decimal"><small id="targetUnit">pontos de AT</small></label>
@@ -45,7 +45,7 @@
     </section>
 
     <section class="codex-panel" id="codexPanel" aria-labelledby="codex-title" hidden>
-      <div class="codex-heading"><div><p class="eyebrow">SEUS SELOS</p><h2 id="codex-title">Cadastre seu progresso</h2></div><div class="codex-actions"><label class="search-field"><span class="sr-only">Buscar Digimon</span><input id="search" type="search" placeholder="Buscar Digimon..."></label><button class="seal-button ghost" id="clearProgress" type="button">Limpar progresso</button></div></div>
+      <div class="codex-heading"><div><p class="eyebrow">SEUS SELOS</p><h2 id="codex-title">Cadastre seu progresso</h2></div><div class="codex-actions"><label class="status-filter"><span class="sr-only">Filtrar por situação</span><select id="statusFilter"><option value="all">Todas as situações</option><option value="inactive">Não ativados</option><option value="progress">Em evolução</option><option value="master">Master</option></select></label><label class="search-field"><span class="sr-only">Buscar Digimon</span><input id="search" type="search" placeholder="Buscar Digimon..."></label><button class="seal-button ghost" id="clearProgress" type="button">Limpar progresso</button></div></div>
       <p class="codex-help">Informe a quantidade já aberta de cada selo. O bônus e o próximo nível são calculados automaticamente.</p>
       <div class="seal-list" id="sealList"></div>
       <div class="empty-state" id="noResults" hidden>Nenhum selo encontrado para esta busca.</div>
@@ -54,7 +54,7 @@
   </main>
 
   <footer><div class="footer-brand"><img src="../assets/logo.png" alt="" width="34" height="34"><strong>Ow3neD</strong></div><p>Digimon Masters Online • Ferramenta da guilda</p><p>Feito para a comunidade LADMO</p></footer>
-  <script src="../assets/seals-data.js?v=5"></script>
-  <script src="../assets/seals-app.js?v=5"></script>
+  <script src="../assets/seals-data.js?v=6"></script>
+  <script src="../assets/seals-app.js?v=8"></script>
 </body>
 </html>
