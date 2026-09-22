@@ -112,6 +112,7 @@
     const target = Number($('target').value);
     if (!Number.isFinite(target) || target < 0) { $('formError').textContent = 'Informe uma meta válida, igual ou maior que zero.'; $('formError').classList.add('show'); return; }
     $('routePanel').hidden = false;
+    requestAnimationFrame(() => $('routePanel').scrollIntoView({behavior:'smooth', block:'start'}));
     const current = currentTotal();
     let missing = Math.max(0, target - current);
     if (missing <= 1e-9) { renderRoute([], current, target, true); return; }
@@ -163,7 +164,15 @@
   $('target').addEventListener('input', () => { updateSummary(); hideRoute(); });
   $('strategy').addEventListener('change', hideRoute);
   $('search').addEventListener('input', renderSeals);
-  $('calculate').addEventListener('click', calculateRoute);
+  $('calculate').addEventListener('click', () => {
+    try {
+      calculateRoute();
+    } catch (error) {
+      $('formError').textContent = 'Não foi possível gerar a rota. Atualize a página e tente novamente.';
+      $('formError').classList.add('show');
+      console.error(error);
+    }
+  });
   $('toggleCodex').addEventListener('click', () => {
     const willOpen = $('codexPanel').hidden;
     $('codexPanel').hidden = !willOpen;
