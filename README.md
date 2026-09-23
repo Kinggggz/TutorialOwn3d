@@ -2,19 +2,19 @@
 
 Site estático preparado para GitHub Pages, com a Calculadora Rank U, a Calculadora de Selos e o Guia de Progressão de Digimon Masters Online.
 
-## Base unificada da Calculadora de Selos
+## Base LADMO da Calculadora de Selos
 
-- **LADMO + DMO global:** 503 selos únicos em uma única calculadora.
-- O cruzamento encontrou 195 correspondências diretas e 52 equivalências de tradução ou grafia. Esses registros foram acoplados sem duplicar o mesmo selo.
-- Os dois selos confirmados no LADMO que não estavam na base global são **Happy Christmas** e **[Despertado] Gallantmon**.
-- **Happy Christmas** utiliza sua progressão oficial especial de bônus: 20, 50, 100, 130, 160 e 200.
-- Os 249 registros da base LADMO foram preservados. Quando existe divergência regional, o atributo e o bônus do LADMO têm prioridade; a referência global complementa limites especiais e dados ausentes.
-- A única divergência de bônus encontrada foi **Sprout**: LADMO/DMO Wiki registra HT +100, enquanto a tabela global registra HT +200. A calculadora usa **HT +100** e identifica o registro como **Valor LADMO**.
-- A busca também reconhece os nomes globais equivalentes, mesmo quando a tela exibe o nome utilizado no LADMO.
-- O nome incorreto `13th Anniversary DE` dentro do atributo DS foi acoplado ao registro correto `13th Anniversary DS Seal`.
-- A base global original possuía uma duplicação de HerculesKabuterimon; ela permanece removida. O selo Demon Lord of Greed Barbamon continua incluído a partir da atualização oficial de 26/08/2026.
-- Custos de Tickets desconhecidos aparecem como `N/D`; a calculadora não inventa valores para completar esses dados.
-- Registros ainda não confirmados especificamente no LADMO recebem a indicação **Referência global**.
+- **513 selos calculáveis** em uma única página, sem seletor de servidor.
+- A base pública mais ampla foi acoplada aos registros e às notas oficiais do LADMO. Nomes equivalentes em português e inglês são tratados como o mesmo selo.
+- Foram adicionados 10 registros ausentes com dados suficientes para cálculo: quatro selos **New LADMO**, três **Selos de Natal**, **Virada da Sorte AT**, **Tamer Matt** e **Férias Digitais AT**.
+- Foram corrigidos os nomes dos selos de 12, 13, 14, 15 e 16 anos, além do atributo incorreto do registro `13th Anniversary DE` que aparecia dentro de DS.
+- **Selo do Broto** foi corrigido de HT +100 para HT +200 conforme as notas posteriores do LADMO.
+- Os bônus intermediários oficiais de Patamon–T.K., Gatomon–Hikari e Princesa Mimi foram cadastrados, evitando que a calculadora aplicasse uma progressão genérica incorreta.
+- **Happy Christmas** mantém sua progressão especial: 20, 50, 100, 130, 160 e 200.
+- A duplicação de HerculesKabuterimon permanece removida. **Selo de Barbamon, Rei Demônio da Ganância** está incluído com limite de 100 e progressão própria.
+- A revisão mais recente foi feita em **23/09/2026**. A atualização desse dia não acrescentou novos selos.
+- Nove itens cuja existência está confirmada — Virada da Sorte HT e os oito selos do 4º Aniversário LADMO — permanecem fora dos cálculos porque as notas públicas consultadas não informam os bônus por rank. Eles estão listados em `assets/seals-ladmo-updates.js` para inclusão assim que os valores forem confirmados.
+- Custos de Tickets desconhecidos aparecem como `N/D`; a calculadora não inventa esses valores.
 
 ## Publicar no GitHub Pages
 

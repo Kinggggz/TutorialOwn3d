@@ -15,7 +15,7 @@
     3000: DEFAULT_THRESHOLDS
   };
   const MULTIPLIERS = [0, .1, .2, .4, .6, .8, 1];
-  const RANK_LABELS = ['Não ativado', 'Normal', 'Bronze', 'Silver', 'Gold', 'Platinum', 'Master'];
+  const RANK_LABELS = ['Não ativado', 'Normal', 'Bronze', 'Prata', 'Ouro', 'Platina', 'Mestre'];
   const RANK_COLOR_KEYS = ['0', '1', '50', '200', '500', '1000', '3000'];
   const STORAGE_KEY = 'ownedSealProgress_v2';
   const LEGACY_STORAGE_KEY = 'ownedSealProgress_v1';
@@ -61,8 +61,8 @@
     'DE::syakomon': 'shakomon',
     'HT::drimogemon': 'drimongemon',
     'AT::blueserpent': 'blueserpentseal',
-    'AT::12thyearanniversary': '12thanniversaryseal',
-    'AT::13thyearanniversary': '13thanniversaryatseal',
+    'AT::12thyearanniversary': '10year',
+    'AT::13thyearanniversary': '11yearseal',
     'AT::metalgreymon': 'metalgreymonblackseal',
     'CT::conversion': 'conversionseal',
     'CT::hope': 'hopeseal',
@@ -75,27 +75,71 @@
     'HP::otamamon': 'otamamonseal',
     'HP::roachmon': 'roachmonseal',
     'HP::dokunemon': 'dokunemonseal',
-    'DS::13thanniversaryde': '13thanniversarydsseal',
     'BL::firm': 'firmseal',
     'BL::friendship': 'friendshipseal'
   };
 
   const LADMO_NAME_CORRECTIONS = {
     'AT::metalgreymon': 'MetalGreymon (Black)',
-    'DS::13thanniversaryde': '13th Anniversary DS',
+    'AT::12thyearanniversary': 'Selo de 12 anos KDMO',
+    'AT::13thyearanniversary': 'Selo de 13 anos KDMO',
+    'HT::sprout': 'Selo do Broto',
     'HP::guardromon': 'Gardromon',
     'HP::kentarumon': 'Centalmon'
+  };
+
+  const GLOBAL_LADMO_OVERRIDES = {
+    21: {name: 'Selo de 12 anos KDMO'},
+    27: {name: 'Selo de 13 anos KDMO'},
+    36: {name: 'Selo de 14 anos KDMO'},
+    372: {name: 'Selo do 15º Aniversário — HP'},
+    373: {name: 'Selo do 15º Aniversário — DS', aliases: ['13th Anniversary DS']},
+    374: {name: 'Selo do 15º Aniversário — AT'},
+    375: {name: 'Selo do 15º Aniversário — CT'},
+    386: {name: 'Selo do 15º Aniversário — HT'},
+    387: {name: 'Selo do 15º Aniversário — DE'},
+    388: {name: 'Selo do 15º Aniversário — BL'},
+    389: {name: 'Selo do 15º Aniversário — EV'},
+    392: {name: 'Selo do Broto', master: 200},
+    440: {name: 'Selo de Tamer: Patamon – T.K.', rankBonuses: [0, 40, 80, 120, 200, 300, 400]},
+    441: {name: 'Selo de Tamer: Gatomon – Hikari', rankBonuses: [0, 0.5, 1, 1.5, 2.5, 4, 5]},
+    442: {name: 'Selo de Tamer: Princesa Mimi', rankBonuses: [0, 60, 120, 180, 300, 500, 600]},
+    487: {name: 'Selo do 16º Aniversário — HP'},
+    488: {name: 'Selo do 16º Aniversário — DS'},
+    489: {name: 'Selo do 16º Aniversário — AT'},
+    490: {name: 'Selo do 16º Aniversário — CT'},
+    491: {name: 'Selo do 16º Aniversário — HT'},
+    492: {name: 'Selo do 16º Aniversário — DE'},
+    493: {name: 'Selo do 16º Aniversário — BL'},
+    494: {name: 'Selo do 16º Aniversário — EV'},
+    495: {name: 'Que Delícia! Selo de Bolo do 16º Aniversário'}
   };
 
   function dataKey(seal) {
     return `${seal.attr}::${normalizeSearch(seal.name)}`;
   }
 
-  function buildUnifiedSeals(ladmoSeals, globalSeals) {
-    const rows = globalSeals.map(seal => ({...seal, aliases: [], source: 'global', ladmoConfirmed: false}));
-    const byKey = new Map(rows.map(seal => [dataKey(seal), seal]));
+  function buildUnifiedSeals(ladmoSeals, globalSeals, updates) {
+    const rows = globalSeals.map(seal => {
+      const override = GLOBAL_LADMO_OVERRIDES[seal.sourceId] || {};
+      const updated = {...seal, ...override};
+      const overrideAliases = Array.isArray(override.aliases) ? override.aliases : [];
+      return {
+        ...updated,
+        aliases: [seal.name, ...overrideAliases].filter((name, index, names) => normalizeSearch(name) !== normalizeSearch(updated.name) && names.indexOf(name) === index),
+        source: 'ladmo-catalog'
+      };
+    });
+    const byKey = new Map();
 
-    ladmoSeals.forEach(ladmoSeal => {
+    function indexSeal(seal) {
+      byKey.set(dataKey(seal), seal);
+      (seal.aliases || []).forEach(alias => byKey.set(`${seal.attr}::${normalizeSearch(alias)}`, seal));
+    }
+
+    rows.forEach(indexSeal);
+
+    [...ladmoSeals, ...updates].forEach(ladmoSeal => {
       const ladmoKey = dataKey(ladmoSeal);
       const aliasName = LADMO_GLOBAL_ALIASES[ladmoKey];
       const globalKey = byKey.has(ladmoKey) ? ladmoKey : (aliasName ? `${ladmoSeal.attr}::${aliasName}` : '');
@@ -109,14 +153,17 @@
           name: displayName,
           master: ladmoSeal.master,
           percent: ladmoSeal.percent,
+          maxSeals: ladmoSeal.maxSeals || globalSeal.maxSeals || 3000,
+          thresholds: ladmoSeal.thresholds || globalSeal.thresholds,
+          rankBonuses: ladmoSeal.rankBonuses || globalSeal.rankBonuses,
           exchange: ladmoSeal.exchange !== 'N/D' ? ladmoSeal.exchange : globalSeal.exchange,
           buyable: ladmoSeal.exchange !== 'N/D' ? true : globalSeal.buyable,
           aliases: [globalName, ladmoSeal.name, ...(globalSeal.aliases || [])].filter((name, index, names) => normalizeSearch(name) !== normalizeSearch(displayName) && names.indexOf(name) === index),
           regionalDifference: globalSeal.master !== ladmoSeal.master,
-          source: 'ladmo+global',
-          ladmoConfirmed: true
+          source: 'ladmo'
         };
         rows[rows.indexOf(globalSeal)] = merged;
+        indexSeal(merged);
         byKey.set(globalKey, merged);
         byKey.set(ladmoKey, merged);
         return;
@@ -126,13 +173,12 @@
         ...ladmoSeal,
         aliases: [],
         buyable: ladmoSeal.exchange !== 'N/D',
-        ladmoConfirmed: true,
-        maxSeals: 3000,
+        maxSeals: ladmoSeal.maxSeals || 3000,
         source: 'ladmo',
-        sourceId: `ladmo-${normalizeSearch(ladmoSeal.name)}`
+        sourceId: ladmoSeal.sourceId || `ladmo-${normalizeSearch(ladmoSeal.name)}`
       };
       rows.push(ladmoOnly);
-      byKey.set(ladmoKey, ladmoOnly);
+      indexSeal(ladmoOnly);
     });
 
     const attributeOrder = ['AT', 'HP', 'DS', 'DE', 'HT', 'CT', 'BL', 'EV'];
@@ -141,13 +187,14 @@
 
   const unifiedSeals = buildUnifiedSeals(
     Array.isArray(window.SEALS_DATA) ? window.SEALS_DATA : [],
-    Array.isArray(window.SEALS_GLOBAL_DATA) ? window.SEALS_GLOBAL_DATA : []
+    Array.isArray(window.SEALS_GLOBAL_DATA) ? window.SEALS_GLOBAL_DATA : [],
+    Array.isArray(window.SEALS_LADMO_UPDATES) ? window.SEALS_LADMO_UPDATES : []
   );
   window.SEALS_UNIFIED_DATA = unifiedSeals;
   let progress = loadProgress();
 
   function activeDatasetKey() {
-    return 'unified';
+    return 'ladmo';
   }
 
   function activeSeals() {
@@ -308,8 +355,8 @@
   function updateSourceUI() {
     const seals = activeSeals();
     $('databaseCount').textContent = formatInt(seals.length);
-    $('databaseLabel').textContent = 'selos únicos na base unificada';
-    $('databaseEyebrow').textContent = 'SEAL MASTER • LADMO + GLOBAL';
+    $('databaseLabel').textContent = 'selos na base LADMO';
+    $('databaseEyebrow').textContent = 'SEAL MASTER • LADMO';
   }
 
   function updateSummary() {
@@ -332,7 +379,7 @@
   function nextText(seal, quantity) {
     const thresholds = thresholdsFor(seal);
     const current = levelIndex(seal, quantity);
-    if (current === thresholds.length - 1) return 'Master concluído';
+    if (current === thresholds.length - 1) return 'Mestre concluído';
     const next = current + 1;
     return `Próximo: ${formatInt(thresholds[next])} ${sealWord(thresholds[next])} (+${formatValue(bonusAt(seal, next), seal.percent)})`;
   }
@@ -354,10 +401,7 @@
       const colorTier = sealColorTier(seal, quantity);
       const index = allSeals.indexOf(seal);
       const routeAvailability = seal.buyable === false ? '<span class="route-availability" title="Este selo pode ser cadastrado, mas não será recomendado automaticamente.">Fora da rota automática</span>' : '';
-      const sourceTag = seal.regionalDifference
-        ? '<span class="regional-tag" title="Existe divergência regional; a calculadora usa o valor confirmado para o LADMO.">Valor LADMO</span>'
-        : (seal.ladmoConfirmed ? '' : '<span class="source-tag" title="Ainda não confirmado especificamente no LADMO.">Referência global</span>');
-      return `<article class="seal-row status-${status} tier-${colorTier.key}${seal.buyable === false ? ' route-unavailable' : ''}"><div class="seal-info"><div class="seal-name"><span class="attribute-tag">${seal.attr}</span><span>${escapeHtml(seal.name)}</span><span class="status-tag tier-${colorTier.key}" title="${colorTier.label}">${colorTier.label}</span></div><div class="seal-meta"><span>Atual: <strong>+${formatValue(bonusAt(seal, level), seal.percent)}</strong></span><span>Master: <strong>+${formatValue(seal.master, seal.percent)}</strong></span><span>${escapeHtml(nextText(seal, quantity))}</span>${sourceTag}${routeAvailability}</div></div><div class="quantity-wrap"><label for="seal-${activeDatasetKey()}-${index}">Quantidade aberta</label><input class="seal-quantity" id="seal-${activeDatasetKey()}-${index}" data-index="${index}" type="number" min="0" max="${maxSealsFor(seal)}" step="1" inputmode="numeric" value="${quantity}"></div></article>`;
+      return `<article class="seal-row status-${status} tier-${colorTier.key}${seal.buyable === false ? ' route-unavailable' : ''}"><div class="seal-info"><div class="seal-name"><span class="attribute-tag">${seal.attr}</span><span>${escapeHtml(seal.name)}</span><span class="status-tag tier-${colorTier.key}" title="${colorTier.label}">${colorTier.label}</span></div><div class="seal-meta"><span>Atual: <strong>+${formatValue(bonusAt(seal, level), seal.percent)}</strong></span><span>Mestre: <strong>+${formatValue(seal.master, seal.percent)}</strong></span><span>${escapeHtml(nextText(seal, quantity))}</span>${routeAvailability}</div></div><div class="quantity-wrap"><label for="seal-${activeDatasetKey()}-${index}">Quantidade aberta</label><input class="seal-quantity" id="seal-${activeDatasetKey()}-${index}" data-index="${index}" type="number" min="0" max="${maxSealsFor(seal)}" step="1" inputmode="numeric" value="${quantity}"></div></article>`;
     }).join('');
 
     $('noResults').hidden = filtered.length > 0;
@@ -520,8 +564,7 @@
     $('routeTotal').textContent = reached ? `Projeção: ${formatValue(projected, percent)}` : `Máximo: ${formatValue(projected, percent)}`;
     $('routeResults').innerHTML = steps.map(step => {
       const destination = thresholdsFor(step.seal)[step.to];
-      const sourceNote = step.seal.ladmoConfirmed ? '' : ' • referência global';
-      return `<article class="route-item"><div><h3>${escapeHtml(step.seal.name)}</h3><p>${step.seal.attr} • bônus Master +${formatValue(step.seal.master, step.seal.percent)}${sourceNote}</p></div><div class="route-step">${formatInt(step.quantity)} → <strong>${formatInt(destination)}</strong> ${sealWord(destination)}</div><div class="route-metric"><strong>+${formatValue(step.bonus, step.seal.percent)}</strong><span>bônus ganho</span></div><div class="route-metric"><strong>${formatInt(step.sealsNeeded)}</strong><span>${sealWord(step.sealsNeeded)}</span></div><div class="route-metric"><strong>${formatInt(step.openerCost)}</strong><span>openers</span></div></article>`;
+      return `<article class="route-item"><div><h3>${escapeHtml(step.seal.name)}</h3><p>${step.seal.attr} • bônus Mestre +${formatValue(step.seal.master, step.seal.percent)}</p></div><div class="route-step">${formatInt(step.quantity)} → <strong>${formatInt(destination)}</strong> ${sealWord(destination)}</div><div class="route-metric"><strong>+${formatValue(step.bonus, step.seal.percent)}</strong><span>bônus ganho</span></div><div class="route-metric"><strong>${formatInt(step.sealsNeeded)}</strong><span>${sealWord(step.sealsNeeded)}</span></div><div class="route-metric"><strong>${formatInt(step.openerCost)}</strong><span>openers</span></div></article>`;
     }).join('') + `<article class="route-item route-summary"><div><h3>Totais da rota</h3><p>${hasUnknownTicketCost ? 'Parte da rota não possui troca por Tickets cadastrada' : (reached ? 'Meta atendida' : 'Meta acima do máximo disponível')}</p></div><div class="route-step">${formatInt(steps.length)} ${steps.length === 1 ? 'selo recomendado' : 'selos recomendados'}</div><div class="route-metric"><strong>${formatInt(totalSeals)}</strong><span>${sealWord(totalSeals)}</span></div><div class="route-metric"><strong>${formatInt(totalOpeners)}</strong><span>openers</span></div><div class="route-metric"><strong>${hasUnknownTicketCost ? 'N/D' : new Intl.NumberFormat('pt-BR', {maximumFractionDigits: 1}).format(totalTickets)}</strong><span>Tickets estimados</span></div></article>`;
   }
 

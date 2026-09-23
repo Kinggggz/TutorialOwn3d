@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Calcule quantos selos são necessários com a base unificada do Seal Master do LADMO e DMO global.">
+  <meta name="description" content="Calcule quantos selos são necessários para atingir sua meta no Seal Master do LADMO.">
   <meta name="theme-color" content="#080d18">
   <title>Calculadora de Selos | Ow3neD</title>
   <link rel="icon" href="../assets/logo.png" type="image/png">
   <link rel="stylesheet" href="../assets/site.css?v=5">
-  <link rel="stylesheet" href="../assets/seals.css?v=12">
-  <link rel="stylesheet" href="../assets/seals-overrides.css?v=12">
+  <link rel="stylesheet" href="../assets/seals.css?v=13">
+  <link rel="stylesheet" href="../assets/seals-overrides.css?v=13">
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -22,8 +22,8 @@
 
   <main id="conteudo" class="seal-main">
     <section class="seal-hero">
-      <div><p class="eyebrow" id="databaseEyebrow">SEAL MASTER • LADMO + GLOBAL</p><h1>Buscar um Atributo</h1><p>Defina sua meta usando a base LADMO acoplada à referência global, sem duplicar traduções do mesmo selo.</p></div>
-      <div class="seal-count"><strong id="databaseCount">503</strong><span id="databaseLabel">selos únicos na base unificada</span></div>
+      <div><p class="eyebrow" id="databaseEyebrow">SEAL MASTER • LADMO</p><h1>Buscar um Atributo</h1><p>Defina sua meta, cadastre seus selos e encontre uma rota para o atributo desejado.</p></div>
+      <div class="seal-count"><strong id="databaseCount">513</strong><span id="databaseLabel">selos na base LADMO</span></div>
     </section>
 
     <section class="planner-panel" aria-labelledby="planner-title">
@@ -45,7 +45,7 @@
     </section>
 
     <section class="codex-panel" id="codexPanel" aria-labelledby="codex-title" hidden>
-      <div class="codex-heading"><div><p class="eyebrow">SEUS SELOS</p><h2 id="codex-title">Cadastre seu progresso</h2></div><div class="codex-actions"><label class="status-filter"><span class="sr-only">Filtrar por situação</span><select id="statusFilter"><option value="all">Todas as situações</option><option value="inactive">Não ativados</option><option value="progress">Em evolução</option><option value="master">Master</option></select></label><label class="search-field"><span class="sr-only">Buscar Digimon</span><input id="search" type="search" placeholder="Buscar Digimon..."></label><button class="seal-button ghost" id="clearProgress" type="button">Limpar progresso</button></div></div>
+      <div class="codex-heading"><div><p class="eyebrow">SEUS SELOS</p><h2 id="codex-title">Cadastre seu progresso</h2></div><div class="codex-actions"><label class="status-filter"><span class="sr-only">Filtrar por situação</span><select id="statusFilter"><option value="all">Todas as situações</option><option value="inactive">Não ativados</option><option value="progress">Em evolução</option><option value="master">Mestre</option></select></label><label class="search-field"><span class="sr-only">Buscar selo</span><input id="search" type="search" placeholder="Buscar selo..."></label><button class="seal-button ghost" id="clearProgress" type="button">Limpar progresso</button></div></div>
       <p class="codex-help">Informe a quantidade já aberta de cada selo. O bônus e o próximo nível são calculados automaticamente.</p>
       <div class="seal-list" id="sealList"></div>
       <div class="empty-state" id="noResults" hidden>Nenhum selo encontrado para esta busca.</div>
@@ -54,8 +54,9 @@
   </main>
 
   <footer><div class="footer-brand"><img src="../assets/logo.png" alt="" width="34" height="34"><strong>Ow3neD</strong></div><p>Digimon Masters Online • Ferramenta da guilda</p><p>Feito para a comunidade LADMO</p></footer>
-  <script src="../assets/seals-data.js?v=12"></script>
-  <script src="../assets/seals-global-data.js?v=12"></script>
-  <script src="../assets/seals-app.js?v=12"></script>
+  <script src="../assets/seals-data.js?v=13"></script>
+  <script src="../assets/seals-global-data.js?v=13"></script>
+  <script src="../assets/seals-ladmo-updates.js?v=13"></script>
+  <script src="../assets/seals-app.js?v=13"></script>
 </body>
 </html>

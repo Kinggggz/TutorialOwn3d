@@ -1539,7 +1539,7 @@ window.SEALS_DATA = [
     "attr": "HT", "exchange": "N/D", "master": 100, "name": "Brave Seal", "percent": false
   },
   {
-    "attr": "HT", "exchange": "N/D", "master": 100, "name": "Sprout", "percent": false
+    "attr": "HT", "exchange": "N/D", "master": 200, "name": "Sprout", "percent": false
   },
   {
     "attr": "HT", "exchange": "N/D", "master": 200, "name": "Tonosama Gekomon", "percent": false
@@ -1576,9 +1576,6 @@ window.SEALS_DATA = [
   },
   {
     "attr": "DS", "exchange": "N/D", "master": 500, "name": "GrandisKuwagamon", "percent": false
-  },
-  {
-    "attr": "DS", "exchange": "N/D", "master": 300, "name": "13th Anniversary DE", "percent": false
   },
   {
     "attr": "BL", "exchange": "N/D", "master": 1, "name": "Firm", "percent": true
