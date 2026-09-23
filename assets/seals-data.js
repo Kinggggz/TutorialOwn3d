@@ -1494,7 +1494,7 @@ window.SEALS_DATA = [
     "attr": "AT", "exchange": "N/D", "master": 200, "name": "BetelGammamon", "percent": false
   },
   {
-    "attr": "AT", "exchange": "N/D", "master": 200, "name": "Happy Christmas", "percent": false
+    "attr": "AT", "exchange": "N/D", "master": 200, "name": "Happy Christmas", "percent": false, "rankBonuses": [0, 20, 50, 100, 130, 160, 200]
   },
   {
     "attr": "AT", "exchange": "N/D", "master": 200, "name": "Blue Serpent", "percent": false

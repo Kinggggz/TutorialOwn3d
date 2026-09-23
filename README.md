@@ -2,13 +2,19 @@
 
 Site estático preparado para GitHub Pages, com a Calculadora Rank U, a Calculadora de Selos e o Guia de Progressão de Digimon Masters Online.
 
-## Bases da Calculadora de Selos
+## Base unificada da Calculadora de Selos
 
-- **LADMO / comunidade:** 249 selos, mantendo a compatibilidade com o Seal Codex usado como base inicial.
-- **DMO global:** 501 selos únicos. A duplicação de HerculesKabuterimon presente na fonte pesquisada foi removida, cinco nomes ausentes foram normalizados e o selo Demon Lord of Greed Barbamon foi incluído a partir da atualização oficial de 26/08/2026.
-- A base global possui custos de troca por Tickets confirmados para 309 selos nas notas oficiais de 2026.
-- Selos marcados como indisponíveis podem ser cadastrados e contam no bônus atual, mas não entram nas rotas automáticas de compra.
+- **LADMO + DMO global:** 503 selos únicos em uma única calculadora.
+- O cruzamento encontrou 195 correspondências diretas e 52 equivalências de tradução ou grafia. Esses registros foram acoplados sem duplicar o mesmo selo.
+- Os dois selos confirmados no LADMO que não estavam na base global são **Happy Christmas** e **[Despertado] Gallantmon**.
+- **Happy Christmas** utiliza sua progressão oficial especial de bônus: 20, 50, 100, 130, 160 e 200.
+- Os 249 registros da base LADMO foram preservados. Quando existe divergência regional, o atributo e o bônus do LADMO têm prioridade; a referência global complementa limites especiais e dados ausentes.
+- A única divergência de bônus encontrada foi **Sprout**: LADMO/DMO Wiki registra HT +100, enquanto a tabela global registra HT +200. A calculadora usa **HT +100** e identifica o registro como **Valor LADMO**.
+- A busca também reconhece os nomes globais equivalentes, mesmo quando a tela exibe o nome utilizado no LADMO.
+- O nome incorreto `13th Anniversary DE` dentro do atributo DS foi acoplado ao registro correto `13th Anniversary DS Seal`.
+- A base global original possuía uma duplicação de HerculesKabuterimon; ela permanece removida. O selo Demon Lord of Greed Barbamon continua incluído a partir da atualização oficial de 26/08/2026.
 - Custos de Tickets desconhecidos aparecem como `N/D`; a calculadora não inventa valores para completar esses dados.
+- Registros ainda não confirmados especificamente no LADMO recebem a indicação **Referência global**.
 
 ## Publicar no GitHub Pages
 
