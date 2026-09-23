@@ -355,7 +355,7 @@
   function updateSourceUI() {
     const seals = activeSeals();
     $('databaseCount').textContent = formatInt(seals.length);
-    $('databaseLabel').textContent = 'selos na base LADMO';
+    $('databaseLabel').textContent = 'selos ativos';
     $('databaseEyebrow').textContent = 'SEAL MASTER • LADMO';
   }
 
