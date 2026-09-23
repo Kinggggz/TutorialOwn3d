@@ -1489,6 +1489,113 @@ window.SEALS_DATA = [
     "master": 80,
     "name": "Upamon",
     "percent": false
+  },
+  {
+    "attr": "AT", "exchange": "N/D", "master": 200, "name": "BetelGammamon", "percent": false
+  },
+  {
+    "attr": "AT", "exchange": "N/D", "master": 200, "name": "Happy Christmas", "percent": false
+  },
+  {
+    "attr": "AT", "exchange": "N/D", "master": 200, "name": "Blue Serpent", "percent": false
+  },
+  {
+    "attr": "AT", "exchange": "N/D", "master": 300, "name": "12th Year Anniversary", "percent": false
+  },
+  {
+    "attr": "AT", "exchange": "N/D", "master": 300, "name": "13th Year Anniversary", "percent": false
+  },
+  {
+    "attr": "AT", "exchange": "N/D", "master": 300, "name": "Alphamon", "percent": false
+  },
+  {
+    "attr": "AT", "exchange": "N/D", "master": 300, "name": "Imperialdramon", "percent": false
+  },
+  {
+    "attr": "AT", "exchange": "N/D", "master": 300, "name": "Siriusmon", "percent": false
+  },
+  {
+    "attr": "AT", "exchange": "N/D", "master": 300, "name": "MetalGreymon", "percent": false
+  },
+  {
+    "attr": "CT", "exchange": "N/D", "master": 2, "name": "Last Seal of 2023", "percent": true
+  },
+  {
+    "attr": "CT", "exchange": "N/D", "master": 2.5, "name": "Phantomon", "percent": true
+  },
+  {
+    "attr": "CT", "exchange": "N/D", "master": 1, "name": "Garurumon X", "percent": true
+  },
+  {
+    "attr": "CT", "exchange": "N/D", "master": 1.5, "name": "Conversion", "percent": true
+  },
+  {
+    "attr": "CT", "exchange": "N/D", "master": 1.5, "name": "Hope", "percent": true
+  },
+  {
+    "attr": "HT", "exchange": "N/D", "master": 100, "name": "Exploration Seal", "percent": false
+  },
+  {
+    "attr": "HT", "exchange": "N/D", "master": 100, "name": "Brave Seal", "percent": false
+  },
+  {
+    "attr": "HT", "exchange": "N/D", "master": 100, "name": "Sprout", "percent": false
+  },
+  {
+    "attr": "HT", "exchange": "N/D", "master": 200, "name": "Tonosama Gekomon", "percent": false
+  },
+  {
+    "attr": "HT", "exchange": "N/D", "master": 100, "name": "Seal of Marksman", "percent": false
+  },
+  {
+    "attr": "HP", "exchange": "N/D", "master": 150, "name": "Seal of Heat", "percent": false
+  },
+  {
+    "attr": "HP", "exchange": "N/D", "master": 150, "name": "Sincerity", "percent": false
+  },
+  {
+    "attr": "HP", "exchange": "N/D", "master": 150, "name": "Grow Well", "percent": false
+  },
+  {
+    "attr": "HP", "exchange": "1 → 5", "master": 200, "name": "Guardromon", "percent": false
+  },
+  {
+    "attr": "HP", "exchange": "N/D", "master": 200, "name": "Kentarumon", "percent": false
+  },
+  {
+    "attr": "HP", "exchange": "N/D", "master": 200, "name": "ReptileDramon", "percent": false
+  },
+  {
+    "attr": "HP", "exchange": "N/D", "master": 150, "name": "Otamamon", "percent": false
+  },
+  {
+    "attr": "HP", "exchange": "N/D", "master": 150, "name": "Roachmon", "percent": false
+  },
+  {
+    "attr": "HP", "exchange": "N/D", "master": 150, "name": "Dokunemon", "percent": false
+  },
+  {
+    "attr": "DS", "exchange": "N/D", "master": 500, "name": "GrandisKuwagamon", "percent": false
+  },
+  {
+    "attr": "DS", "exchange": "N/D", "master": 300, "name": "13th Anniversary DE", "percent": false
+  },
+  {
+    "attr": "BL", "exchange": "N/D", "master": 1, "name": "Firm", "percent": true
+  },
+  {
+    "attr": "BL", "exchange": "N/D", "master": 1, "name": "Friendship", "percent": true
+  },
+  {
+    "attr": "BL", "exchange": "N/D", "master": 1, "name": "Seal of Spring", "percent": true
+  },
+  {
+    "attr": "EV", "exchange": "N/D", "master": 1, "name": "Seal of Coolness", "percent": true
+  },
+  {
+    "attr": "EV", "exchange": "N/D", "master": 1.5, "name": "Hagurumon", "percent": true
+  },
+  {
+    "attr": "EV", "exchange": "N/D", "master": 2, "name": "Allomon", "percent": true
   }
 ];
-
