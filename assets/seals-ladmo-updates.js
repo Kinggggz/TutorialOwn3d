@@ -105,6 +105,18 @@ window.SEALS_LADMO_UPDATES = [
     name: 'Selo AT — Férias Digitais',
     percent: false,
     sourceId: 'ladmo-2026-07-digital-vacation-at'
+  },
+  {
+    aliases: ['Vampiric Seal'],
+    attr: 'BL',
+    buyable: false,
+    exchange: 'N/D',
+    master: 1,
+    maxSeals: 3000,
+    name: 'Selo Vampírico',
+    percent: true,
+    rankBonuses: [0, 0.1, 0.2, 0.4, 0.6, 0.8, 1],
+    sourceId: 'ladmo-2025-04-vampiric'
   }
 ];
 

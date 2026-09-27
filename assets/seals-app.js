@@ -84,14 +84,38 @@
     'AT::12thyearanniversary': 'Selo de 12 anos KDMO',
     'AT::13thyearanniversary': 'Selo de 13 anos KDMO',
     'HT::sprout': 'Selo do Broto',
-    'HP::guardromon': 'Gardromon',
-    'HP::kentarumon': 'Centalmon'
+    'HP::guardromon': 'Guardromon',
+    'HP::kentarumon': 'Kentaurosmon',
+    'EV::hagurumon': 'Cogmon'
   };
 
   const GLOBAL_LADMO_OVERRIDES = {
+    // Lista oficial adicionada ao NPC Takato em 26/03/2026. Os valores de
+    // troca abaixo prevalecem sobre a importação global quando divergirem.
+    14: {ticketVerified: true},
+    15: {exchange: '10 → 10', ticketVerified: true},
+    16: {name: 'VenomMyotismon', exchange: '100 → 10', ticketVerified: true},
     21: {name: 'Selo de 12 anos KDMO'},
     27: {name: 'Selo de 13 anos KDMO'},
     36: {name: 'Selo de 14 anos KDMO'},
+    137: {ticketVerified: true, exchange: '1 → 1'},
+    138: {name: 'DarkTyrannomon', ticketVerified: true, exchange: '1 → 10'},
+    143: {name: 'WereGarurumon (Black)', ticketVerified: true, exchange: '10 → 10'},
+    196: {name: 'Guardromon', ticketVerified: true},
+    197: {name: 'Kentaurosmon', ticketVerified: true},
+    213: {ticketVerified: true},
+    242: {ticketVerified: true, exchange: '1 → 5'},
+    247: {name: 'Pukumon', aliases: ['Peckmon'], exchange: '1 → 10', ticketVerified: true},
+    249: {ticketVerified: true, exchange: '1 → 10'},
+    253: {ticketVerified: true},
+    284: {ticketVerified: true, exchange: '25 → 5'},
+    286: {name: 'Baohumon', aliases: ['BaoHackmon'], exchange: '1 → 1', ticketVerified: true},
+    287: {name: 'Flotomon', aliases: ['Salamon', 'Plotmon'], exchange: '1 → 1', ticketVerified: true},
+    289: {name: 'Punchessmon W', ticketVerified: true},
+    349: {ticketVerified: true, exchange: '100 → 5'},
+    350: {name: 'Cogmon', aliases: ['Hagurumon'], exchange: '1 → 1', ticketVerified: true},
+    352: {ticketVerified: true, exchange: '1 → 1'},
+    381: {ticketVerified: true},
     372: {name: 'Selo do 15º Aniversário — HP'},
     373: {name: 'Selo do 15º Aniversário — DS', aliases: ['13th Anniversary DS']},
     374: {name: 'Selo do 15º Aniversário — AT'},
@@ -101,6 +125,14 @@
     388: {name: 'Selo do 15º Aniversário — BL'},
     389: {name: 'Selo do 15º Aniversário — EV'},
     392: {name: 'Selo do Broto', master: 200},
+    418: {name: 'Wormmon', aliases: ['Numemon', 'Nunemon'], exchange: '1 → 5', ticketVerified: true},
+    419: {name: '[Despertado] Ordinemon', ticketVerified: true},
+    423: {name: '[Despertado] ZeedMillenniummon', ticketVerified: true},
+    429: {name: '[Despertado] Gallantmon Modo Carmesim', ticketVerified: true},
+    430: {ticketVerified: true, exchange: '1 → 1'},
+    433: {ticketVerified: true},
+    434: {name: '[Despertado] Sakuyamon', ticketVerified: true},
+    435: {ticketVerified: true},
     440: {name: 'Selo de Tamer: Patamon – T.K.', rankBonuses: [0, 40, 80, 120, 200, 300, 400]},
     441: {name: 'Selo de Tamer: Gatomon – Hikari', rankBonuses: [0, 0.5, 1, 1.5, 2.5, 4, 5]},
     442: {name: 'Selo de Tamer: Princesa Mimi', rankBonuses: [0, 60, 120, 180, 300, 500, 600]},
@@ -112,8 +144,46 @@
     492: {name: 'Selo do 16º Aniversário — DE'},
     493: {name: 'Selo do 16º Aniversário — BL'},
     494: {name: 'Selo do 16º Aniversário — EV'},
-    495: {name: 'Que Delícia! Selo de Bolo do 16º Aniversário'}
+    495: {name: 'Que Delícia! Selo de Bolo do 16º Aniversário'},
+    504: {ticketVerified: true, exchange: '1 → 5'},
+    505: {ticketVerified: true, exchange: '1 → 10'},
+    506: {name: 'Grotemon', ticketVerified: true, exchange: '1 → 5'},
+    507: {ticketVerified: true},
+    561: {name: 'Dokugumon', aliases: ['Spiderrimon', 'SpiderMon']}
   };
+
+  // Usa os nomes exibidos no LADMO sem criar um segundo registro para o
+  // mesmo selo. Os nomes globais originais permanecem disponíveis na busca.
+  const LADMO_ATTRIBUTE_SEQUENCE = ['HP', 'DS', 'AT', 'CT', 'HT', 'DE', 'BL', 'EV'];
+
+  function setRegionalName(sourceId, name, aliases = []) {
+    const current = GLOBAL_LADMO_OVERRIDES[sourceId] || {};
+    GLOBAL_LADMO_OVERRIDES[sourceId] = {
+      ...current,
+      name,
+      aliases: [...(current.aliases || []), ...aliases]
+    };
+  }
+
+  [
+    [393, 'Selo Dungeon Masters'],
+    [401, 'Selo do Passe de Temporada'],
+    [410, 'Selo Dungeon Masters2'],
+    [443, 'Selo Dungeon Masters3']
+  ].forEach(([firstId, label]) => {
+    LADMO_ATTRIBUTE_SEQUENCE.forEach((attr, index) => setRegionalName(firstId + index, `${label} — ${attr}`));
+  });
+
+  ['A', 'B', 'C'].forEach((tier, tierIndex) => {
+    LADMO_ATTRIBUTE_SEQUENCE.forEach((attr, attrIndex) => {
+      setRegionalName(526 + tierIndex * 8 + attrIndex, `Selo de Exploração — ${attr} ${tier}`);
+    });
+  });
+
+  setRegionalName(451, 'Selo de Inverno — AT', ['Selo de Verão — AT']);
+  setRegionalName(452, 'Selo de Inverno — HT', ['Selo de Verão — HT']);
+  setRegionalName(453, 'Selo de Inverno — CT', ['Selo de Verão — CT']);
+  setRegionalName('gameking-4191-barbamon', 'Selo de Barbamon, Rei Demônio da Ganância', ['Demon Lord of Greed Barbamon']);
 
   function dataKey(seal) {
     return `${seal.attr}::${normalizeSearch(seal.name)}`;
@@ -127,6 +197,7 @@
       return {
         ...updated,
         aliases: [seal.name, ...overrideAliases].filter((name, index, names) => normalizeSearch(name) !== normalizeSearch(updated.name) && names.indexOf(name) === index),
+        ticketVerified: override.ticketVerified === true,
         source: 'ladmo-catalog'
       };
     });
@@ -157,8 +228,8 @@
           thresholds: ladmoSeal.thresholds || globalSeal.thresholds,
           rankBonuses: ladmoSeal.rankBonuses || globalSeal.rankBonuses,
           exchange: ladmoSeal.exchange !== 'N/D' ? ladmoSeal.exchange : globalSeal.exchange,
-          buyable: ladmoSeal.exchange !== 'N/D' ? true : globalSeal.buyable,
-          aliases: [globalName, ladmoSeal.name, ...(globalSeal.aliases || [])].filter((name, index, names) => normalizeSearch(name) !== normalizeSearch(displayName) && names.indexOf(name) === index),
+          ticketVerified: (Boolean(ladmoSeal.exchange) && ladmoSeal.exchange !== 'N/D') || globalSeal.ticketVerified === true,
+          aliases: [globalName, ladmoSeal.name, ...(ladmoSeal.aliases || []), ...(globalSeal.aliases || [])].filter((name, index, names) => normalizeSearch(name) !== normalizeSearch(displayName) && names.indexOf(name) === index),
           regionalDifference: globalSeal.master !== ladmoSeal.master,
           source: 'ladmo'
         };
@@ -171,8 +242,8 @@
 
       const ladmoOnly = {
         ...ladmoSeal,
-        aliases: [],
-        buyable: ladmoSeal.exchange !== 'N/D',
+        aliases: Array.isArray(ladmoSeal.aliases) ? ladmoSeal.aliases : [],
+        ticketVerified: ladmoSeal.ticketVerified === true || (Boolean(ladmoSeal.exchange) && ladmoSeal.exchange !== 'N/D'),
         maxSeals: ladmoSeal.maxSeals || 3000,
         source: 'ladmo',
         sourceId: ladmoSeal.sourceId || `ladmo-${normalizeSearch(ladmoSeal.name)}`
@@ -253,7 +324,7 @@
   function saveProgress() {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
-      $('savedStatus').textContent = 'Progresso salvo neste navegador';
+      $('savedStatus').textContent = 'Progresso salvo automaticamente';
     } catch {
       $('savedStatus').textContent = 'Não foi possível salvar automaticamente';
     }
@@ -386,12 +457,15 @@
 
   function renderSeals() {
     const query = normalizeSearch($('search').value.trim());
+    const attributeFilter = $('sealAttributeFilter').value;
     const statusFilter = $('statusFilter').value;
     const allSeals = activeSeals();
-    const filtered = selectedSeals().filter(seal => {
+    const filtered = allSeals.filter(seal => {
       const quantity = progressValue(seal);
       const searchableNames = [seal.name, ...(seal.aliases || [])].map(normalizeSearch).join(' ');
-      return searchableNames.includes(query) && (statusFilter === 'all' || sealStatus(seal, quantity) === statusFilter);
+      return (attributeFilter === 'all' || seal.attr === attributeFilter)
+        && searchableNames.includes(query)
+        && (statusFilter === 'all' || sealStatus(seal, quantity) === statusFilter);
     });
 
     $('sealList').innerHTML = filtered.map(seal => {
@@ -400,8 +474,8 @@
       const status = sealStatus(seal, quantity);
       const colorTier = sealColorTier(seal, quantity);
       const index = allSeals.indexOf(seal);
-      const routeAvailability = seal.buyable === false ? '<span class="route-availability" title="Este selo pode ser cadastrado, mas não será recomendado automaticamente.">Fora da rota automática</span>' : '';
-      return `<article class="seal-row status-${status} tier-${colorTier.key}${seal.buyable === false ? ' route-unavailable' : ''}"><div class="seal-info"><div class="seal-name"><span class="attribute-tag">${seal.attr}</span><span>${escapeHtml(seal.name)}</span><span class="status-tag tier-${colorTier.key}" title="${colorTier.label}">${colorTier.label}</span></div><div class="seal-meta"><span>Atual: <strong>+${formatValue(bonusAt(seal, level), seal.percent)}</strong></span><span>Mestre: <strong>+${formatValue(seal.master, seal.percent)}</strong></span><span>${escapeHtml(nextText(seal, quantity))}</span>${routeAvailability}</div></div><div class="quantity-wrap"><label for="seal-${activeDatasetKey()}-${index}">Quantidade aberta</label><input class="seal-quantity" id="seal-${activeDatasetKey()}-${index}" data-index="${index}" type="number" min="0" max="${maxSealsFor(seal)}" step="1" inputmode="numeric" value="${quantity}"></div></article>`;
+      const ticketStatus = seal.ticketVerified === true ? '' : '<span class="ticket-availability" title="Não foi encontrada uma tabela pública do LADMO que confirme o custo deste selo em Bilhetes de Troca.">Troca por Tickets não confirmada</span>';
+      return `<article class="seal-row status-${status} tier-${colorTier.key}${seal.ticketVerified === true ? '' : ' ticket-unverified'}"><div class="seal-info"><div class="seal-name"><span class="attribute-tag">${seal.attr}</span><span>${escapeHtml(seal.name)}</span><span class="status-tag tier-${colorTier.key}" title="${colorTier.label}">${colorTier.label}</span></div><div class="seal-meta"><span>Atual: <strong>+${formatValue(bonusAt(seal, level), seal.percent)}</strong></span><span>Mestre: <strong>+${formatValue(seal.master, seal.percent)}</strong></span><span>${escapeHtml(nextText(seal, quantity))}</span>${ticketStatus}</div></div><div class="quantity-wrap"><label for="seal-${activeDatasetKey()}-${index}">Quantidade aberta</label><input class="seal-quantity" id="seal-${activeDatasetKey()}-${index}" data-index="${index}" type="number" min="0" max="${maxSealsFor(seal)}" step="1" inputmode="numeric" value="${quantity}"></div></article>`;
     }).join('');
 
     $('noResults').hidden = filtered.length > 0;
@@ -431,7 +505,7 @@
     const quantity = progressValue(seal);
     const from = levelIndex(seal, quantity);
     const currentBonus = bonusAt(seal, from);
-    const exchange = parseExchange(seal.exchange);
+    const exchange = seal.ticketVerified === true ? parseExchange(seal.exchange) : null;
     const options = [];
 
     for (let to = from + 1; to < thresholds.length; to++) {
@@ -476,7 +550,7 @@
 
   function solveRoute(missing, strategy) {
     const groups = selectedSeals()
-      .filter(seal => seal.buyable !== false)
+      .filter(seal => seal.ticketVerified === true)
       .map(upgradeOptions)
       .filter(options => options.length > 0);
     const allOptions = groups.flat();
@@ -553,7 +627,7 @@
     $('routeResults').hidden = false;
     if (!steps.length) {
       $('routeTotal').textContent = reached ? 'Meta já alcançada' : 'Sem rota disponível';
-      $('routeResults').innerHTML = `<div class="empty-state">${reached ? 'Seu progresso atual já atende à meta escolhida.' : 'A meta não pode ser alcançada com os selos disponíveis para a rota nesta base.'}</div>`;
+      $('routeResults').innerHTML = `<div class="empty-state">${reached ? 'Seu progresso atual já atende à meta escolhida.' : 'Não há uma rota disponível com os custos confirmados.'}</div>`;
       return;
     }
 
@@ -569,8 +643,7 @@
   }
 
   $('attribute').addEventListener('change', () => {
-    $('search').value = '';
-    renderSeals();
+    updateSummary();
     hideRoute();
   });
   $('target').addEventListener('input', () => {
@@ -579,6 +652,7 @@
   });
   $('strategy').addEventListener('change', hideRoute);
   $('search').addEventListener('input', renderSeals);
+  $('sealAttributeFilter').addEventListener('change', renderSeals);
   $('statusFilter').addEventListener('change', renderSeals);
   $('calculate').addEventListener('click', () => {
     try {

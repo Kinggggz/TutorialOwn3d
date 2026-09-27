@@ -3,3 +3,4 @@
 .crest img{width:180px;height:180px}.resource-card:focus-visible,.button:focus-visible{outline:3px solid #8fc4ff;outline-offset:3px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ring-two{animation:none}.button,.resource-card{transition:none}}
 .guide-pages{display:grid;gap:18px}.guide-pages img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:16px;background:#111827;box-shadow:0 16px 42px rgba(0,0,0,.25)}
 .seal-card:before{background:rgba(85,214,255,.08)}.seal-card .card-icon{color:#79e1ff;background:rgba(85,214,255,.1);border-color:rgba(85,214,255,.26)}.seal-card .card-link{color:#79e1ff}
+.dunit-card:before{background:rgba(139,92,246,.1)}.dunit-card .card-icon{color:#d2c3ff;background:rgba(139,92,246,.12);border-color:rgba(139,92,246,.34);font-size:.82rem}.dunit-card .card-link{color:#c7b6ff}
