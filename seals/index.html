@@ -1,64 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Calcule quantos selos são necessários para atingir sua meta no Seal Master do LADMO.">
-  <meta name="theme-color" content="#080d18">
-  <title>Calculadora de Selos | Ow3neD</title>
-  <link rel="icon" href="../assets/logo.png" type="image/png">
-  <link rel="stylesheet" href="../assets/site.css?v=5">
-  <link rel="stylesheet" href="../assets/seals.css?v=13">
-  <link rel="stylesheet" href="../assets/seals-overrides.css?v=17">
-  <link rel="stylesheet" href="../assets/ow3ned-ui-v24.css">
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Calcule quantos selos são necessários para atingir sua meta no Seal Master do LADMO." name="description"/>
+<meta content="#080d18" name="theme-color"/>
+<title>Calculadora de Selos | Ow3neD</title>
+<link href="../assets/logo.png" rel="icon" type="image/png"/>
+<link href="../assets/site.css?v=5" rel="stylesheet"/>
+<link href="../assets/seals.css?v=13" rel="stylesheet"/>
+<link href="../assets/seals-overrides.css?v=17" rel="stylesheet"/>
+<link href="../assets/ow3ned-ui.css?v=33" rel="stylesheet"/>
+<meta content="Calculadora de Selos | Ow3neD" property="og:title"/><meta content="Calcule quantos selos são necessários para atingir sua meta no Seal Master do LADMO." property="og:description"/><meta content="website" property="og:type"/></head>
 <body data-page="seals">
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <header class="site-header">
-    <a class="brand" href="../" aria-label="Ow3neD - página inicial"><img src="../assets/logo.png" alt="" width="52" height="52"><span>Ow3neD</span></a>
-    <nav aria-label="Navegação principal">
-      <a href="../">Início</a><a href="../calculator/">Calculadora Rank U</a><a class="active" href="./" aria-current="page">Calculadora de Selos</a><a href="../dunit/">Calculadora D-Unit</a><a href="../guide/">Guia de Progressão</a>
-    </nav>
-  </header>
-
-  <main id="conteudo" class="seal-main">
-    <section class="seal-hero">
-      <div><p class="eyebrow" id="databaseEyebrow">SEAL MASTER • LADMO</p><h1>Calculadora de Selos</h1><p>Defina sua meta.</p></div>
-      <div class="seal-count"><strong id="databaseCount">514</strong><span id="databaseLabel">selos ativos</span></div>
-    </section>
-
-    <section class="planner-panel" aria-labelledby="planner-title">
-      <div class="planner-title"><div><h2 id="planner-title">Meta de atributo</h2><p>Selos ativos já contam para sua meta.</p></div><button class="seal-button ghost" id="toggleCodex" type="button" aria-expanded="false" aria-controls="codexPanel">Cadastrar meus selos</button></div>
-      <div class="planner-fields">
-        <label>Atributo<select id="attribute"><option>AT</option><option>HP</option><option>DS</option><option>DE</option><option>HT</option><option>CT</option><option>BL</option><option>EV</option></select></label>
-        <label>Meta desejada<input id="target" type="number" min="0" step="1" value="1000" inputmode="decimal"><small id="targetUnit">pontos de AT</small></label>
-        <label>Estratégia<select id="strategy"><option value="tickets">Menor custo em Tickets</option><option value="openers">Menos Seal Openers</option><option value="balanced">Melhor custo-benefício</option></select></label>
-        <button class="seal-button primary" id="calculate" type="button">Calcular rota</button>
-      </div>
-      <div class="status-row" aria-live="polite"><span>Atual: <strong id="currentValue">0</strong></span><span>Faltam: <strong id="missingValue">1.000</strong></span><span id="savedStatus">Progresso salvo automaticamente</span></div>
-      <div class="form-error" id="formError" role="alert"></div>
-    </section>
-
-    <section class="route-panel" id="routePanel" aria-labelledby="route-title" hidden>
-      <div class="route-heading"><div><p class="eyebrow">RESULTADO</p><h2 id="route-title">Rota sugerida</h2></div><div class="route-total" id="routeTotal">Defina a meta</div></div>
-      <div id="routeEmpty" class="empty-state" hidden></div>
-      <div id="routeResults" class="route-results" hidden></div>
-    </section>
-
-    <section class="codex-panel" id="codexPanel" aria-labelledby="codex-title" hidden>
-      <div class="codex-heading"><div><p class="eyebrow">CADASTRO</p><h2 id="codex-title">Seus selos</h2></div><div class="codex-actions"><label class="attribute-filter"><span class="sr-only">Filtrar por atributo</span><select id="sealAttributeFilter"><option value="all">Todos os atributos</option><option value="AT">AT</option><option value="HP">HP</option><option value="DS">DS</option><option value="DE">DE</option><option value="HT">HT</option><option value="CT">CT</option><option value="BL">BL</option><option value="EV">EV</option></select></label><label class="status-filter"><span class="sr-only">Filtrar por situação</span><select id="statusFilter"><option value="all">Todas as situações</option><option value="inactive">Não ativados</option><option value="progress">Em evolução</option><option value="master">Mestre</option></select></label><label class="search-field"><span class="sr-only">Buscar selo</span><input id="search" type="search" placeholder="Buscar selo..."></label><button class="seal-button ghost" id="clearProgress" type="button">Limpar progresso</button></div></div>
-      <p class="codex-help">Use os filtros ou a busca para encontrar seus selos.</p>
-      <div class="seal-list" id="sealList"></div>
-      <div class="empty-state" id="noResults" hidden>Nenhum selo encontrado.</div>
-    </section>
-
-  </main>
-
-  <footer><div class="footer-brand"><img src="../assets/logo.png" alt="" width="34" height="34"><strong>Ow3neD</strong></div><p>Digimon Masters Online • Ow3neD</p></footer>
-  <script src="../assets/seals-data.js?v=13"></script>
-  <script src="../assets/seals-global-data.js?v=13"></script>
-  <script src="../assets/seals-ladmo-updates.js?v=17"></script>
-  <script src="../assets/seals-app.js?v=17"></script>
-  <script src="../assets/ow3ned-nav-v24.js"></script>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header">
+<a aria-label="Ow3neD - página inicial" class="brand" href="../"><img alt="" height="52" src="../assets/logo.png" width="52"/><span>Ow3neD</span></a>
+<nav aria-label="Navegação principal">
+<a href="../">Início</a><a href="../calculator/">Calculadora Rank U</a><a aria-current="page" class="active" href="./">Calculadora de Selos</a><a href="../dunit/">Calculadora D-Unit</a><a href="../guide/">Guia de Progressão</a>
+</nav>
+</header>
+<main class="seal-main" id="conteudo">
+<section class="seal-hero">
+<div><p class="eyebrow" id="databaseEyebrow">SEAL MASTER • LADMO</p><h1>Calculadora de Selos</h1><p>Defina sua meta.</p><p class="codex-help"><strong>9 selos confirmados aguardam valores oficiais</strong> e, por segurança, ainda não entram nos cálculos.</p></div>
+<div class="seal-count"><strong id="databaseCount">514</strong><span id="databaseLabel">selos ativos</span></div>
+</section>
+<section aria-labelledby="planner-title" class="planner-panel">
+<div class="planner-title"><div><h2 id="planner-title">Meta de atributo</h2><p>Selos ativos já contam para sua meta.</p></div><button aria-controls="codexPanel" aria-expanded="false" class="seal-button ghost" id="toggleCodex" type="button">Cadastrar meus selos</button></div>
+<div class="planner-fields">
+<label>Atributo<select id="attribute"><option>AT</option><option>HP</option><option>DS</option><option>DE</option><option>HT</option><option>CT</option><option>BL</option><option>EV</option></select></label>
+<label>Meta desejada<input id="target" inputmode="decimal" min="0" step="1" type="number" value="1000"/><small id="targetUnit">pontos de AT</small></label>
+<label>Estratégia<select id="strategy"><option value="tickets">Menor custo em Tickets</option><option value="openers">Menos Seal Openers</option><option value="balanced">Melhor custo-benefício</option></select></label>
+<button class="seal-button primary" id="calculate" type="button">Calcular rota</button>
+</div>
+<div aria-live="polite" class="status-row"><span>Atual: <strong id="currentValue">0</strong></span><span>Faltam: <strong id="missingValue">1.000</strong></span><span id="savedStatus">Progresso salvo automaticamente</span></div>
+<div class="form-error" id="formError" role="alert"></div>
+</section>
+<section aria-labelledby="route-title" class="route-panel" hidden="" id="routePanel">
+<div class="route-heading"><div><p class="eyebrow">RESULTADO</p><h2 id="route-title">Rota sugerida</h2></div><div class="route-total" id="routeTotal">Defina a meta</div></div>
+<div class="route-results" hidden="" id="routeResults"></div>
+</section>
+<section aria-labelledby="codex-title" class="codex-panel" hidden="" id="codexPanel">
+<div class="codex-heading"><div><p class="eyebrow">CADASTRO</p><h2 id="codex-title">Seus selos</h2></div><div class="codex-actions"><label class="attribute-filter"><span class="sr-only">Filtrar por atributo</span><select id="sealAttributeFilter"><option value="all">Todos os atributos</option><option value="AT">AT</option><option value="HP">HP</option><option value="DS">DS</option><option value="DE">DE</option><option value="HT">HT</option><option value="CT">CT</option><option value="BL">BL</option><option value="EV">EV</option></select></label><label class="status-filter"><span class="sr-only">Filtrar por situação</span><select id="statusFilter"><option value="all">Todas as situações</option><option value="inactive">Não ativados</option><option value="progress">Em evolução</option><option value="master">Mestre</option></select></label><label class="search-field"><span class="sr-only">Buscar selo</span><input id="search" placeholder="Buscar selo..." type="search"/></label><button class="seal-button ghost" id="clearProgress" type="button">Limpar progresso</button></div></div>
+<p class="codex-help">Use os filtros ou a busca para encontrar seus selos.</p>
+<div class="seal-list" id="sealList"></div>
+<div class="empty-state" hidden="" id="noResults">Nenhum selo encontrado.</div>
+</section>
+</main>
+<footer><div class="footer-brand"><img alt="" height="34" src="../assets/logo.png" width="34"/><strong>Ow3neD</strong></div><p>Digimon Masters Online • Ow3neD</p></footer>
+<script src="../assets/seals-data.js?v=13"></script>
+<script src="../assets/seals-global-data.js?v=13"></script>
+<script src="../assets/seals-ladmo-updates.js?v=17"></script>
+<script src="../assets/seals-app.js?v=39"></script>
+<script src="../assets/ow3ned-nav.js?v=33"></script>
 </body>
 </html>

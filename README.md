@@ -5,13 +5,16 @@ Site estático preparado para GitHub Pages, com a Calculadora Rank U, a Calculad
 ## Calculadora D-Unit LADMO
 
 - Disponível em `dunit/` e integrada à navegação global do site.
-- Base consolidada com 144 grupos únicos após deduplicação: 26 provenientes de notas oficiais, 32 da base secundária e 86 exclusivos transcritos do vídeo LADMO.
-- A base é parcial: o LADMO exige 260 grupos concluídos para Digimon Master. Portanto, ainda faltam ao menos 116 grupos no cadastro.
-- 83 grupos possuem composição completa de Digimons; 61 ainda possuem composição parcial e são identificados na interface.
-- Permite registrar até quatro condições por grupo, acompanhar o rank, filtrar por dificuldade/status e calcular rotas para rank ou atributos dentro da base cadastrada.
-- Progresso salvo localmente no navegador, com importação e exportação em JSON.
-- Incluído o grupo oficial **Eclipse solar** (Apollomon Whispered + Apollomon), adicionado em 17/09/2026: HP +500, AT +100, HT +100 e EXP +50%.
-- Corrigido o bônus do grupo **Palmon [Woodmon]** no bloco transcrito do vídeo (EV +70 na 2ª condição), permitindo a deduplicação correta com a base secundária.
+- Base consolidada com **278 grupos únicos**, após remover uma duplicação exata entre `codex-133` e `codex-134`; progresso antigo de qualquer uma das duas entradas é migrado automaticamente.
+- **96 composições nominais identificadas** e **182 grupos** com requisitos/recompensas confirmados, mas nomes individuais ainda em validação.
+- A base contempla a meta de 260 grupos concluídos necessária ao rank Digimon Master.
+- A antiga pontuação heurística da rota foi substituída por um **otimizador exato por programação dinâmica 0/1**.
+- Prioridades disponíveis: melhor custo-benefício, menos condições, mais acessível e menos grupos.
+- A lista carrega progressivamente (60 grupos no desktop e 30 no celular) para reduzir custo de renderização.
+- O progresso usa armazenamento compacto v3, com migração automática do formato v2 e importação/exportação JSON.
+- Importações de grupos manuais passam por validação rígida de esquema antes de entrar no site.
+- O grupo oficial **Eclipse solar** permanece incluído com Apollomon Whispered + Apollomon e HP +500 / AT +100 / HT +100 / EXP +50%.
+- O D-Unit foi separado em `dunit-data.js`, `dunit-optimizer.js`, `dunit-app.js` e `dunit.css`, eliminando as antigas sobrescritas sucessivas de funções.
 
 ## Base LADMO da Calculadora de Selos
 
@@ -25,7 +28,8 @@ Site estático preparado para GitHub Pages, com a Calculadora Rank U, a Calculad
 - Os bônus intermediários oficiais de Patamon–T.K., Gatomon–Hikari e Princesa Mimi foram cadastrados, evitando que a calculadora aplicasse uma progressão genérica incorreta.
 - **Happy Christmas** mantém sua progressão especial: 20, 50, 100, 130, 160 e 200.
 - A duplicação de HerculesKabuterimon permanece removida. **Selo de Barbamon, Rei Demônio da Ganância** está incluído com limite de 100 e progressão própria.
-- A revisão mais recente foi feita em **27/09/2026**. A atualização oficial de **22/09/2026** foi revisada e não acrescentou novos selos.
+- A revisão mais recente foi feita em **28/09/2026**. A atualização oficial de **22/09/2026** foi revisada e não acrescentou novos selos.
+- O nome **Sharmamon** foi corrigido conforme a base de referência atualizada; a grafia antiga `Shamamon` continua funcionando na busca.
 - A tabela oficial do NPC Takato publicada em **26/03/2026** foi aplicada. Foram corrigidos nomes e custos divergentes, incluindo Myotismon, VenomMyotismon, Vritramon, Chakmon, Grotemon, Diarbbitmon, HerculesKabuterimon, Yukidarumon, Angemon, Marsmon, Reppamon, Gabumon, DarkTyrannomon e WereGarurumon (Black).
 - Os nomes de **Dungeon Masters**, **Passe de Temporada**, **Dungeon Masters2**, **Dungeon Masters3**, **Exploração**, **Inverno** e **Dokugumon** foram padronizados para o LADMO; os nomes globais continuam funcionando como aliases de busca.
 - Nove itens cuja existência está confirmada — Virada da Sorte HT e os oito selos do 4º Aniversário LADMO — permanecem fora dos cálculos porque as notas públicas consultadas não informam os bônus por rank. Eles estão listados em `assets/seals-ladmo-updates.js` para inclusão assim que os valores forem confirmados.

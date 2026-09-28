@@ -15,8 +15,8 @@ Esta versão mantém a identidade visual do v23 e aplica uma revisão completa d
 
 ## Arquivos de interface
 
-- `assets/ow3ned-ui-v24.css`
-- `assets/ow3ned-nav-v24.js`
+- `assets/ow3ned-ui.css`
+- `assets/ow3ned-nav.js`
 
 A revisão altera textos e apresentação, sem reescrever as regras de cálculo.
 

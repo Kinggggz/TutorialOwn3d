@@ -1,5 +1,7 @@
 # Auditoria do vídeo D-Unit — v27
 
+> Documento histórico. A consolidação atual está em `dunit/AUDITORIA.md` e substitui as contagens desta revisão.
+
 Data da revisão: 27/09/2026
 Fonte principal: vídeo LADMO fornecido pelo proprietário do projeto (14:09, 1280×720).
 
@@ -29,3 +31,8 @@ Fonte principal: vídeo LADMO fornecido pelo proprietário do projeto (14:09, 12
 ## Critério de segurança dos dados
 
 Quando a gravação não permitiu confirmar com segurança os quatro bônus, o estado não foi adicionado nesta revisão. Isso evita transformar ruído de leitura/OCR em dado de gameplay.
+
+## Correções posteriores
+
+- `Bênção da Ilha dos Arquivos` foi removido como título de grupo: a inspeção quadro a quadro mostrou que esse texto era uma sobreposição enquanto **Renamon** estava selecionado.
+- `Híbrido HH` foi corrigido para **Híbrido H**, conforme o título visível na lista do jogo.

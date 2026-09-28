@@ -1,45 +1,65 @@
-# Auditoria da Calculadora D-Unit LADMO
+# Auditoria da Calculadora D-Unit LADMO — v33
 
-Revisão concluída em 27/09/2026.
+Revisão concluída em 28/09/2026.
 
-## Cobertura atual
+## Base consolidada
 
-- 144 grupos únicos cadastrados.
-- 83 grupos com composição completa de Digimons.
-- 61 grupos com composição parcial.
-- 26 grupos provenientes de notas oficiais, 32 da base secundária e 87 da gravação do LADMO.
-- O rank Digimon Master exige 260 grupos concluídos. Portanto, ainda faltam ao menos 116 grupos no cadastro.
+- 278 grupos únicos cadastrados após deduplicação.
+- 96 composições nominais identificadas.
+- 182 grupos mantêm a quantidade de membros e os requisitos/recompensas, mas ainda não exibem nomes individuais sem confirmação.
+- Todos os grupos possuem quatro recompensas e quatro etapas cadastradas; **Eclipse solar** mantém as quatro etapas como requisito não publicado porque a nota oficial não informa esses requisitos.
+- A entrada `codex-134` foi removida por ser duplicata exata de `codex-133` em nome, quantidade, quatro requisitos e quatro recompensas. O ID antigo permanece em `legacyIds`, de modo que progresso salvo em qualquer uma das duas entradas migra para `codex-133` usando o maior estágio marcado.
 
-Essa diferença significa que a calculadora recomenda rotas somente dentro da base cadastrada. Ela não deve ser apresentada como catálogo integral do LADMO enquanto as composições e recompensas restantes não forem transcritas e confirmadas.
+## Otimizador de rota
 
-## Validações executadas
+A antiga ordenação heurística foi substituída por programação dinâmica 0/1 exata.
 
-- IDs duplicados: nenhum.
-- Registros exatamente duplicados: nenhum.
-- Recompensas sem atributo, valor ou rótulo: nenhuma.
-- Valores de SCD acima do intervalo esperado: nenhum.
-- Referências locais quebradas nas páginas HTML: nenhuma.
-- Sintaxe de `video-groups.js` e dos scripts embutidos: válida.
-- Nomes iguais com composições diferentes foram preservados, incluindo `Palmon [Woodmon]`, `PicoDevimon [Soulmon]` e `Shoutmon`.
+- Ranking: cada grupo completo contribui 1 para o próximo rank.
+- Status: cada grupo contribui apenas os bônus ainda não obtidos do status selecionado.
+- `Menos condições`: minimiza exatamente a soma de condições restantes e usa dificuldade como desempate.
+- `Mais acessível`: minimiza exatamente o custo de dificuldade e usa condições como desempate.
+- `Menos grupos`: minimiza exatamente a quantidade de grupos necessária para atingir o valor escolhido.
+- `Melhor custo-benefício`: minimiza um índice explícito de trabalho (condições × 3 + dificuldade × 2), com desempates determinísticos.
+- Composições já identificadas são preferidas apenas quando as métricas principais empatam; grupos sem nomes confirmados não são descartados.
+- O otimizador foi confrontado com busca exaustiva em cenários aleatórios menores e retornou a mesma solução ótima em todos os testes executados.
 
-## Correções principais
+## Engenharia e desempenho
 
-- Contagem pública corrigida de 153 para 144 grupos únicos.
-- O contador de rank passou a usar todos os grupos concluídos da base, sem misturar o conceito de fonte confirmada.
-- A interface identifica a quantidade de composições completas e parciais.
-- A rota prioriza grupos cuja composição de Digimons já está conhecida.
-- `Cooldown` foi normalizado para `SCD`.
-- Foram adicionados os objetivos `DS` e `SCD de Terra`.
-- Nomes, composições e recompensas divergentes encontrados na gravação e nas notas oficiais foram corrigidos.
+- O D-Unit deixou de depender de várias sobrescritas sucessivas de `render`, `renderGroups` e `score`.
+- Estrutura atual:
+  - `dunit-data.js` — base consolidada.
+  - `dunit-optimizer.js` — otimizador puro e testável.
+  - `dunit-app.js` — interface, armazenamento, importação/exportação e renderização.
+  - `dunit.css` — estilos da ferramenta.
+- A lista renderiza 60 grupos por vez no desktop e 30 no celular, com carregamento progressivo.
+- Rotas com mais de 12 grupos ficam visualmente recolhidas em “Ver rota completa”.
+- O estado local passou a ser salvo em formato compacto (`owned-dunit-ladmo-v3`), mas a migração do formato v2 continua automática.
 
-## Pendências comprovadas pela gravação
+## Segurança e validação
 
-A gravação mostra grupos ainda ausentes da base, entre eles entradas de `MailBirdramon`, `Greymon (C)`, `Dorumon [DexDorugamon]`, `Gotsumon`, `Deputymon`, `Starmon`, `DemiMeramon`, `Kiwimon`, `Dobermon`, `Gizumon`, `PawnChessmonWhite`, `PawnChessmonBlack` e outros.
+- Importações JSON nunca substituem a base oficial; importam somente progresso e grupos manuais.
+- Grupos manuais importados são validados por esquema: nome, IDs, quantidade de Digimons, quatro bônus, tipos de status, valores inteiros, dificuldade e limites de tamanho.
+- IDs manuais duplicados são regenerados.
+- URLs de grupos importados não são aceitas; somente fontes incorporadas na base consolidada geram links.
+- Conteúdo digitado/importado continua escapado antes de ser inserido no HTML.
 
-Eles não foram inseridos apenas pelo nome, pois uma rota confiável também precisa da composição completa, das quatro recompensas e das condições corretas. Cadastrar valores presumidos criaria resultados falsos.
+## Acessibilidade
 
-## Revisão 27/09/2026
+- Labels explícitos foram associados aos filtros e campos do planejador.
+- Botões de condição informam grupo, requisito e estado por `aria-label`/`aria-pressed`.
+- Progresso de ranking usa `role="progressbar"` com valor acessível.
+- Rota, contagem da lista e notificações usam regiões `aria-live` quando apropriado.
+- O Guia de Progressão ganhou uma transcrição textual invisível visualmente para leitores de tela, sem alterar a apresentação das 14 páginas.
 
-- A nota oficial de 17/09/2026 adicionou **Eclipse solar**, com Apollomon Whispered + Apollomon e bônus HP +500 / AT +100 / HT +100 / EXP +50%. O grupo foi incluído.
-- O registro do vídeo para **Palmon [Woodmon]** tinha a segunda condição como EV +20, enquanto a base consolidada usa EV +70. A correção para EV +70 elimina uma duplicação artificial no processo de deduplicação.
-- A nota oficial de 22/09/2026 foi verificada e não adicionou um novo grupo D-Unit.
+## Manutenção global
+
+- `ow3ned-ui-v24.css` e `ow3ned-nav-v24.js` foram renomeados para `ow3ned-ui.css` e `ow3ned-nav.js`; as páginas usam `?v=33` para controle de cache.
+- `logo.png` foi otimizado de 512×512 para 128×128, mantendo resolução suficiente para o maior uso atual e reduzindo o arquivo de ~246 KB para ~28 KB.
+- Metadados Open Graph básicos foram adicionados às páginas principais.
+
+## v38 — análise de dificuldade com divulgação progressiva
+- O bloco de evoluções só é exibido quando há formas especiais identificáveis em uma composição confirmada.
+- Mensagens de composição pendente deixaram de ser exibidas ao usuário.
+- A explicação de dificuldade passou a separar quantidade de membros, transcendência, nível total e esforço estrutural.
+- A orientação de foco informa a próxima condição do grupo e continua usando a rota otimizada.
+- Composições unitárias de 13 grupos foram consolidadas pelo próprio título do grupo (1 membro) e Meicoomon recuperou a composição já revisada anteriormente.

@@ -80,6 +80,7 @@
   };
 
   const LADMO_NAME_CORRECTIONS = {
+    'CT::shamamon': 'Sharmamon',
     'AT::metalgreymon': 'MetalGreymon (Black)',
     'AT::12thyearanniversary': 'Selo de 12 anos KDMO',
     'AT::13thyearanniversary': 'Selo de 13 anos KDMO',
@@ -444,7 +445,6 @@
   function hideRoute() {
     $('routePanel').hidden = true;
     $('routeResults').hidden = true;
-    $('routeEmpty').hidden = true;
   }
 
   function nextText(seal, quantity) {
@@ -623,7 +623,6 @@
 
   function renderRoute(steps, projected, target, reached) {
     const percent = ['CT', 'BL', 'EV'].includes($('attribute').value);
-    $('routeEmpty').hidden = true;
     $('routeResults').hidden = false;
     if (!steps.length) {
       $('routeTotal').textContent = reached ? 'Meta já alcançada' : 'Sem rota disponível';
