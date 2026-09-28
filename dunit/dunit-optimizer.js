@@ -100,7 +100,21 @@
 
     const maximumGain = candidates.reduce((sum, candidate) => sum + candidate.gain, 0);
     if (maximumGain < requested) {
-      return { reachable: false, selected: [], totalGain: 0, maximumGain, needed: requested, exact: true, strategyUsed: strategy };
+      const selected = orderSelected(candidates, strategy, rankMode);
+      return {
+        reachable: false,
+        partial: maximumGain > 0,
+        selected,
+        totalGain: maximumGain,
+        maximumGain,
+        needed: requested,
+        shortfall: requested - maximumGain,
+        remainingConditions: selected.reduce((sum, candidate) => sum + candidate.remaining, 0),
+        difficultyScore: selected.reduce((sum, candidate) => sum + candidate.difficultyCost, 0),
+        unresolvedCount: selected.reduce((sum, candidate) => sum + (candidate.unresolved ? 1 : 0), 0),
+        exact: true,
+        strategyUsed: rankMode && strategy === 'gain' ? 'balanced' : strategy
+      };
     }
 
     // State index is capped accumulated gain. Each state stores the best lexicographic route for that gain.

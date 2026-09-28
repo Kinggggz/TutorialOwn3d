@@ -30,8 +30,8 @@
 <div class="planner-title"><div><h2 id="planner-title">Meta de atributo</h2><p>Selos ativos já contam para sua meta.</p></div><button aria-controls="codexPanel" aria-expanded="false" class="seal-button ghost" id="toggleCodex" type="button">Cadastrar meus selos</button></div>
 <div class="planner-fields">
 <label>Atributo<select id="attribute"><option>AT</option><option>HP</option><option>DS</option><option>DE</option><option>HT</option><option>CT</option><option>BL</option><option>EV</option></select></label>
-<label>Meta desejada<input id="target" inputmode="decimal" min="0" step="1" type="number" value="1000"/><small id="targetUnit">pontos de AT</small></label>
-<label>Estratégia<select id="strategy"><option value="tickets">Menor custo em Tickets</option><option value="openers">Menos Seal Openers</option><option value="balanced">Melhor custo-benefício</option></select></label>
+<label>Meta de status<input id="target" inputmode="decimal" min="0" step="1" type="number" value="1000"/><small id="targetUnit">pontos de AT</small></label>
+<label>Estratégia<select id="strategy"><option value="economic" selected>Rota econômica</option><option value="tickets">Menor custo em Tickets</option><option value="openers">Menos Seal Openers</option><option value="balanced">Melhor custo-benefício</option></select></label>
 <button class="seal-button primary" id="calculate" type="button">Calcular rota</button>
 </div>
 <div aria-live="polite" class="status-row"><span>Atual: <strong id="currentValue">0</strong></span><span>Faltam: <strong id="missingValue">1.000</strong></span><span id="savedStatus">Progresso salvo automaticamente</span></div>

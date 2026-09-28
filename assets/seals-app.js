@@ -474,8 +474,7 @@
       const status = sealStatus(seal, quantity);
       const colorTier = sealColorTier(seal, quantity);
       const index = allSeals.indexOf(seal);
-      const ticketStatus = seal.ticketVerified === true ? '' : '<span class="ticket-availability" title="Não foi encontrada uma tabela pública do LADMO que confirme o custo deste selo em Bilhetes de Troca.">Troca por Tickets não confirmada</span>';
-      return `<article class="seal-row status-${status} tier-${colorTier.key}${seal.ticketVerified === true ? '' : ' ticket-unverified'}"><div class="seal-info"><div class="seal-name"><span class="attribute-tag">${seal.attr}</span><span>${escapeHtml(seal.name)}</span><span class="status-tag tier-${colorTier.key}" title="${colorTier.label}">${colorTier.label}</span></div><div class="seal-meta"><span>Atual: <strong>+${formatValue(bonusAt(seal, level), seal.percent)}</strong></span><span>Mestre: <strong>+${formatValue(seal.master, seal.percent)}</strong></span><span>${escapeHtml(nextText(seal, quantity))}</span>${ticketStatus}</div></div><div class="quantity-wrap"><label for="seal-${activeDatasetKey()}-${index}">Quantidade aberta</label><input class="seal-quantity" id="seal-${activeDatasetKey()}-${index}" data-index="${index}" type="number" min="0" max="${maxSealsFor(seal)}" step="1" inputmode="numeric" value="${quantity}"></div></article>`;
+      return `<article class="seal-row status-${status} tier-${colorTier.key}${seal.ticketVerified === true ? '' : ' ticket-unverified'}"><div class="seal-info"><div class="seal-name"><span class="attribute-tag">${seal.attr}</span><span>${escapeHtml(seal.name)}</span><span class="status-tag tier-${colorTier.key}" title="${colorTier.label}">${colorTier.label}</span></div><div class="seal-meta"><span>Atual: <strong>+${formatValue(bonusAt(seal, level), seal.percent)}</strong></span><span>Mestre: <strong>+${formatValue(seal.master, seal.percent)}</strong></span><span>${escapeHtml(nextText(seal, quantity))}</span></div></div><div class="quantity-wrap"><label for="seal-${activeDatasetKey()}-${index}">Quantidade aberta</label><input class="seal-quantity" id="seal-${activeDatasetKey()}-${index}" data-index="${index}" type="number" min="0" max="${maxSealsFor(seal)}" step="1" inputmode="numeric" value="${quantity}"></div></article>`;
     }).join('');
 
     $('noResults').hidden = filtered.length > 0;
@@ -530,6 +529,7 @@
     const unknownSeals = option.ticketCost === null ? option.sealsNeeded : 0;
     const tickets = option.ticketCost === null ? 0 : option.ticketCost;
     if (strategy === 'openers') return [option.openerCost, unknownSeals, tickets, option.sealsNeeded];
+    if (strategy === 'economic') return [unknownSeals, tickets + option.openerCost * 10, option.openerCost, tickets, option.sealsNeeded];
     if (strategy === 'balanced') return [unknownSeals, tickets + option.openerCost * 15, option.openerCost, option.sealsNeeded];
     return [unknownSeals, tickets, option.openerCost, option.sealsNeeded];
   }
@@ -565,7 +565,7 @@
     if (targetUnits <= 0) return {steps: [], gained: 0, reachable: true};
 
     let states = new Array(targetUnits + 1).fill(null);
-    states[0] = {objective: [0, 0, 0, 0], rawUnits: 0, steps: 0, path: null};
+    states[0] = {objective: new Array(strategy === 'economic' ? 5 : 4).fill(0), rawUnits: 0, steps: 0, path: null};
 
     groups.forEach(options => {
       const next = states.slice();
@@ -638,7 +638,7 @@
     $('routeResults').innerHTML = steps.map(step => {
       const destination = thresholdsFor(step.seal)[step.to];
       return `<article class="route-item"><div><h3>${escapeHtml(step.seal.name)}</h3><p>${step.seal.attr} • bônus Mestre +${formatValue(step.seal.master, step.seal.percent)}</p></div><div class="route-step">${formatInt(step.quantity)} → <strong>${formatInt(destination)}</strong> ${sealWord(destination)}</div><div class="route-metric"><strong>+${formatValue(step.bonus, step.seal.percent)}</strong><span>bônus ganho</span></div><div class="route-metric"><strong>${formatInt(step.sealsNeeded)}</strong><span>${sealWord(step.sealsNeeded)}</span></div><div class="route-metric"><strong>${formatInt(step.openerCost)}</strong><span>openers</span></div></article>`;
-    }).join('') + `<article class="route-item route-summary"><div><h3>Totais da rota</h3><p>${hasUnknownTicketCost ? 'Parte da rota não possui troca por Tickets cadastrada' : (reached ? 'Meta atendida' : 'Meta acima do máximo disponível')}</p></div><div class="route-step">${formatInt(steps.length)} ${steps.length === 1 ? 'selo recomendado' : 'selos recomendados'}</div><div class="route-metric"><strong>${formatInt(totalSeals)}</strong><span>${sealWord(totalSeals)}</span></div><div class="route-metric"><strong>${formatInt(totalOpeners)}</strong><span>openers</span></div><div class="route-metric"><strong>${hasUnknownTicketCost ? 'N/D' : new Intl.NumberFormat('pt-BR', {maximumFractionDigits: 1}).format(totalTickets)}</strong><span>Tickets estimados</span></div></article>`;
+    }).join('') + `<article class="route-item route-summary"><div><h3>Totais da rota</h3><p>${reached ? 'Meta atendida' : 'Melhor rota disponível'}</p></div><div class="route-step">${formatInt(steps.length)} ${steps.length === 1 ? 'selo recomendado' : 'selos recomendados'}</div><div class="route-metric"><strong>${formatInt(totalSeals)}</strong><span>${sealWord(totalSeals)}</span></div><div class="route-metric"><strong>${formatInt(totalOpeners)}</strong><span>openers</span></div><div class="route-metric"><strong>${hasUnknownTicketCost ? 'N/D' : new Intl.NumberFormat('pt-BR', {maximumFractionDigits: 1}).format(totalTickets)}</strong><span>Tickets estimados</span></div></article>`;
   }
 
   $('attribute').addEventListener('change', () => {

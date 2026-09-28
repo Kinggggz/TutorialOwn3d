@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <link rel="icon" href="../assets/logo.png" type="image/png">
   <link rel="stylesheet" href="../assets/ow3ned-ui.css?v=33">
-  <link rel="stylesheet" href="dunit.css?v=38">
+  <link rel="stylesheet" href="dunit.css?v=40">
 </head>
 <body data-page="dunit">
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -48,13 +48,16 @@
           <div class="tool-field"><label for="difficulty">Dificuldade</label><select class="select" id="difficulty"><option value="all">Todas</option><option>Fácil</option><option>Médio</option><option>Difícil</option><option>Evento</option></select></div>
           <div class="tool-field"><label for="state">Estado</label><select class="select" id="state"><option value="all">Todos</option><option value="near">Quase completos</option><option value="complete">Completos</option><option value="pending">Pendentes</option></select></div>
         </div>
+        <section class="route-panel" aria-labelledby="routeTitle">
+          <div class="route-panel-head"><div><p class="eyebrow">RESULTADO</p><h2 id="routeTitle">Rota otimizada</h2></div></div>
+          <div class="route" id="route" aria-live="polite"></div>
+        </section>
         <div class="list" id="groupList"></div>
         <div class="list-footer"><span class="list-status" id="listStatus" aria-live="polite"></span><button type="button" class="btn load-more" id="loadMoreBtn" hidden>Carregar mais</button></div>
         <div class="legend" aria-label="Legenda"><span><i style="background:#176d4a"></i>obtido</span><span><i style="background:#8b5cf6"></i>em progresso</span><span><i style="background:#ffc857"></i>status selecionado</span></div>
       </article>
 
       <aside class="side">
-        <section class="card"><h2>Rota otimizada</h2><div class="route" id="route" aria-live="polite"></div></section>
         <section class="card"><h2>Metas de ranking</h2><div class="ranks" id="ranks"></div></section>
         <section class="card"><h2>Base</h2><div class="quality"><div class="quality-row"><span>Grupos cadastrados</span><b id="qOfficial">0</b></div><div class="quality-row"><span>Composições identificadas</span><b id="qCompleteCompositions">0</b></div><div class="quality-row"><span>Nomes pendentes</span><b id="qPartialCompositions">0</b></div><div class="quality-row"><span>Grupos manuais</span><b id="qCustom">0</b></div><div class="quality-row"><span>Última revisão</span><b>28/09/2026</b></div></div></section>
       </aside>
@@ -88,9 +91,9 @@
   <input id="fileInput" type="file" accept="application/json,.json" hidden>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="dunit-data.js?v=39"></script>
-  <script src="dunit-optimizer.js?v=39"></script>
-  <script src="dunit-app.js?v=39"></script>
+  <script src="dunit-data.js?v=40"></script>
+  <script src="dunit-optimizer.js?v=40"></script>
+  <script src="dunit-app.js?v=40"></script>
   <script src="../assets/ow3ned-nav.js?v=33"></script>
 </body>
 </html>

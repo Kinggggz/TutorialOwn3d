@@ -391,15 +391,23 @@
     const result = optimizer.optimizeRoute({
       groups, target, needed, strategy: el.strategy.value, availability: el.availability.value
     });
+    const selected = result.selected || [];
+    let summaryHtml;
     if (!result.reachable) {
-      const maximum = rankMode ? result.maximumGain : formatValue(result.maximumGain, target);
-      el.route.innerHTML = `<p class="notice route-warning">Com os filtros atuais, o máximo disponível é ${esc(maximum)}.</p>`;
-      return;
+      if (!selected.length) {
+        el.route.innerHTML = '<p class="notice">Nenhum grupo disponível com os filtros atuais.</p>';
+        return;
+      }
+      if (rankMode) {
+        summaryHtml = `<div class="route-summary"><b>Rota otimizada</b><span>${selected.length} grupos · ${result.remainingConditions} condições</span></div>`;
+      } else {
+        const maximumTotal = selectedStatTotal(target) + result.maximumGain;
+        summaryHtml = `<div class="route-summary"><b>Rota otimizada</b><span>${selected.length} grupos · ${result.remainingConditions} condições · ${esc(displayStat(target))} ${esc(formatValue(maximumTotal, target))}</span></div>`;
+      }
+    } else {
+      const gainText = rankMode ? `${selected.length} grupos` : formatValue(result.totalGain, target);
+      summaryHtml = `<div class="route-summary"><b>Rota otimizada</b><span>${selected.length} grupos · ${result.remainingConditions} condições · ganho ${esc(gainText)}</span></div>`;
     }
-
-    const selected = result.selected;
-    const gainText = rankMode ? `${selected.length} grupos` : formatValue(result.totalGain, target);
-    const summaryHtml = `<div class="route-summary"><b>Rota otimizada</b><span>${selected.length} grupos · ${result.remainingConditions} condições · ganho ${esc(gainText)}</span></div>`;
     if (!selected.length) { el.route.innerHTML = summaryHtml + '<p class="notice">Nenhum grupo necessário.</p>'; return; }
     const visible = selected.slice(0, 12).map((candidate, index) => routeCard(candidate, index, target)).join('');
     const remaining = selected.slice(12);
