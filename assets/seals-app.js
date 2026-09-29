@@ -166,11 +166,79 @@
     };
   }
 
+  // Traduz somente os rótulos exibidos. O nome original é preservado como
+  // alias para que a busca e o progresso salvo continuem compatíveis.
+  const SEAL_NAME_TRANSLATIONS = {
+    'Blue Serpent': 'Selo da Serpente Azul',
+    'Bountiful Chuseok AT Seal': 'Selo do Chuseok Abundante — AT',
+    'Bountiful Chuseok HT Seal': 'Selo do Chuseok Abundante — HT',
+    'Bountiful Chuseok CT Seal': 'Selo do Chuseok Abundante — CT',
+    'Environment Guardian Seal': 'Selo do Guardião Ambiental',
+    'Happy Christmas': 'Feliz Natal',
+    'New Semester Seal': 'Selo do Novo Semestre',
+    'PassionateSeal': 'Selo Apaixonado',
+    'Seal of summer': 'Selo de Verão',
+    'Vegiemon Seal': 'Selo de Vegiemon',
+    'Grow Well': 'Selo Cresça Bem',
+    'Seal of Heat': 'Selo do Calor',
+    'Sincerity': 'Selo da Sinceridade',
+    'Bakemon Seal': 'Selo de Bakemon',
+    'Beginning Seal': 'Selo do Começo',
+    'Betamon Seal': 'Selo de Betamon',
+    'Gekomon Seal': 'Selo de Gekomon',
+    'Happiness Seal': 'Selo da Felicidade',
+    'Heat Wave Seal': 'Selo da Onda de Calor',
+    'Armor Seal': 'Selo da Armadura',
+    'Mojyamon Seal': 'Selo de Mojyamon',
+    'Brave Seal': 'Selo da Bravura',
+    'Exploration Seal': 'Selo de Exploração',
+    'Grand Prix Seal': 'Selo do Grande Prêmio',
+    'PowerDigimon Seal': 'Selo do Poder Digimon',
+    'Seal of Marksman': 'Selo do Atirador',
+    'Conversion': 'Selo da Conversão',
+    'Deltamon Seal': 'Selo de Deltamon',
+    'Hope': 'Selo da Esperança',
+    'Last Seal of 2023': 'Último Selo de 2023',
+    'Last Seal of 2024': 'Último Selo de 2024',
+    'Seal of Dragon': 'Selo do Dragão',
+    'Firm': 'Selo da Firmeza',
+    'Friendship': 'Selo da Amizade',
+    'Seal of Spring': 'Selo da Primavera',
+    'Afterimage Seal': 'Selo da Imagem Residual',
+    'Family Seal': 'Selo da Família',
+    'Knowledge Seal': 'Selo do Conhecimento',
+    'Seal of Coolness': 'Selo do Frescor',
+    '[Awakening]Dukemon': '[Despertado] Dukemon',
+    '[Awakened] Lilithmon (Resistance)': '[Despertado] Lilithmon (Resistência)',
+    '[Awakening]SaintGalgomon': '[Despertado] SaintGalgomon',
+    'Alphamon Ouryuken (Awaken)': 'Alphamon Ouryuken (Despertado)',
+    'ImperialDramon Fighter Mode': 'ImperialDramon Modo Lutador',
+    'Lucemon Satan Mode': 'Lucemon Modo Satã',
+    'Ophanimon Falldown Mode': 'Ophanimon Modo Decaído',
+    'Omegamon Merciful Mode': 'Omegamon Modo Piedoso',
+    'Kuzuhamon: MikoMode': 'Kuzuhamon: Modo Miko',
+    'Shoutmon X7:superiormode': 'Shoutmon X7: Modo Superior',
+    'Gallantmon Modo Crimson': 'Gallantmon Modo Carmesim',
+    'Cherubimon White': 'Cherubimon Branco',
+    'Garurumon (Black)': 'Garurumon (Preto)',
+    'MetalGreymon (Black)': 'MetalGreymon (Preto)',
+    'WereGarurumon (Black)': 'WereGarurumon (Preto)',
+    'Gabumon (Black)': 'Gabumon (Preto)',
+    'Selo New LADMO — AT': 'Selo Novo LADMO — AT',
+    'Selo New LADMO — HP': 'Selo Novo LADMO — HP',
+    'Selo New LADMO — DS': 'Selo Novo LADMO — DS',
+    'Selo New LADMO — CT': 'Selo Novo LADMO — CT',
+    'Selo de Tamer: Patamon – T.K.': 'Selo de Domador: Patamon – T.K.',
+    'Selo de Tamer: Gatomon – Hikari': 'Selo de Domador: Gatomon – Hikari',
+    'Selo de Tamer: Princesa Mimi': 'Selo de Domador: Princesa Mimi',
+    'Selo de Tamer: Matt': 'Selo de Domador: Matt'
+  };
+
   [
-    [393, 'Selo Dungeon Masters'],
+    [393, 'Selo dos Mestres da Masmorra'],
     [401, 'Selo do Passe de Temporada'],
-    [410, 'Selo Dungeon Masters2'],
-    [443, 'Selo Dungeon Masters3']
+    [410, 'Selo dos Mestres da Masmorra 2'],
+    [443, 'Selo dos Mestres da Masmorra 3']
   ].forEach(([firstId, label]) => {
     LADMO_ATTRIBUTE_SEQUENCE.forEach((attr, index) => setRegionalName(firstId + index, `${label} — ${attr}`));
   });
@@ -185,6 +253,15 @@
   setRegionalName(452, 'Selo de Inverno — HT', ['Selo de Verão — HT']);
   setRegionalName(453, 'Selo de Inverno — CT', ['Selo de Verão — CT']);
   setRegionalName('gameking-4191-barbamon', 'Selo de Barbamon, Rei Demônio da Ganância', ['Demon Lord of Greed Barbamon']);
+
+  function localizeSealName(seal) {
+    const translatedName = SEAL_NAME_TRANSLATIONS[seal.name];
+    if (!translatedName || normalizeSearch(translatedName) === normalizeSearch(seal.name)) return seal;
+    const aliases = [seal.name, ...(seal.aliases || [])].filter((name, index, names) =>
+      normalizeSearch(name) !== normalizeSearch(translatedName) && names.indexOf(name) === index
+    );
+    return {...seal, name: translatedName, aliases};
+  }
 
   function dataKey(seal) {
     return `${seal.attr}::${normalizeSearch(seal.name)}`;
@@ -254,7 +331,7 @@
     });
 
     const attributeOrder = ['AT', 'HP', 'DS', 'DE', 'HT', 'CT', 'BL', 'EV'];
-    return rows.sort((left, right) => attributeOrder.indexOf(left.attr) - attributeOrder.indexOf(right.attr) || left.name.localeCompare(right.name, 'pt-BR'));
+    return rows.map(localizeSealName).sort((left, right) => attributeOrder.indexOf(left.attr) - attributeOrder.indexOf(right.attr) || left.name.localeCompare(right.name, 'pt-BR'));
   }
 
   const unifiedSeals = buildUnifiedSeals(
