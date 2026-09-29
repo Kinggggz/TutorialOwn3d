@@ -12,7 +12,7 @@
 <meta content="website" property="og:type"/>
 <link href="../assets/logo.png" rel="icon" type="image/png"/>
 <link href="../assets/ow3ned-ui.css?v=33" rel="stylesheet"/>
-<link href="dunit.css?v=40" rel="stylesheet"/>
+<link href="dunit.css?v=48" rel="stylesheet"/>
 </head>
 <body data-page="dunit">
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -32,7 +32,7 @@
 <article class="card metric"><strong id="nextCount">1</strong><span>até o próximo rank</span></article>
 </section>
 <section aria-label="Configurar rota" class="card planner">
-<div class="field"><label for="goal">Objetivo</label><select class="select" id="goal"><option value="rank">Avançar no ranking</option><option>AT</option><option>HT</option><option>CT</option><option>HP</option><option>DS</option><option>DE</option><option>EV</option><option>BL</option><option value="Base SCD">SCD</option><option value="Vacina SCD">SCD de Vacina</option><option value="Dados SCD">SCD de Dados</option><option value="Vírus SCD">SCD de Vírus</option><option value="Luz SCD">SCD de Luz</option><option value="Escuridão SCD">SCD de Escuridão</option><option value="Desconhecido SCD">SCD Desconhecido</option><option value="Fogo SCD">SCD de Fogo</option><option value="Gelo SCD">SCD de Gelo</option><option value="Água SCD">SCD de Água</option><option value="Madeira SCD">SCD de Madeira</option><option value="Vento SCD">SCD de Vento</option><option value="Eletricidade SCD">SCD de Eletricidade</option><option value="Aço SCD">SCD de Aço</option><option value="Terra SCD">SCD de Terra</option><option>EXP</option></select></div>
+<div class="field"><label for="goal">Objetivo</label><select class="select" id="goal"><option value="rank">Avançar no ranking</option><option>AT</option><option>HT</option><option>CT</option><option>HP</option><option>DS</option><option>DE</option><option>EV</option><option>BL</option><option value="SCD">SCD</option><option value="Base SCD">SCD de atributo Base</option><option value="Dano de atributo básico">Dano de atributo básico</option><option value="Vacina SCD">SCD de Vacina</option><option value="Dados SCD">SCD de Dados</option><option value="Vírus SCD">SCD de Vírus</option><option value="Luz SCD">SCD de Luz</option><option value="Escuridão SCD">SCD de Escuridão</option><option value="Desconhecido SCD">SCD Desconhecido</option><option value="Fogo SCD">SCD de Fogo</option><option value="Gelo SCD">SCD de Gelo</option><option value="Água SCD">SCD de Água</option><option value="Madeira SCD">SCD de Madeira</option><option value="Vento SCD">SCD de Vento</option><option value="Eletricidade SCD">SCD de Eletricidade</option><option value="Aço SCD">SCD de Aço</option><option value="Terra SCD">SCD de Terra</option><option>EXP</option></select></div>
 <div class="field"><label for="targetAmount">Valor desejado</label><input class="input" disabled="" id="targetAmount" min="0" step="1" type="number" value="0"/></div>
 <div class="field"><label for="strategy">Prioridade</label><select class="select" id="strategy"><option value="balanced">Melhor custo-benefício</option><option value="fast">Menos condições</option><option value="cheap">Mais acessível</option><option value="gain">Menos grupos</option></select></div>
 <div class="field"><label for="availability">Grupos</label><select class="select" id="availability"><option value="all">Todos os grupos</option><option value="noevent">Excluir grupos de evento</option><option value="accessible">Somente fácil/médio</option></select></div>
@@ -84,9 +84,9 @@
 <dialog class="modal" id="addModal"><form class="modal-box" id="addForm" method="dialog"><h2>Adicionar grupo manual</h2><div class="fields"><label>Nome do grupo<input id="newName" maxlength="100" required=""/></label><label>Digimons (separados por vírgula)<input id="newDigimon" maxlength="3000" required=""/></label><label>Quatro bônus (separados por vírgula)<input id="newRewards" maxlength="400" placeholder="AT +30, HT +50, EXP +20%, SCD +1%" required=""/></label><label>Dificuldade<select id="newDifficulty"><option>Fácil</option><option>Médio</option><option>Difícil</option><option>Evento</option></select></label></div><div class="modal-actions"><button class="btn" value="cancel">Cancelar</button><button class="btn primary" id="saveGroup" value="default">Salvar</button></div></form></dialog>
 <input accept="application/json,.json" hidden="" id="fileInput" type="file"/>
 <div aria-live="polite" class="toast" id="toast" role="status"></div>
-<script src="dunit-data.js?v=40"></script>
-<script src="dunit-optimizer.js?v=40"></script>
-<script src="dunit-app.js?v=40"></script>
+<script src="dunit-data.js?v=48"></script>
+<script src="dunit-optimizer.js?v=48"></script>
+<script src="dunit-app.js?v=48"></script>
 <script src="../assets/ow3ned-nav.js?v=33"></script>
 </body>
 </html>

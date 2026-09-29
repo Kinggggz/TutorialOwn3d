@@ -30,7 +30,7 @@
   }
 
   function unresolvedComposition(group) {
-    return (group.digimons || []).some((name) => /Digimon\(s\).*nomes em validação|não confirmada|nomes em validação/i.test(String(name)));
+    return (group.digimons || []).some((name) => /Digimon\(s\).*nomes em validação|não confirmada|nomes em validação|composição exibida no vídeo/i.test(String(name)));
   }
 
   function addVector(a, b) {

@@ -6,7 +6,7 @@
   if (!optimizer || !officialData.length) throw new Error('Base D-Unit não carregada.');
 
   const STATS = Object.freeze([
-    'AT','HT','CT','HP','DS','DE','EV','BL','EXP','SCD','Base SCD','Vacina SCD','Dados SCD','Vírus SCD',
+    'AT','HT','CT','HP','DS','DE','EV','BL','EXP','SCD','Base SCD','Dano de atributo básico','Vacina SCD','Dados SCD','Vírus SCD',
     'Luz SCD','Escuridão SCD','Desconhecido SCD','Fogo SCD','Gelo SCD','Água SCD','Madeira SCD','Vento SCD',
     'Eletricidade SCD','Aço SCD','Terra SCD'
   ]);
@@ -28,14 +28,14 @@
   const esc = (value) => String(value).replace(/[&<>"']/g, (char) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const clampStep = (value) => Math.max(0, Math.min(4, Math.floor(Number(value) || 0)));
   const unresolved = optimizer.unresolvedComposition;
-  const displayStat = (stat) => stat === 'Base SCD' || stat === 'SCD' ? 'SCD' : stat;
+  const displayStat = (stat) => stat === 'Base SCD' ? 'SCD de atributo Base' : stat;
   const displayReward = (reward) => {
     const label = String(reward?.label || '');
-    if (reward?.stat === 'Base SCD') return label.replace(/^Base SCD/, 'SCD');
+    if (reward?.stat === 'Base SCD') return label.replace(/^Base SCD/, 'SCD de atributo Base');
     if (reward?.stat === 'SCD') return label;
     return label;
   };
-  const formatValue = (value, stat) => `${value}${stat === 'EXP' || stat.includes('SCD') ? '%' : ''}`;
+  const formatValue = (value, stat) => `${value}${stat === 'EXP' || stat.includes('SCD') || stat === 'Dano de atributo básico' ? '%' : ''}`;
   const visibleDigimons = (group) => unresolved(group) ? `${group.memberCount || '?'} Digimons` : (group.digimons || []).join(' · ');
 
   const SPECIAL_FORM_RULES = Object.freeze([
@@ -560,7 +560,7 @@
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'progresso-dunit-ladmo-v33.json';
+    link.download = 'progresso-dunit-ladmo-v48.json';
     document.body.appendChild(link);
     link.click();
     link.remove();
