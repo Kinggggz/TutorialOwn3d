@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#070b14" name="theme-color"/>
+<meta content="Skill Builder da Ow3neD para builds Farm e DPS, skills e estimativa de DPS dos Digimon Rank U do LADMO." name="description"/>
+<title>Calculadora de Builds | Ow3neD</title>
+<link href="../assets/logo.png" rel="icon" type="image/png"/><link href="../assets/site.css?v=5" rel="stylesheet"/><link href="../assets/ow3ned-ui.css?v=41" rel="stylesheet"/><link href="styles.css?v=47" rel="stylesheet"/><link href="integration.css?v=47" rel="stylesheet"/>
+</head>
+<body data-page="builds">
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a><header class="site-header">
+<a aria-label="Ow3neD - página inicial" class="brand" href="../"><img alt="" height="52" src="../assets/logo.png" width="52"/><span>Ow3neD</span></a>
+<nav aria-label="Navegação principal">
+<a href="../">Início</a>
+<a href="../calculator/">Calculadora Rank U</a>
+<a href="../seals/">Calculadora de Selos</a>
+<a href="../dunit/">Calculadora D-Unit</a>
+<a aria-current="page" class="active" href="./">Calculadora de Builds</a>
+<a href="../guide/">Guia de Progressão</a>
+</nav>
+</header>
+<main class="shell" id="conteudo">
+<section class="intro">
+<p class="eyebrow">SKILL BUILDER • LADMO</p>
+<h1>Saiba o que upar</h1>
+<p>Escolha seu Digimon e veja a distribuição, a ordem das skills e a rotação.</p>
+</section>
+<section aria-labelledby="picker-title" class="picker panel">
+<div class="picker-head">
+<div><p class="eyebrow">ESCOLHA SUA BUILD</p><div class="picker-title-line"><h2 id="picker-title">Rank U</h2><span class="verified-count"><strong id="uCount">—</strong> verificados</span></div></div>
+<button aria-controls="advancedOptions" aria-expanded="false" class="text-button" id="toggleAdvanced" type="button">Opções avançadas</button>
+</div>
+<div class="picker-grid">
+<label>Buscar<input id="search" placeholder="Ex.: OMM, Susanoomon, Lilith..." type="search"/></label>
+<label>Digimon<select id="digimon"></select></label>
+<label>Build<select id="mode"></select></label>
+</div>
+<div class="advanced" hidden="" id="advancedOptions">
+<label>Atributo<select id="attribute"><option value="all">Todos</option><option>Vacina</option><option>Dados</option><option>Vírus</option><option>Desconhecido</option></select></label>
+<label>Limite da skill<select id="cap"><option>10</option><option>15</option><option>20</option><option selected="">25</option></select></label>
+<label>Pontos disponíveis<input id="points" max="200" min="0" type="number" value="76"/></label>
+</div>
+<div aria-label="Catálogo visual Rank U" class="portrait-strip" id="portraitStrip"></div>
+</section>
+<section aria-live="polite" class="build-hero panel">
+<div class="build-title-row">
+<div class="digi-portrait main-portrait" id="mainPortrait"><img alt="" decoding="async" id="digiPortrait" loading="eager" referrerpolicy="no-referrer"/><span class="portrait-fallback">U</span><span class="rank-chip">U</span></div>
+<div class="build-name">
+<p class="eyebrow">BUILD</p>
+<h2 id="digiName">—</h2>
+<div class="tags" id="tags"></div>
+</div>
+<div class="hero-actions"><button class="dps-button" id="openDps" type="button">Comparar DPS</button></div>
+</div>
+<div class="build-summary">
+<div class="summary-main">
+<h3 id="buildTitle">—</h3>
+<p id="buildReason">—</p>
+</div>
+<div class="allocation-wrap">
+<div class="allocation-head"><span>Distribuição</span><small id="usedPoints">—</small></div>
+<div class="allocation" id="allocation"></div>
+</div>
+</div>
+<p class="estimate-notice">Build estimada. O DPS e a melhor distribuição podem variar de conta para conta; ajuste conforme seus testes.</p>
+</section>
+<section class="quick-grid">
+<article class="panel quick-card focus-card">
+<p class="eyebrow">ORDEM DE UPGRADE</p>
+<h2 id="nextSkill">—</h2>
+<p id="nextReason">—</p>
+<div class="priority-track" id="priorityTrack"></div>
+</article>
+<article class="panel quick-card">
+<p class="eyebrow">ROTAÇÃO</p>
+<h2>Como usar</h2>
+<div class="rotation" id="rotation"></div>
+<p class="helper" id="rotationNote"></p>
+</article>
+</section>
+<section aria-labelledby="skills-title" class="panel skills-panel">
+<div class="section-head"><div><p class="eyebrow">SKILLS</p><h2 id="skills-title">Função e cooldown</h2></div></div>
+<div class="skills" id="skills"></div>
+</section>
+</main>
+<dialog aria-labelledby="dpsTitle" class="dps-modal" id="dpsModal">
+<form class="dps-dialog" method="dialog">
+<div class="dps-head">
+<div><p class="eyebrow">COMPARADOR</p><h2 id="dpsTitle">Comparar DPS de builds</h2><p id="dpsDigiName"></p></div>
+<button aria-label="Fechar" class="close-dialog" value="cancel">×</button>
+</div>
+<div class="dps-basics">
+<label>Duração do teste (s)<input id="dpsDuration" max="600" min="10" type="number" value="60"/></label>
+<label>AT / dano normal usado<input id="dpsAttack" min="0" type="number" value="0"/></label>
+<label>AS (s)<input id="dpsAttackSpeed" min="0.1" step="0.01" type="number" value="2.5"/></label>
+</div>
+<p class="dps-helper">AT, AS, níveis, cooldown, animação e danos de skill conhecidos são preenchidos automaticamente. Ajuste qualquer valor para os números da sua conta.</p>
+<section aria-labelledby="mechanicsTitle" class="compare-mechanics">
+<div class="compare-section-head"><h3 id="mechanicsTitle">Mecânica das skills</h3><small>Preencha os campos que estiverem em branco.</small></div>
+<div class="compare-mechanics-list" id="compareMechanics"></div>
+</section>
+<div class="compare-builds">
+<section aria-labelledby="buildATitle" class="compare-build-card">
+<div class="compare-build-head"><div><span>BUILD A</span><h3 id="buildATitle">Configuração A</h3></div><select aria-label="Selecionar Build A" id="compareBuildA"></select></div>
+<label class="rotation-input">Rotação<input id="compareRotationA" placeholder="F1, F2, F1, F3" type="text"/></label>
+<div class="compare-skill-list" id="compareSkillInputsA"></div>
+</section>
+<section aria-labelledby="buildBTitle" class="compare-build-card alt">
+<div class="compare-build-head"><div><span>BUILD B</span><h3 id="buildBTitle">Configuração B</h3></div><select aria-label="Selecionar Build B" id="compareBuildB"></select></div>
+<label class="rotation-input">Rotação<input id="compareRotationB" placeholder="F1, F3, F1" type="text"/></label>
+<div class="compare-skill-list" id="compareSkillInputsB"></div>
+</section>
+</div>
+<button class="run-dps" id="runDps" type="button">Comparar DPS estimado</button>
+<div aria-live="polite" class="dps-result" id="dpsResult"></div>
+</form>
+</dialog>
+<footer><div class="footer-brand"><img alt="" height="34" src="../assets/logo.png" width="34"/><strong>Ow3neD</strong></div><p>Digimon Masters Online • Ow3neD</p></footer>
+<script src="data.js?v=47"></script>
+<script src="dps-engine.js?v=47"></script>
+<script src="app.js?v=47"></script>
+<script src="../assets/ow3ned-nav.js?v=41"></script></body>
+</html>

@@ -48,3 +48,19 @@ Site estático preparado para GitHub Pages, com a Calculadora Rank U, a Calculad
 4. Selecione a branch **main**, a pasta **/(root)** e clique em **Save**.
 
 O endereço ficará disponível no formato `https://seu-usuario.github.io/nome-do-repositorio/`.
+
+
+## Calculadora de Builds
+
+A pasta `builds/` contém o Skill Builder Rank U integrado ao portal, com presets **Farm** (AoE/leveling) e **DPS** (alvo único/sustentado), além do comparador de DPS estimado.
+
+## Atualização V45 — Skill Builder
+
+A calculadora de builds foi re-auditada em 28/09/2026 com a separação correta de função: **Farm = limpeza/leveling com AoE quando disponível** e **DPS = dano sustentado contra alvo único/chefes**. O antigo preset Burst foi removido. Susanoomon [Supremacia], por exemplo, ficou com **Farm F3 25 / F1 15** e **DPS F1 24 / F2 11**. Consulte `AUDITORIA-BUILDS-V45.md`.
+
+## v46 — auditoria de AoE
+As skills em área dos 22 Rank U foram revisadas **individualmente**, sem assumir que F3 seja a skill de área. A versão distingue F2/F3/F4 conforme cada kit, mantém fallback single-target quando não há AoE confirmada e documenta divergências regionais como o caso do Alphamon Ouryuken [Supremacia]. O rótulo antigo “Burst” também foi removido dos papéis das skills para evitar confusão com a build DPS. Consulte `builds/AUDITORIA-AOE-V46.md`. A integração também foi corrigida para diferenciar Farm com AoE de Farm fallback, respeitar a ordem visual da distribuição e exibir o tipo de área confirmado nas skills.
+
+
+## v47 — Farm/DPS auditado e integração final
+A calculadora de builds mantém 22 Rank U e 44 presets, separando **Farm** de **DPS sustentado** sem inferir AoE pela posição F1/F2/F3/F4/F5. Presets sem custos suficientes não recebem níveis inventados; a interface exibe “Dados insuficientes para níveis exatos”. A v47 também adiciona o contador de verificados, corrige “Saiba o que upar”, usa cache `v=47`, prioriza fallbacks locais para Apollomon/Apollomon Whispered e evita recriar o catálogo de retratos ao mudar apenas o modo ou os pontos. Consulte `AUDITORIA-BUILDS-V47.md`.

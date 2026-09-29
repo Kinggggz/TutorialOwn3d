@@ -1,99 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#080b14">
-  <title>Calculadora D-Unit | Ow3neD</title>
-  <meta name="description" content="Planeje grupos, status e rankings do D-Unit no LADMO com rota otimizada.">
-  <meta property="og:title" content="Calculadora D-Unit | Ow3neD">
-  <meta property="og:description" content="Planeje grupos, status e rankings do D-Unit no LADMO com rota otimizada.">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="../assets/logo.png" type="image/png">
-  <link rel="stylesheet" href="../assets/ow3ned-ui.css?v=33">
-  <link rel="stylesheet" href="dunit.css?v=40">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#080b14" name="theme-color"/>
+<title>Calculadora D-Unit | Ow3neD</title>
+<meta content="Planeje grupos, status e rankings do D-Unit no LADMO com rota otimizada." name="description"/>
+<meta content="Calculadora D-Unit | Ow3neD" property="og:title"/>
+<meta content="Planeje grupos, status e rankings do D-Unit no LADMO com rota otimizada." property="og:description"/>
+<meta content="website" property="og:type"/>
+<link href="../assets/logo.png" rel="icon" type="image/png"/>
+<link href="../assets/ow3ned-ui.css?v=33" rel="stylesheet"/>
+<link href="dunit.css?v=40" rel="stylesheet"/>
 </head>
 <body data-page="dunit">
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <header class="guild-nav">
-    <a class="guild-brand" href="../" aria-label="Ow3neD - página inicial"><img src="../assets/logo.png" alt="" width="38" height="38"><span>Ow3neD</span></a>
-    <nav class="guild-links" aria-label="Navegação principal"><a href="../">Início</a><a href="../calculator/">Calculadora Rank U</a><a href="../seals/">Calculadora de Selos</a><a class="active" aria-current="page" href="./">Calculadora D-Unit</a><a href="../guide/">Guia de Progressão</a></nav>
-  </header>
-
-  <main class="shell" id="conteudo">
-    <header class="topbar">
-      <div class="brand"><div class="mark" aria-hidden="true">DU</div><div><div class="eyebrow">D-UNIT • LADMO</div><h1>Planejador D-Unit</h1></div></div>
-      <div class="actions"><button type="button" class="btn secondary" id="exportBtn">Exportar</button><button type="button" class="btn secondary" id="importBtn">Importar</button><button type="button" class="btn" id="addBtn">+ Grupo manual</button><button type="button" class="btn danger" id="resetBtn">Limpar</button></div>
-    </header>
-
-    <section class="summary" aria-label="Resumo do ranking">
-      <article class="card rank-card"><div class="eyebrow">Ranking estimado</div><div class="rank-name" id="rankName">Iniciante</div><div class="progress" role="progressbar" aria-label="Progresso para o próximo ranking" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="rankBar"></span></div><div class="rank-detail"><span id="rankProgress">0 grupos completos</span><span id="rankNext">Falta 1 para Bronze</span></div></article>
-      <article class="card metric"><strong id="completeCount">0</strong><span>grupos completos</span></article>
-      <article class="card metric"><strong id="conditionCount">0</strong><span>condições</span></article>
-      <article class="card metric"><strong id="nextCount">1</strong><span>até o próximo rank</span></article>
-    </section>
-
-    <section class="card planner" aria-label="Configurar rota">
-      <div class="field"><label for="goal">Objetivo</label><select class="select" id="goal"><option value="rank">Avançar no ranking</option><option>AT</option><option>HT</option><option>CT</option><option>HP</option><option>DS</option><option>DE</option><option>EV</option><option>BL</option><option value="Base SCD">SCD</option><option value="Vacina SCD">SCD de Vacina</option><option value="Dados SCD">SCD de Dados</option><option value="Vírus SCD">SCD de Vírus</option><option value="Luz SCD">SCD de Luz</option><option value="Escuridão SCD">SCD de Escuridão</option><option value="Desconhecido SCD">SCD Desconhecido</option><option value="Fogo SCD">SCD de Fogo</option><option value="Gelo SCD">SCD de Gelo</option><option value="Água SCD">SCD de Água</option><option value="Madeira SCD">SCD de Madeira</option><option value="Vento SCD">SCD de Vento</option><option value="Eletricidade SCD">SCD de Eletricidade</option><option value="Aço SCD">SCD de Aço</option><option value="Terra SCD">SCD de Terra</option><option>EXP</option></select></div>
-      <div class="field"><label for="targetAmount">Valor desejado</label><input class="input" id="targetAmount" type="number" min="0" step="1" value="0" disabled></div>
-      <div class="field"><label for="strategy">Prioridade</label><select class="select" id="strategy"><option value="balanced">Melhor custo-benefício</option><option value="fast">Menos condições</option><option value="cheap">Mais acessível</option><option value="gain">Menos grupos</option></select></div>
-      <div class="field"><label for="availability">Grupos</label><select class="select" id="availability"><option value="all">Todos os grupos</option><option value="noevent">Excluir grupos de evento</option><option value="accessible">Somente fácil/médio</option></select></div>
-      <div class="goal-output" aria-live="polite"><strong id="earnedGoal">0</strong><span id="earnedLabel">grupos concluídos</span></div>
-    </section>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="guild-nav">
+<a aria-label="Ow3neD - página inicial" class="guild-brand" href="../"><img alt="" height="38" src="../assets/logo.png" width="38"/><span>Ow3neD</span></a>
+<nav aria-label="Navegação principal" class="guild-links"><a href="../">Início</a><a href="../calculator/">Calculadora Rank U</a><a href="../seals/">Calculadora de Selos</a><a aria-current="page" class="active" href="./">Calculadora D-Unit</a><a href="../builds/">Calculadora de Builds</a><a href="../guide/">Guia de Progressão</a></nav>
+</header>
+<main class="shell" id="conteudo">
+<header class="topbar">
+<div class="brand"><div aria-hidden="true" class="mark">DU</div><div><div class="eyebrow">D-UNIT • LADMO</div><h1>Planejador D-Unit</h1></div></div>
+<div class="actions"><button class="btn secondary" id="exportBtn" type="button">Exportar</button><button class="btn secondary" id="importBtn" type="button">Importar</button><button class="btn" id="addBtn" type="button">+ Grupo manual</button><button class="btn danger" id="resetBtn" type="button">Limpar</button></div>
+</header>
+<section aria-label="Resumo do ranking" class="summary">
+<article class="card rank-card"><div class="eyebrow">Ranking estimado</div><div class="rank-name" id="rankName">Iniciante</div><div aria-label="Progresso para o próximo ranking" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress" role="progressbar"><span id="rankBar"></span></div><div class="rank-detail"><span id="rankProgress">0 grupos completos</span><span id="rankNext">Falta 1 para Bronze</span></div></article>
+<article class="card metric"><strong id="completeCount">0</strong><span>grupos completos</span></article>
+<article class="card metric"><strong id="conditionCount">0</strong><span>condições</span></article>
+<article class="card metric"><strong id="nextCount">1</strong><span>até o próximo rank</span></article>
+</section>
+<section aria-label="Configurar rota" class="card planner">
+<div class="field"><label for="goal">Objetivo</label><select class="select" id="goal"><option value="rank">Avançar no ranking</option><option>AT</option><option>HT</option><option>CT</option><option>HP</option><option>DS</option><option>DE</option><option>EV</option><option>BL</option><option value="Base SCD">SCD</option><option value="Vacina SCD">SCD de Vacina</option><option value="Dados SCD">SCD de Dados</option><option value="Vírus SCD">SCD de Vírus</option><option value="Luz SCD">SCD de Luz</option><option value="Escuridão SCD">SCD de Escuridão</option><option value="Desconhecido SCD">SCD Desconhecido</option><option value="Fogo SCD">SCD de Fogo</option><option value="Gelo SCD">SCD de Gelo</option><option value="Água SCD">SCD de Água</option><option value="Madeira SCD">SCD de Madeira</option><option value="Vento SCD">SCD de Vento</option><option value="Eletricidade SCD">SCD de Eletricidade</option><option value="Aço SCD">SCD de Aço</option><option value="Terra SCD">SCD de Terra</option><option>EXP</option></select></div>
+<div class="field"><label for="targetAmount">Valor desejado</label><input class="input" disabled="" id="targetAmount" min="0" step="1" type="number" value="0"/></div>
+<div class="field"><label for="strategy">Prioridade</label><select class="select" id="strategy"><option value="balanced">Melhor custo-benefício</option><option value="fast">Menos condições</option><option value="cheap">Mais acessível</option><option value="gain">Menos grupos</option></select></div>
+<div class="field"><label for="availability">Grupos</label><select class="select" id="availability"><option value="all">Todos os grupos</option><option value="noevent">Excluir grupos de evento</option><option value="accessible">Somente fácil/médio</option></select></div>
+<div aria-live="polite" class="goal-output"><strong id="earnedGoal">0</strong><span id="earnedLabel">grupos concluídos</span></div>
+</section>
 <section class="workspace">
-      <article class="card main">
-        <div class="database-head"><div><h2>Base D-Unit LADMO</h2><p>Marque sua condição atual.</p></div><span class="verified" id="verifiedCount"></span></div>
-        <div class="tools">
-          <div class="tool-field"><label for="search">Buscar</label><input class="input" id="search" placeholder="Grupo, Digimon ou status…" autocomplete="off"></div>
-          <div class="tool-field"><label for="difficulty">Dificuldade</label><select class="select" id="difficulty"><option value="all">Todas</option><option>Fácil</option><option>Médio</option><option>Difícil</option><option>Evento</option></select></div>
-          <div class="tool-field"><label for="state">Estado</label><select class="select" id="state"><option value="all">Todos</option><option value="near">Quase completos</option><option value="complete">Completos</option><option value="pending">Pendentes</option></select></div>
-        </div>
-        <section class="route-panel" aria-labelledby="routeTitle">
-          <div class="route-panel-head"><div><p class="eyebrow">RESULTADO</p><h2 id="routeTitle">Rota otimizada</h2></div></div>
-          <div class="route" id="route" aria-live="polite"></div>
-        </section>
-        <div class="list" id="groupList"></div>
-        <div class="list-footer"><span class="list-status" id="listStatus" aria-live="polite"></span><button type="button" class="btn load-more" id="loadMoreBtn" hidden>Carregar mais</button></div>
-        <div class="legend" aria-label="Legenda"><span><i style="background:#176d4a"></i>obtido</span><span><i style="background:#8b5cf6"></i>em progresso</span><span><i style="background:#ffc857"></i>status selecionado</span></div>
-      </article>
-
-      <aside class="side">
-        <section class="card"><h2>Metas de ranking</h2><div class="ranks" id="ranks"></div></section>
-        <section class="card"><h2>Base</h2><div class="quality"><div class="quality-row"><span>Grupos cadastrados</span><b id="qOfficial">0</b></div><div class="quality-row"><span>Composições identificadas</span><b id="qCompleteCompositions">0</b></div><div class="quality-row"><span>Nomes pendentes</span><b id="qPartialCompositions">0</b></div><div class="quality-row"><span>Grupos manuais</span><b id="qCustom">0</b></div><div class="quality-row"><span>Última revisão</span><b>28/09/2026</b></div></div></section>
-      </aside>
-    </section>
-    <p class="footer">Fontes: notas oficiais, vídeo LADMO e LADMO Seal Codex · Não afiliada à MOVE Interactive ou GameKing.</p>
-  </main>
-
-
-  <dialog class="modal difficulty-modal" id="difficultyModal" aria-labelledby="difficultyTitle">
-    <div class="modal-box difficulty-box">
-      <div class="difficulty-modal-head">
-        <div><p class="eyebrow">DIFICULDADE DO DECK</p><h2 id="difficultyTitle">Dificuldade</h2></div>
-        <button type="button" class="modal-close" id="difficultyClose" aria-label="Fechar explicação">×</button>
-      </div>
-      <p class="difficulty-deck-name" id="difficultyDeckName"></p>
-      <p class="difficulty-summary" id="difficultySummary"></p>
-      <div class="difficulty-metrics" id="difficultyMetrics"></div>
-      <section class="difficulty-section" aria-labelledby="difficultyWhyTitle">
-        <h3 id="difficultyWhyTitle">Por que este deck tem essa dificuldade?</h3>
-        <ul class="difficulty-points" id="difficultyPoints"></ul>
-      </section>
-      <section class="difficulty-section" id="difficultyEvolutionSection" aria-labelledby="difficultyEvolutionTitle" hidden>
-        <h3 id="difficultyEvolutionTitle">Evoluções e formas relevantes</h3>
-        <div class="difficulty-evolutions" id="difficultyEvolutions"></div>
-      </section>
-      <div class="difficulty-focus" id="difficultyFocus"></div>
+<article class="card main">
+<div class="database-head"><div><h2>Base D-Unit LADMO</h2><p>Marque sua condição atual.</p></div><span class="verified" id="verifiedCount"></span></div>
+<div class="tools">
+<div class="tool-field"><label for="search">Buscar</label><input autocomplete="off" class="input" id="search" placeholder="Grupo, Digimon ou status…"/></div>
+<div class="tool-field"><label for="difficulty">Dificuldade</label><select class="select" id="difficulty"><option value="all">Todas</option><option>Fácil</option><option>Médio</option><option>Difícil</option><option>Evento</option></select></div>
+<div class="tool-field"><label for="state">Estado</label><select class="select" id="state"><option value="all">Todos</option><option value="near">Quase completos</option><option value="complete">Completos</option><option value="pending">Pendentes</option></select></div>
 </div>
-  </dialog>
-
-  <dialog class="modal" id="addModal"><form class="modal-box" id="addForm" method="dialog"><h2>Adicionar grupo manual</h2><div class="fields"><label>Nome do grupo<input id="newName" maxlength="100" required></label><label>Digimons (separados por vírgula)<input id="newDigimon" maxlength="3000" required></label><label>Quatro bônus (separados por vírgula)<input id="newRewards" maxlength="400" placeholder="AT +30, HT +50, EXP +20%, SCD +1%" required></label><label>Dificuldade<select id="newDifficulty"><option>Fácil</option><option>Médio</option><option>Difícil</option><option>Evento</option></select></label></div><div class="modal-actions"><button class="btn" value="cancel">Cancelar</button><button class="btn primary" id="saveGroup" value="default">Salvar</button></div></form></dialog>
-  <input id="fileInput" type="file" accept="application/json,.json" hidden>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <script src="dunit-data.js?v=40"></script>
-  <script src="dunit-optimizer.js?v=40"></script>
-  <script src="dunit-app.js?v=40"></script>
-  <script src="../assets/ow3ned-nav.js?v=33"></script>
+<section aria-labelledby="routeTitle" class="route-panel">
+<div class="route-panel-head"><div><p class="eyebrow">RESULTADO</p><h2 id="routeTitle">Rota otimizada</h2></div></div>
+<div aria-live="polite" class="route" id="route"></div>
+</section>
+<div class="list" id="groupList"></div>
+<div class="list-footer"><span aria-live="polite" class="list-status" id="listStatus"></span><button class="btn load-more" hidden="" id="loadMoreBtn" type="button">Carregar mais</button></div>
+<div aria-label="Legenda" class="legend"><span><i style="background:#176d4a"></i>obtido</span><span><i style="background:#8b5cf6"></i>em progresso</span><span><i style="background:#ffc857"></i>status selecionado</span></div>
+</article>
+<aside class="side">
+<section class="card"><h2>Metas de ranking</h2><div class="ranks" id="ranks"></div></section>
+<section class="card"><h2>Base</h2><div class="quality"><div class="quality-row"><span>Grupos cadastrados</span><b id="qOfficial">0</b></div><div class="quality-row"><span>Composições identificadas</span><b id="qCompleteCompositions">0</b></div><div class="quality-row"><span>Nomes pendentes</span><b id="qPartialCompositions">0</b></div><div class="quality-row"><span>Grupos manuais</span><b id="qCustom">0</b></div><div class="quality-row"><span>Última revisão</span><b>28/09/2026</b></div></div></section>
+</aside>
+</section>
+<p class="footer">Fontes: notas oficiais, vídeo LADMO e LADMO Seal Codex · Não afiliada à MOVE Interactive ou GameKing.</p>
+</main>
+<dialog aria-labelledby="difficultyTitle" class="modal difficulty-modal" id="difficultyModal">
+<div class="modal-box difficulty-box">
+<div class="difficulty-modal-head">
+<div><p class="eyebrow">DIFICULDADE DO DECK</p><h2 id="difficultyTitle">Dificuldade</h2></div>
+<button aria-label="Fechar explicação" class="modal-close" id="difficultyClose" type="button">×</button>
+</div>
+<p class="difficulty-deck-name" id="difficultyDeckName"></p>
+<p class="difficulty-summary" id="difficultySummary"></p>
+<div class="difficulty-metrics" id="difficultyMetrics"></div>
+<section aria-labelledby="difficultyWhyTitle" class="difficulty-section">
+<h3 id="difficultyWhyTitle">Por que este deck tem essa dificuldade?</h3>
+<ul class="difficulty-points" id="difficultyPoints"></ul>
+</section>
+<section aria-labelledby="difficultyEvolutionTitle" class="difficulty-section" hidden="" id="difficultyEvolutionSection">
+<h3 id="difficultyEvolutionTitle">Evoluções e formas relevantes</h3>
+<div class="difficulty-evolutions" id="difficultyEvolutions"></div>
+</section>
+<div class="difficulty-focus" id="difficultyFocus"></div>
+</div>
+</dialog>
+<dialog class="modal" id="addModal"><form class="modal-box" id="addForm" method="dialog"><h2>Adicionar grupo manual</h2><div class="fields"><label>Nome do grupo<input id="newName" maxlength="100" required=""/></label><label>Digimons (separados por vírgula)<input id="newDigimon" maxlength="3000" required=""/></label><label>Quatro bônus (separados por vírgula)<input id="newRewards" maxlength="400" placeholder="AT +30, HT +50, EXP +20%, SCD +1%" required=""/></label><label>Dificuldade<select id="newDifficulty"><option>Fácil</option><option>Médio</option><option>Difícil</option><option>Evento</option></select></label></div><div class="modal-actions"><button class="btn" value="cancel">Cancelar</button><button class="btn primary" id="saveGroup" value="default">Salvar</button></div></form></dialog>
+<input accept="application/json,.json" hidden="" id="fileInput" type="file"/>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<script src="dunit-data.js?v=40"></script>
+<script src="dunit-optimizer.js?v=40"></script>
+<script src="dunit-app.js?v=40"></script>
+<script src="../assets/ow3ned-nav.js?v=33"></script>
 </body>
 </html>

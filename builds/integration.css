@@ -1,0 +1,16 @@
+
+/* Integração do Skill Builder com o portal Ow3neD */
+body[data-page="builds"]{--page-accent:#64dda4;--page-accent-rgb:100,221,164}
+body[data-page="builds"] .site-header{font-size:14px}
+body[data-page="builds"] .site-header .brand{font-size:1.08rem!important;font-weight:900!important;color:#f5f8ff!important}
+body[data-page="builds"] .site-header .brand img{width:46px!important;height:46px!important}
+body[data-page="builds"] .shell{width:min(1160px,calc(100% - 36px));max-width:1160px;padding-left:0;padding-right:0}
+body[data-page="builds"] footer{width:min(1320px,calc(100% - 40px));margin:auto;min-height:112px;padding:0;border-top:1px solid rgba(109,140,184,.18);display:grid;grid-template-columns:1fr auto;align-items:center;gap:24px;text-align:left;color:#73819b;font-size:.78rem}
+body[data-page="builds"] footer .footer-brand{display:flex;align-items:center;gap:9px;color:#cbd5e7;font-size:.98rem}
+body[data-page="builds"] footer .footer-brand img{object-fit:contain}
+@media(max-width:850px){body[data-page="builds"] footer{grid-template-columns:1fr;padding:26px 0;gap:10px}}
+@media(max-width:620px){body[data-page="builds"] .shell{width:calc(100% - 24px)}body[data-page="builds"] footer{width:calc(100% - 24px)}}
+
+body[data-page="builds"] .picker-title-line{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+body[data-page="builds"] .verified-count{display:inline-flex;align-items:center;gap:4px;padding:3px 7px;border:1px solid rgba(100,221,164,.22);border-radius:999px;background:rgba(100,221,164,.07);color:#9fabc0;font-size:.68rem;font-weight:700;letter-spacing:.02em}
+body[data-page="builds"] .verified-count strong{color:#78e5b3;font-size:.78rem}

@@ -14,6 +14,7 @@
   --ow-seals:#55d6ff;
   --ow-dunit:#a884ff;
   --ow-guide:#ffc45c;
+  --ow-builds:#64dda4;
   --ow-radius:18px;
   --ow-shadow:0 24px 70px rgba(0,0,0,.28);
   --ow-header-max:1320px;
@@ -26,8 +27,9 @@ body[data-page="ranku"]{--page-accent:var(--ow-ranku);--page-accent-rgb:155,124,
 body[data-page="seals"]{--page-accent:var(--ow-seals);--page-accent-rgb:85,214,255}
 body[data-page="dunit"]{--page-accent:var(--ow-dunit);--page-accent-rgb:168,132,255}
 body[data-page="guide"]{--page-accent:var(--ow-guide);--page-accent-rgb:255,196,92}
+body[data-page="builds"]{--page-accent:var(--ow-builds);--page-accent-rgb:100,221,164}
 
-body[data-page="ranku"],body[data-page="seals"],body[data-page="dunit"],body[data-page="guide"]{
+body[data-page="ranku"],body[data-page="seals"],body[data-page="dunit"],body[data-page="guide"],body[data-page="builds"]{
   background:radial-gradient(circle at 82% 7%,rgba(var(--page-accent-rgb),.105),transparent 28%),radial-gradient(circle at 12% 55%,rgba(74,156,255,.045),transparent 30%),var(--ow-bg)!important;
 }
 
@@ -187,6 +189,7 @@ body[data-page="home"] .calculator-card{--card-accent:var(--ow-ranku);--card-rgb
 body[data-page="home"] .seal-card{--card-accent:var(--ow-seals);--card-rgb:85,214,255}
 body[data-page="home"] .dunit-card{--card-accent:var(--ow-dunit);--card-rgb:168,132,255}
 body[data-page="home"] .guide-card{--card-accent:var(--ow-guide);--card-rgb:255,196,92}
+body[data-page="home"] .builds-card{--card-accent:var(--ow-builds);--card-rgb:100,221,164;grid-column:1/-1}
 body[data-page="home"] .card-icon{width:50px;height:50px;border-radius:14px;color:var(--card-accent)!important;background:rgba(var(--card-rgb),.095)!important;border-color:rgba(var(--card-rgb),.25)!important}
 body[data-page="home"] .card-icon svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
 body[data-page="home"] .card-label{color:rgba(var(--card-rgb),.72)}
@@ -257,6 +260,7 @@ body[data-page="guide"] .button.primary{background:linear-gradient(135deg,#da8f2
   body[data-page="home"] .hero-kicker-row .eyebrow{width:100%;margin-bottom:3px}
   body[data-page="home"] .hero-proof{flex-wrap:wrap;gap:10px 16px}
   body[data-page="home"] .resource-card{grid-template-columns:auto 1fr!important;min-height:0!important;padding:22px!important}
+  body[data-page="home"] .builds-card{grid-column:auto}
   body[data-page="home"] .card-number{font-size:2.8rem;right:18px}
   body[data-page="home"] .card-content p{font-size:.9rem}
   body[data-page="ranku"] .wrap{width:calc(100% - 20px)!important}
