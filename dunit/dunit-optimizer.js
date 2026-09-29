@@ -30,7 +30,9 @@
   }
 
   function unresolvedComposition(group) {
-    return (group.digimons || []).some((name) => /Digimon\(s\).*nomes em validação|não confirmada|nomes em validação|composição exibida no vídeo/i.test(String(name)));
+    const digimons = Array.isArray(group?.digimons) ? group.digimons : [];
+    const declaredMembers = Number(group?.memberCount) || 0;
+    return declaredMembers > digimons.length || digimons.some((name) => /Digimon\(s\).*nomes em validação|não confirmada|nomes em validação|composição exibida no vídeo/i.test(String(name)));
   }
 
   function addVector(a, b) {

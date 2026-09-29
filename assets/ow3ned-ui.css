@@ -15,6 +15,7 @@
   --ow-dunit:#a884ff;
   --ow-guide:#ffc45c;
   --ow-builds:#64dda4;
+  --ow-decks:#ff7d67;
   --ow-radius:18px;
   --ow-shadow:0 24px 70px rgba(0,0,0,.28);
   --ow-header-max:1320px;
@@ -28,8 +29,9 @@ body[data-page="seals"]{--page-accent:var(--ow-seals);--page-accent-rgb:85,214,2
 body[data-page="dunit"]{--page-accent:var(--ow-dunit);--page-accent-rgb:168,132,255}
 body[data-page="guide"]{--page-accent:var(--ow-guide);--page-accent-rgb:255,196,92}
 body[data-page="builds"]{--page-accent:var(--ow-builds);--page-accent-rgb:100,221,164}
+body[data-page="decks"]{--page-accent:var(--ow-decks);--page-accent-rgb:255,125,103}
 
-body[data-page="ranku"],body[data-page="seals"],body[data-page="dunit"],body[data-page="guide"],body[data-page="builds"]{
+body[data-page="ranku"],body[data-page="seals"],body[data-page="dunit"],body[data-page="guide"],body[data-page="builds"],body[data-page="decks"]{
   background:radial-gradient(circle at 82% 7%,rgba(var(--page-accent-rgb),.105),transparent 28%),radial-gradient(circle at 12% 55%,rgba(74,156,255,.045),transparent 30%),var(--ow-bg)!important;
 }
 
@@ -120,6 +122,7 @@ body[data-page="ranku"],body[data-page="seals"],body[data-page="dunit"],body[dat
   padding:0;
 }
 .ow-nav-toggle svg{width:22px;height:22px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round}
+.ow-nav-toggle:focus-visible{outline:3px solid rgba(var(--page-accent-rgb),.48);outline-offset:2px}
 
 /* Home */
 body[data-page="home"]{
@@ -189,7 +192,8 @@ body[data-page="home"] .calculator-card{--card-accent:var(--ow-ranku);--card-rgb
 body[data-page="home"] .seal-card{--card-accent:var(--ow-seals);--card-rgb:85,214,255}
 body[data-page="home"] .dunit-card{--card-accent:var(--ow-dunit);--card-rgb:168,132,255}
 body[data-page="home"] .guide-card{--card-accent:var(--ow-guide);--card-rgb:255,196,92}
-body[data-page="home"] .builds-card{--card-accent:var(--ow-builds);--card-rgb:100,221,164;grid-column:1/-1}
+body[data-page="home"] .decks-card{--card-accent:var(--ow-decks);--card-rgb:255,125,103}
+body[data-page="home"] .builds-card{--card-accent:var(--ow-builds);--card-rgb:100,221,164}
 body[data-page="home"] .card-icon{width:50px;height:50px;border-radius:14px;color:var(--card-accent)!important;background:rgba(var(--card-rgb),.095)!important;border-color:rgba(var(--card-rgb),.25)!important}
 body[data-page="home"] .card-icon svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
 body[data-page="home"] .card-label{color:rgba(var(--card-rgb),.72)}
@@ -221,10 +225,12 @@ body[data-page="guide"] .viewer-main{width:min(1320px,calc(100% - 40px))}
 body[data-page="guide"] .guide-pages img{border-color:rgba(var(--page-accent-rgb),.19);box-shadow:0 20px 58px rgba(0,0,0,.28)}
 body[data-page="guide"] .button.primary{background:linear-gradient(135deg,#da8f28,#ffc45c);color:#1b1306;box-shadow:0 12px 34px rgba(218,143,40,.14)}
 
-@media(max-width:980px){
+@media(max-width:1180px){
   .ow-header{width:min(100% - 28px,var(--ow-header-max))!important;min-height:72px!important}
-  .ow-nav-toggle{display:grid}
-  .ow-nav{
+  .ow-header:not(.ow-nav-ready){align-items:flex-start!important;flex-wrap:wrap!important}
+  .ow-header:not(.ow-nav-ready) .ow-nav{width:100%;justify-content:flex-start!important;flex-wrap:wrap!important}
+  .ow-header.ow-nav-ready .ow-nav-toggle{display:grid}
+  .ow-header.ow-nav-ready .ow-nav{
     position:absolute!important;
     top:calc(100% + 8px);
     right:0;
@@ -243,7 +249,7 @@ body[data-page="guide"] .button.primary{background:linear-gradient(135deg,#da8f2
     transform-origin:top right;
     transition:.18s ease!important;
   }
-  .ow-nav.is-open{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+  .ow-header.ow-nav-ready .ow-nav.is-open{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
   .ow-nav a{width:100%;min-height:44px;padding:0 13px!important}
   body[data-page="home"] .hero{grid-template-columns:1fr;min-height:auto;padding:62px 0 42px}
   body[data-page="home"] .crest{display:none}

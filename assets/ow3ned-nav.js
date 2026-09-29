@@ -16,6 +16,7 @@
   toggle.setAttribute('aria-expanded', 'false');
   toggle.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';
   header.insertBefore(toggle, nav);
+  header.classList.add('ow-nav-ready');
 
   const setOpen = (open) => {
     nav.classList.toggle('is-open', open);
@@ -34,9 +35,12 @@
     if (!header.contains(event.target)) setOpen(false);
   });
   window.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') setOpen(false);
+    if (event.key === 'Escape' && nav.classList.contains('is-open')) {
+      setOpen(false);
+      toggle.focus();
+    }
   });
-  window.matchMedia('(min-width: 981px)').addEventListener?.('change', (event) => {
+  window.matchMedia('(min-width: 1181px)').addEventListener?.('change', (event) => {
     if (event.matches) setOpen(false);
   });
 })();

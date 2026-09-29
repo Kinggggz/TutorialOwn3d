@@ -6,7 +6,7 @@
   if (!optimizer || !officialData.length) throw new Error('Base D-Unit não carregada.');
 
   const STATS = Object.freeze([
-    'AT','HT','CT','HP','DS','DE','EV','BL','EXP','SCD','Base SCD','Dano de atributo básico','Vacina SCD','Dados SCD','Vírus SCD',
+    'AT','HT','CT','HP','DS','DE','EV','BL','EXP','SCD','Dano de atributo básico','Vacina SCD','Dados SCD','Vírus SCD',
     'Luz SCD','Escuridão SCD','Desconhecido SCD','Fogo SCD','Gelo SCD','Água SCD','Madeira SCD','Vento SCD',
     'Eletricidade SCD','Aço SCD','Terra SCD'
   ]);
@@ -28,15 +28,11 @@
   const esc = (value) => String(value).replace(/[&<>"']/g, (char) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const clampStep = (value) => Math.max(0, Math.min(4, Math.floor(Number(value) || 0)));
   const unresolved = optimizer.unresolvedComposition;
-  const displayStat = (stat) => stat === 'Base SCD' ? 'SCD de atributo Base' : stat;
-  const displayReward = (reward) => {
-    const label = String(reward?.label || '');
-    if (reward?.stat === 'Base SCD') return label.replace(/^Base SCD/, 'SCD de atributo Base');
-    if (reward?.stat === 'SCD') return label;
-    return label;
-  };
+  const normalizeStat = (stat) => stat === 'Base SCD' ? 'SCD' : stat;
+  const displayStat = (stat) => normalizeStat(stat);
+  const displayReward = (reward) => String(reward?.label || '').replace(/^Base SCD/, 'SCD');
   const formatValue = (value, stat) => `${value}${stat === 'EXP' || stat.includes('SCD') || stat === 'Dano de atributo básico' ? '%' : ''}`;
-  const visibleDigimons = (group) => unresolved(group) ? `${group.memberCount || '?'} Digimons` : (group.digimons || []).join(' · ');
+  const visibleDigimons = (group) => unresolved(group) ? `${group.memberCount || '?'} Digimons — composição pendente` : (group.digimons || []).join(' · ');
 
   const SPECIAL_FORM_RULES = Object.freeze([
     { re: /despertad[oa]|awakened/i, label: 'Despertado' },
@@ -160,7 +156,7 @@
     } else if (route.status === 'complete-rank') {
       focusClass = 'done'; focusTitle = 'Ranking máximo'; focusText = 'Você já atingiu o maior ranking configurado no planejador.';
     } else if (route.status === 'target-met') {
-      focusClass = 'done'; focusTitle = 'Meta atingida'; focusText = 'Sua meta atual já foi alcançada; este deck pode ficar para um objetivo futuro.';
+      focusClass = 'done'; focusTitle = 'Meta atingida'; focusText = 'Sua meta atual já foi alcançada; este grupo pode ficar para um objetivo futuro.';
     } else if (route.status === 'no-target') {
       focusClass = remaining <= 1 ? 'high' : remaining <= 2 ? 'medium' : 'low';
       focusTitle = remaining <= 1 ? 'Foco alto' : remaining <= 2 ? 'Foco médio' : 'Foco secundário';
@@ -170,12 +166,12 @@
     } else if (route.position >= 0) {
       focusClass = route.position < 5 ? 'high' : 'medium';
       focusTitle = route.position < 5 ? 'Foco alto' : 'Bom foco';
-      focusText = `Este deck está na rota otimizada atual, na posição ${route.position + 1}.${nextCondition ? ` Próxima etapa: ${nextCondition}.` : ''}`;
+      focusText = `Este grupo está na rota otimizada atual, na posição ${route.position + 1}.${nextCondition ? ` Próxima etapa: ${nextCondition}.` : ''}`;
     } else {
       const excluded = (el.availability.value === 'accessible' && !['Fácil','Médio'].includes(group.difficulty)) || (el.availability.value === 'noevent' && group.difficulty === 'Evento');
       focusClass = 'low';
       focusTitle = excluded ? 'Fora do filtro atual' : 'Foco secundário';
-      focusText = excluded ? 'A disponibilidade selecionada exclui este nível de dificuldade da rota.' : `Para sua meta atual, o otimizador encontrou grupos com melhor relação entre ganho e esforço.${nextCondition ? ` Próxima etapa deste deck: ${nextCondition}.` : ''}`;
+      focusText = excluded ? 'A disponibilidade selecionada exclui este nível de dificuldade da rota.' : `Para sua meta atual, o otimizador encontrou grupos com melhor relação entre ganho e esforço.${nextCondition ? ` Próxima etapa deste grupo: ${nextCondition}.` : ''}`;
     }
 
     const summary = group.difficulty === 'Fácil' ? 'Progressão direta, com requisitos estruturais menores.' : group.difficulty === 'Médio' ? 'Progressão intermediária, equilibrando quantidade, nível e transcendência.' : group.difficulty === 'Evento' ? 'Obtenção ligada a conteúdo de evento, além dos requisitos do grupo.' : 'Progressão exigente, com maior volume de preparação ou formas avançadas.';
@@ -202,9 +198,9 @@
 
   function validateReward(raw) {
     if (!raw || typeof raw !== 'object') return null;
-    const stat = String(raw.stat || '').trim();
+    const stat = normalizeStat(String(raw.stat || '').trim());
     const value = Number(raw.value);
-    const label = String(raw.label || '').trim();
+    const label = String(raw.label || '').trim().replace(/^Base SCD/, 'SCD');
     if (!STATS.includes(stat) || !Number.isInteger(value) || value < 0 || value > 100000 || !label || label.length > 80) return null;
     return { stat, value, label };
   }
@@ -310,7 +306,7 @@
     if (gainOption) gainOption.disabled = stat === 'rank';
     if (stat === 'rank' && el.strategy.value === 'gain') el.strategy.value = 'balanced';
     if (stat === 'rank') {
-      el.earnedGoal.textContent = groups.filter((group) => group.official && clampStep(group.steps) === 4).length;
+      el.earnedGoal.textContent = groups.filter((group) => clampStep(group.steps) === 4).length;
       el.earnedLabel.textContent = 'grupos concluídos';
       el.targetAmount.disabled = true;
       return;
@@ -480,7 +476,8 @@
     }
     el.difficultyFocus.className = `difficulty-focus ${analysis.focusClass}`;
     el.difficultyFocus.innerHTML = `<small>ONDE FOCAR</small><strong>${esc(analysis.focusTitle)}</strong><p>${esc(analysis.focusText)}</p>`;
-    el.difficultyModal.showModal();
+    if (typeof el.difficultyModal.showModal === 'function') el.difficultyModal.showModal();
+    else el.difficultyModal.setAttribute('open', '');
   }
 
   el.groupList.addEventListener('click', (event) => {
@@ -515,12 +512,16 @@
   ['goal','strategy','availability'].forEach((id) => el[id].addEventListener('change', render));
   el.targetAmount.addEventListener('input', () => renderRoute(renderSummary()));
 
-  el.difficultyClose.addEventListener('click', () => el.difficultyModal.close());
+  const closeDialog = (dialog) => typeof dialog.close === 'function' ? dialog.close() : dialog.removeAttribute('open');
+  el.difficultyClose.addEventListener('click', () => closeDialog(el.difficultyModal));
   el.difficultyModal.addEventListener('click', (event) => {
-    if (event.target === el.difficultyModal) el.difficultyModal.close();
+    if (event.target === el.difficultyModal) closeDialog(el.difficultyModal);
   });
 
-  el.addBtn.addEventListener('click', () => el.addModal.showModal());
+  el.addBtn.addEventListener('click', () => {
+    if (typeof el.addModal.showModal === 'function') el.addModal.showModal();
+    else el.addModal.setAttribute('open', '');
+  });
   el.saveGroup.addEventListener('click', (event) => {
     event.preventDefault();
     const name = el.newName.value.trim();
@@ -538,7 +539,7 @@
     });
     save();
     el.addForm.reset();
-    el.addModal.close();
+    closeDialog(el.addModal);
     render();
     toast('Grupo manual adicionado.');
   });
@@ -560,7 +561,7 @@
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'progresso-dunit-ladmo-v48.json';
+    link.download = 'progresso-dunit-ladmo-v54.json';
     document.body.appendChild(link);
     link.click();
     link.remove();

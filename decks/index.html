@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080b14">
+  <meta name="description" content="Compare Deck Buffs do LADMO, seus Digimons e status.">
+  <title>Comparador de Deck Buff | Ow3neD</title>
+  <link rel="icon" href="../assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="../assets/ow3ned-ui.css?v=54">
+  <link rel="stylesheet" href="decks.css?v=55">
+</head>
+<body data-page="decks">
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="guild-nav">
+  <a class="guild-brand" href="../" aria-label="Ow3neD - página inicial"><img src="../assets/logo.png" alt="" width="38" height="38"><span>Ow3neD</span></a>
+  <nav class="guild-links" aria-label="Navegação principal"><a href="../">Início</a><a href="../calculator/">Calculadora Rank U</a><a href="../seals/">Calculadora de Selos</a><a href="../dunit/">Calculadora D-Unit</a><a class="active" aria-current="page" href="./">Deck Buff</a><a href="../builds/">Calculadora de Builds</a><a href="../guide/">Guia de Progressão</a></nav>
+</header>
+
+<main class="compare-shell" id="conteudo">
+  <header class="page-head">
+    <div><p class="eyebrow">DECK SYSTEM • LADMO</p><h1>Comparador de Decks</h1></div>
+    <div class="database-count"><strong id="deckCount">0</strong><span>decks na base</span></div>
+  </header>
+
+  <section class="compare-panel" aria-labelledby="compareTitle">
+    <div class="panel-head"><div><p class="eyebrow">COMPARAÇÃO</p><h2 id="compareTitle">Escolha os decks</h2></div><div class="field objective"><label for="objective">Melhor em</label><select id="objective"><option value="overall">Desempenho geral</option><option value="skillDamage">Dano de Skill</option><option value="normalDamage">Ataque básico</option><option value="critDamage">Dano Crítico</option><option value="attackSpeed">Velocidade de Ataque</option><option value="hp">HP</option><option value="attributeDamage">Dano de Atributo</option><option value="finalDamage">Dano Final</option><option value="attackAmp">Amplificação de Ataque</option><option value="attack">Ataque</option><option value="hit">Precisão</option><option value="cooldownReset">Reset de recarga</option></select></div></div>
+
+    <div class="deck-selectors">
+      <div class="field deck-picker" data-deck-picker>
+        <label for="deck1">Deck 1</label>
+        <div class="deck-search-row"><input class="deck-search" id="deck1Search" type="search" autocomplete="off" placeholder="Pesquisar deck, Digimon ou status…" data-deck-search="deck1" aria-label="Pesquisar Deck 1"><span class="deck-search-count" data-search-count="deck1"></span></div>
+        <select id="deck1" data-deck-select></select>
+      </div>
+      <div class="field deck-picker" data-deck-picker>
+        <label for="deck2">Deck 2</label>
+        <div class="deck-search-row"><input class="deck-search" id="deck2Search" type="search" autocomplete="off" placeholder="Pesquisar deck, Digimon ou status…" data-deck-search="deck2" aria-label="Pesquisar Deck 2"><span class="deck-search-count" data-search-count="deck2"></span></div>
+        <select id="deck2" data-deck-select></select>
+      </div>
+      <div class="field optional deck-picker" data-deck-picker>
+        <label for="deck3">Deck 3 <span>opcional</span></label>
+        <div class="deck-search-row"><input class="deck-search" id="deck3Search" type="search" autocomplete="off" placeholder="Pesquisar deck, Digimon ou status…" data-deck-search="deck3" aria-label="Pesquisar Deck 3"><span class="deck-search-count" data-search-count="deck3"></span></div>
+        <select id="deck3" data-deck-select></select>
+      </div>
+      <div class="field optional deck-picker" data-deck-picker>
+        <label for="deck4">Deck 4 <span>opcional</span></label>
+        <div class="deck-search-row"><input class="deck-search" id="deck4Search" type="search" autocomplete="off" placeholder="Pesquisar deck, Digimon ou status…" data-deck-search="deck4" aria-label="Pesquisar Deck 4"><span class="deck-search-count" data-search-count="deck4"></span></div>
+        <select id="deck4" data-deck-select></select>
+      </div>
+    </div>
+
+    <div class="verdict" id="verdict" role="status" aria-live="polite"></div>
+    <div class="comparison-grid" id="comparison"></div>
+  </section>
+  <p class="method-note">“Melhor” considera o status selecionado. Efeitos ativados são ponderados pela chance; “geral” usa uma estimativa comparativa.</p>
+</main>
+
+<dialog class="explanation-dialog" id="explanationDialog" aria-labelledby="explanationTitle">
+  <div class="dialog-head"><div><p class="eyebrow">COMO FUNCIONA</p><h2 id="explanationTitle">Explicação</h2></div><button id="explanationClose" type="button" aria-label="Fechar explicação">×</button></div>
+  <div class="dialog-content" id="explanationContent"></div>
+</dialog>
+
+<script src="decks-data.js?v=54"></script>
+<script src="decks-app.js?v=55"></script>
+<script src="../assets/ow3ned-nav.js?v=54"></script>
+</body>
+</html>

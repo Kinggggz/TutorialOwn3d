@@ -11,14 +11,14 @@
 <meta content="Planeje grupos, status e rankings do D-Unit no LADMO com rota otimizada." property="og:description"/>
 <meta content="website" property="og:type"/>
 <link href="../assets/logo.png" rel="icon" type="image/png"/>
-<link href="../assets/ow3ned-ui.css?v=33" rel="stylesheet"/>
-<link href="dunit.css?v=48" rel="stylesheet"/>
+<link href="../assets/ow3ned-ui.css?v=54" rel="stylesheet"/>
+<link href="dunit.css?v=54" rel="stylesheet"/>
 </head>
 <body data-page="dunit">
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 <header class="guild-nav">
 <a aria-label="Ow3neD - página inicial" class="guild-brand" href="../"><img alt="" height="38" src="../assets/logo.png" width="38"/><span>Ow3neD</span></a>
-<nav aria-label="Navegação principal" class="guild-links"><a href="../">Início</a><a href="../calculator/">Calculadora Rank U</a><a href="../seals/">Calculadora de Selos</a><a aria-current="page" class="active" href="./">Calculadora D-Unit</a><a href="../builds/">Calculadora de Builds</a><a href="../guide/">Guia de Progressão</a></nav>
+<nav aria-label="Navegação principal" class="guild-links"><a href="../">Início</a><a href="../calculator/">Calculadora Rank U</a><a href="../seals/">Calculadora de Selos</a><a aria-current="page" class="active" href="./">Calculadora D-Unit</a><a href="../decks/">Deck Buff</a><a href="../builds/">Calculadora de Builds</a><a href="../guide/">Guia de Progressão</a></nav>
 </header>
 <main class="shell" id="conteudo">
 <header class="topbar">
@@ -32,7 +32,7 @@
 <article class="card metric"><strong id="nextCount">1</strong><span>até o próximo rank</span></article>
 </section>
 <section aria-label="Configurar rota" class="card planner">
-<div class="field"><label for="goal">Objetivo</label><select class="select" id="goal"><option value="rank">Avançar no ranking</option><option>AT</option><option>HT</option><option>CT</option><option>HP</option><option>DS</option><option>DE</option><option>EV</option><option>BL</option><option value="SCD">SCD</option><option value="Base SCD">SCD de atributo Base</option><option value="Dano de atributo básico">Dano de atributo básico</option><option value="Vacina SCD">SCD de Vacina</option><option value="Dados SCD">SCD de Dados</option><option value="Vírus SCD">SCD de Vírus</option><option value="Luz SCD">SCD de Luz</option><option value="Escuridão SCD">SCD de Escuridão</option><option value="Desconhecido SCD">SCD Desconhecido</option><option value="Fogo SCD">SCD de Fogo</option><option value="Gelo SCD">SCD de Gelo</option><option value="Água SCD">SCD de Água</option><option value="Madeira SCD">SCD de Madeira</option><option value="Vento SCD">SCD de Vento</option><option value="Eletricidade SCD">SCD de Eletricidade</option><option value="Aço SCD">SCD de Aço</option><option value="Terra SCD">SCD de Terra</option><option>EXP</option></select></div>
+<div class="field"><label for="goal">Objetivo</label><select class="select" id="goal"><option value="rank">Avançar no ranking</option><option>AT</option><option>HT</option><option>CT</option><option>HP</option><option>DS</option><option>DE</option><option>EV</option><option>BL</option><option value="SCD">SCD</option><option value="Dano de atributo básico">Dano de atributo básico</option><option value="Vacina SCD">SCD de Vacina</option><option value="Dados SCD">SCD de Dados</option><option value="Vírus SCD">SCD de Vírus</option><option value="Luz SCD">SCD de Luz</option><option value="Escuridão SCD">SCD de Escuridão</option><option value="Desconhecido SCD">SCD Desconhecido</option><option value="Fogo SCD">SCD de Fogo</option><option value="Gelo SCD">SCD de Gelo</option><option value="Água SCD">SCD de Água</option><option value="Madeira SCD">SCD de Madeira</option><option value="Vento SCD">SCD de Vento</option><option value="Eletricidade SCD">SCD de Eletricidade</option><option value="Aço SCD">SCD de Aço</option><option value="Terra SCD">SCD de Terra</option><option>EXP</option></select></div>
 <div class="field"><label for="targetAmount">Valor desejado</label><input class="input" disabled="" id="targetAmount" min="0" step="1" type="number" value="0"/></div>
 <div class="field"><label for="strategy">Prioridade</label><select class="select" id="strategy"><option value="balanced">Melhor custo-benefício</option><option value="fast">Menos condições</option><option value="cheap">Mais acessível</option><option value="gain">Menos grupos</option></select></div>
 <div class="field"><label for="availability">Grupos</label><select class="select" id="availability"><option value="all">Todos os grupos</option><option value="noevent">Excluir grupos de evento</option><option value="accessible">Somente fácil/médio</option></select></div>
@@ -40,7 +40,7 @@
 </section>
 <section class="workspace">
 <article class="card main">
-<div class="database-head"><div><h2>Base D-Unit LADMO</h2><p>Marque sua condição atual.</p></div><span class="verified" id="verifiedCount"></span></div>
+<div class="database-head"><div><h2>Base D-Unit LADMO</h2><p>Marque sempre a última condição atendida.</p></div><span class="verified" id="verifiedCount"></span></div>
 <div class="tools">
 <div class="tool-field"><label for="search">Buscar</label><input autocomplete="off" class="input" id="search" placeholder="Grupo, Digimon ou status…"/></div>
 <div class="tool-field"><label for="difficulty">Dificuldade</label><select class="select" id="difficulty"><option value="all">Todas</option><option>Fácil</option><option>Médio</option><option>Difícil</option><option>Evento</option></select></div>
@@ -56,7 +56,7 @@
 </article>
 <aside class="side">
 <section class="card"><h2>Metas de ranking</h2><div class="ranks" id="ranks"></div></section>
-<section class="card"><h2>Base</h2><div class="quality"><div class="quality-row"><span>Grupos cadastrados</span><b id="qOfficial">0</b></div><div class="quality-row"><span>Composições identificadas</span><b id="qCompleteCompositions">0</b></div><div class="quality-row"><span>Nomes pendentes</span><b id="qPartialCompositions">0</b></div><div class="quality-row"><span>Grupos manuais</span><b id="qCustom">0</b></div><div class="quality-row"><span>Última revisão</span><b>28/09/2026</b></div></div></section>
+<section class="card"><h2>Base</h2><div class="quality"><div class="quality-row"><span>Grupos ativos</span><b id="qOfficial">0</b></div><div class="quality-row"><span>Composições identificadas</span><b id="qCompleteCompositions">0</b></div><div class="quality-row"><span>Nomes pendentes</span><b id="qPartialCompositions">0</b></div><div class="quality-row"><span>Grupos manuais</span><b id="qCustom">0</b></div><div class="quality-row"><span>Última revisão</span><b>29/09/2026</b></div></div></section>
 </aside>
 </section>
 <p class="footer">Fontes: notas oficiais, vídeo LADMO e LADMO Seal Codex · Não afiliada à MOVE Interactive ou GameKing.</p>
@@ -64,14 +64,14 @@
 <dialog aria-labelledby="difficultyTitle" class="modal difficulty-modal" id="difficultyModal">
 <div class="modal-box difficulty-box">
 <div class="difficulty-modal-head">
-<div><p class="eyebrow">DIFICULDADE DO DECK</p><h2 id="difficultyTitle">Dificuldade</h2></div>
+<div><p class="eyebrow">DIFICULDADE DO GRUPO</p><h2 id="difficultyTitle">Dificuldade</h2></div>
 <button aria-label="Fechar explicação" class="modal-close" id="difficultyClose" type="button">×</button>
 </div>
 <p class="difficulty-deck-name" id="difficultyDeckName"></p>
 <p class="difficulty-summary" id="difficultySummary"></p>
 <div class="difficulty-metrics" id="difficultyMetrics"></div>
 <section aria-labelledby="difficultyWhyTitle" class="difficulty-section">
-<h3 id="difficultyWhyTitle">Por que este deck tem essa dificuldade?</h3>
+<h3 id="difficultyWhyTitle">Por que este grupo tem essa dificuldade?</h3>
 <ul class="difficulty-points" id="difficultyPoints"></ul>
 </section>
 <section aria-labelledby="difficultyEvolutionTitle" class="difficulty-section" hidden="" id="difficultyEvolutionSection">
@@ -81,12 +81,12 @@
 <div class="difficulty-focus" id="difficultyFocus"></div>
 </div>
 </dialog>
-<dialog class="modal" id="addModal"><form class="modal-box" id="addForm" method="dialog"><h2>Adicionar grupo manual</h2><div class="fields"><label>Nome do grupo<input id="newName" maxlength="100" required=""/></label><label>Digimons (separados por vírgula)<input id="newDigimon" maxlength="3000" required=""/></label><label>Quatro bônus (separados por vírgula)<input id="newRewards" maxlength="400" placeholder="AT +30, HT +50, EXP +20%, SCD +1%" required=""/></label><label>Dificuldade<select id="newDifficulty"><option>Fácil</option><option>Médio</option><option>Difícil</option><option>Evento</option></select></label></div><div class="modal-actions"><button class="btn" value="cancel">Cancelar</button><button class="btn primary" id="saveGroup" value="default">Salvar</button></div></form></dialog>
+<dialog class="modal" id="addModal"><form class="modal-box" id="addForm" method="dialog"><h2>Adicionar grupo manual</h2><div class="fields"><label>Nome do grupo<input id="newName" maxlength="100" required=""/></label><label>Digimons (separados por vírgula)<input id="newDigimon" maxlength="3000" required=""/></label><label>Quatro bônus (separados por vírgula)<input id="newRewards" maxlength="400" placeholder="AT +30, HT +50, EXP +20%, SCD +1%" required=""/></label><label>Dificuldade<select id="newDifficulty"><option>Fácil</option><option>Médio</option><option>Difícil</option><option>Evento</option></select></label></div><div class="modal-actions"><button class="btn" type="submit" value="cancel">Cancelar</button><button class="btn primary" id="saveGroup" type="submit" value="default">Salvar</button></div></form></dialog>
 <input accept="application/json,.json" hidden="" id="fileInput" type="file"/>
 <div aria-live="polite" class="toast" id="toast" role="status"></div>
-<script src="dunit-data.js?v=48"></script>
-<script src="dunit-optimizer.js?v=48"></script>
-<script src="dunit-app.js?v=48"></script>
-<script src="../assets/ow3ned-nav.js?v=33"></script>
+<script src="dunit-data.js?v=54"></script>
+<script src="dunit-optimizer.js?v=54"></script>
+<script src="dunit-app.js?v=54"></script>
+<script src="../assets/ow3ned-nav.js?v=54"></script>
 </body>
 </html>
