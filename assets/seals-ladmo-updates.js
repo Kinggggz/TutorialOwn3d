@@ -8,7 +8,7 @@ window.SEALS_LADMO_UPDATES = [
     name: 'Selo New LADMO — AT',
     percent: false,
     rankBonuses: [0, 30, 60, 120, 180, 240, 300],
-    sourceId: 'ladmo-2024-11-new-at'
+    recordId: 'ladmo-2024-11-new-at'
   },
   {
     attr: 'HP',
@@ -19,7 +19,7 @@ window.SEALS_LADMO_UPDATES = [
     name: 'Selo New LADMO — HP',
     percent: false,
     rankBonuses: [0, 30, 60, 120, 180, 240, 300],
-    sourceId: 'ladmo-2024-11-new-hp'
+    recordId: 'ladmo-2024-11-new-hp'
   },
   {
     attr: 'DS',
@@ -30,7 +30,7 @@ window.SEALS_LADMO_UPDATES = [
     name: 'Selo New LADMO — DS',
     percent: false,
     rankBonuses: [0, 30, 60, 120, 180, 240, 300],
-    sourceId: 'ladmo-2024-11-new-ds'
+    recordId: 'ladmo-2024-11-new-ds'
   },
   {
     attr: 'CT',
@@ -41,7 +41,7 @@ window.SEALS_LADMO_UPDATES = [
     name: 'Selo New LADMO — CT',
     percent: true,
     rankBonuses: [0, 0.3, 0.6, 1.2, 1.8, 2.4, 3],
-    sourceId: 'ladmo-2024-11-new-ct'
+    recordId: 'ladmo-2024-11-new-ct'
   },
   {
     attr: 'AT',
@@ -51,7 +51,7 @@ window.SEALS_LADMO_UPDATES = [
     maxSeals: 3000,
     name: 'Selo de Natal — AT',
     percent: false,
-    sourceId: 'ladmo-2025-12-christmas-at'
+    recordId: 'ladmo-2025-12-christmas-at'
   },
   {
     attr: 'HT',
@@ -61,7 +61,7 @@ window.SEALS_LADMO_UPDATES = [
     maxSeals: 3000,
     name: 'Selo de Natal — HT',
     percent: false,
-    sourceId: 'ladmo-2025-12-christmas-ht'
+    recordId: 'ladmo-2025-12-christmas-ht'
   },
   {
     attr: 'DE',
@@ -71,7 +71,7 @@ window.SEALS_LADMO_UPDATES = [
     maxSeals: 3000,
     name: 'Selo de Natal — DE',
     percent: false,
-    sourceId: 'ladmo-2025-12-christmas-de'
+    recordId: 'ladmo-2025-12-christmas-de'
   },
   {
     attr: 'AT',
@@ -82,7 +82,7 @@ window.SEALS_LADMO_UPDATES = [
     name: 'Selo da Virada da Sorte — AT',
     percent: false,
     rankBonuses: [0, 50, 100, 200, 300, 400, 500],
-    sourceId: 'ladmo-2026-03-lucky-turn-at'
+    recordId: 'ladmo-2026-03-lucky-turn-at'
   },
   {
     attr: 'DE',
@@ -94,7 +94,7 @@ window.SEALS_LADMO_UPDATES = [
     percent: false,
     thresholds: [0, 1, 25, 50, 75, 90, 100],
     rankBonuses: [0, 30, 60, 90, 150, 200, 300],
-    sourceId: 'ladmo-2026-05-tamer-matt'
+    recordId: 'ladmo-2026-05-tamer-matt'
   },
   {
     attr: 'AT',
@@ -104,7 +104,7 @@ window.SEALS_LADMO_UPDATES = [
     maxSeals: 3000,
     name: 'Selo AT — Férias Digitais',
     percent: false,
-    sourceId: 'ladmo-2026-07-digital-vacation-at'
+    recordId: 'ladmo-2026-07-digital-vacation-at'
   },
   {
     aliases: ['Vampiric Seal'],
@@ -116,12 +116,11 @@ window.SEALS_LADMO_UPDATES = [
     name: 'Selo Vampírico',
     percent: true,
     rankBonuses: [0, 0.1, 0.2, 0.4, 0.6, 0.8, 1],
-    sourceId: 'ladmo-2025-04-vampiric'
+    recordId: 'ladmo-2025-04-vampiric'
   }
 ];
 
-// Os itens abaixo existem no LADMO, mas as notas oficiais consultadas não
-// publicam os bônus por rank. Eles ficam fora da rota para evitar estimativas.
+// Itens sem bônus por rank confirmado ficam fora da rota para evitar estimativas.
 window.SEALS_LADMO_PENDING = [
   {attr: 'HT', name: 'Selo Virada da Sorte — HT'},
   {attr: 'HP', name: 'Selo do 4º Aniversário LADMO — HP'},

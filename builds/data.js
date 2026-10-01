@@ -74,7 +74,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 1
         },
         "confidence": "high",
-        "basis": "DMO Wiki + patch 27/08/2026",
         "reason": "F3 é a skill de área confirmada do Susanoomon. Farm prioriza F3; F1 recebe os pontos restantes.",
         "rotation": [
           "F3",
@@ -100,7 +99,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 1
         },
         "confidence": "medium",
-        "basis": "DMO Wiki atual + rebalance 08/2026",
         "reason": "Para DPS sustentado contra alvo único/chefes, F1 e F2 são o núcleo do ciclo. F3 é a skill de área e fica reservada ao Farm. A divisão F1 24 / F2 11 usa os 76 pontos e favorece a rotação curta.",
         "rotation": [
           "F1",
@@ -113,28 +111,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — Susanoomon Extreme",
-        "url": "https://dmowiki.com/Susanoomon_%28Extreme%29"
-      },
-      {
-        "type": "Oficial",
-        "label": "GameKing — rebalanceamento 27/08/2026",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=228"
-      },
-      {
-        "type": "Oficial",
-        "label": "GameKing — lançamento LADMO",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=179"
-      }
-    ],
     "notes": [
-      "Auditoria v47: Farm prioriza F3 (AoE confirmada) e DPS sustentado prioriza F1/F2; a distribuição de DPS é uma recomendação derivada dos custos e cooldowns atuais."
+      "Nenhuma habilidade nativa em área está confirmada na configuração atual."
     ],
     "overclock": false,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "omm": {
     "name": "Omegamon - Merciful Mode",
@@ -211,7 +192,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 25
         },
         "confidence": "high",
-        "basis": "DMO Wiki atual",
         "reason": "F4 ataca todos os inimigos no alcance; por isso é a prioridade de Farm.",
         "rotation": [
           "F4",
@@ -237,7 +217,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 1
         },
         "confidence": "high",
-        "basis": "Comunidade 08/2026 + DMO Wiki atual",
         "reason": "Para DPS sustentado contra alvo único, a recomendação concentra F1 e coloca os pontos restantes em F3. F4 é a skill de área e fica no preset Farm.",
         "rotation": [
           "F1",
@@ -249,28 +228,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — OMM",
-        "url": "https://dmowiki.com/Omegamon_-_Merciful_Mode"
-      },
-      {
-        "type": "Reddit",
-        "label": "Discussão 08/2026 — F1 25 / F3 8",
-        "url": "https://www.reddit.com/r/DigimonMastersOnline/comments/1vuu1r4/omm/"
-      },
-      {
-        "type": "Oficial",
-        "label": "GameKing — balanceamento U",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=228"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: F4. A classificação não é inferida pelo número da skill; cada F1/F2/F3/F4/F5 foi verificada individualmente."
+      "Habilidades em área confirmadas na base: F4."
     ],
     "overclock": true,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "x7sm": {
     "name": "Shoutmon X7 Superior Mode",
@@ -358,8 +320,7 @@ window.SKILL_BUILDER_DATA = {
           "F5": 1
         },
         "confidence": "medium",
-        "basis": "Patch 27/08/2026 + dados atuais",
-        "reason": "Nenhuma skill nativa foi confirmada como AoE nas fontes atuais. Farm usa a rotação curta de alvo único como fallback; não confundir F3 de alto dano com skill em área.",
+        "reason": "Nenhuma skill nativa foi confirmada como AoE na configuração atual. Farm usa a rotação curta de alvo único como fallback; não confundir F3 de alto dano com skill em área.",
         "rotation": [
           "F2",
           "F1",
@@ -387,7 +348,6 @@ window.SKILL_BUILDER_DATA = {
           "F5": 1
         },
         "confidence": "high",
-        "basis": "Comunidade 06/2026 + valores atuais",
         "reason": "F2 é a principal skill sustentada após o rebalance. Com F2 no 25, os pontos restantes vão para F3; F1 deixou de ser a skill curta que era antes do rebalance.",
         "rotation": [
           "F2",
@@ -399,33 +359,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — X7SM",
-        "url": "https://dmowiki.com/Shoutmon_X7_Superior_Mode"
-      },
-      {
-        "type": "Reddit",
-        "label": "Discussão de distribuição",
-        "url": "https://www.reddit.com/r/DigimonMastersOnline/comments/1l31b6z/x7sm_skill_levels_distribution/"
-      },
-      {
-        "type": "YouTube",
-        "label": "Review LADMO — skills/showcase",
-        "url": "https://www.youtube.com/watch?v=qYHm8FiQVUQ"
-      },
-      {
-        "type": "Oficial",
-        "label": "GameKing — balanceamento/Overclock",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=228"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: nenhuma skill nativa explicitamente confirmada. A classificação não é inferida pelo número da skill; cada F1/F2/F3/F4/F5 foi verificada individualmente."
+      "Nenhuma habilidade nativa em área está confirmada na configuração atual."
     ],
     "overclock": true,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "miko": {
     "name": "Kuzuhamon - Miko Mode",
@@ -502,7 +440,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 1
         },
         "confidence": "high",
-        "basis": "DMO Wiki + patch 27/08/2026",
         "reason": "F2 é a AoE atual da Miko e a opção indicada para limpeza/leveling.",
         "rotation": [
           "F2",
@@ -528,7 +465,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 1
         },
         "confidence": "high",
-        "basis": "Comunidade 06/2026 + DMO Wiki atual",
         "reason": "Para DPS de alvo único, F1 é o investimento principal. F2 é a opção de AoE/leveling e fica como foco do preset Farm.",
         "rotation": [
           "F1",
@@ -540,28 +476,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — Miko",
-        "url": "https://dmowiki.com/Kuzuhamon_-_Miko_Mode"
-      },
-      {
-        "type": "Reddit",
-        "label": "Skill distribution help — 06/2026",
-        "url": "https://www.reddit.com/r/DigimonMastersOnline/comments/1ud3egb/skill_distribution_help/"
-      },
-      {
-        "type": "Oficial",
-        "label": "GameKing — balanceamento/Overclock",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=228"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: F2. A classificação não é inferida pelo número da skill; cada F1/F2/F3/F4/F5 foi verificada individualmente."
+      "Habilidades em área confirmadas na base: F2."
     ],
     "overclock": true,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "cma": {
     "name": "Gallantmon (Crimson Mode) [Despertado]",
@@ -638,7 +557,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 1
         },
         "confidence": "medium",
-        "basis": "Patch 27/08/2026 + custos atuais",
         "reason": "Nenhuma skill nativa foi confirmada como AoE. Farm usa F1/F2 como fallback de alvo único; F3 não é classificada como área só por ser o grande nuke.",
         "rotation": [
           "F1",
@@ -665,7 +583,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 1
         },
         "confidence": "high",
-        "basis": "Comunidade 06/2026 + DMO Wiki atual",
         "reason": "Distribuição comunitária recorrente para DPS sustentado: F1 24 e F2 11 usa os 76 pontos e mantém o ciclo de baixo cooldown.",
         "rotation": [
           "F1",
@@ -676,28 +593,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — CMA",
-        "url": "https://dmowiki.com/Gallantmon_%28Crimson_Mode%29_%28Awaken%29"
-      },
-      {
-        "type": "Reddit",
-        "label": "Skill distribution help — 06/2026",
-        "url": "https://www.reddit.com/r/DigimonMastersOnline/comments/1ud3egb/skill_distribution_help/"
-      },
-      {
-        "type": "Oficial",
-        "label": "GameKing — balanceamento/Overclock",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=228"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: nenhuma skill nativa explicitamente confirmada. A classificação não é inferida pelo número da skill; cada F1/F2/F3/F4/F5 foi verificada individualmente."
+      "Nenhuma habilidade nativa em área está confirmada na configuração atual."
     ],
     "overclock": true,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "aoe": {
     "name": "Alphamon Ouryuken [Supremacia]",
@@ -773,7 +673,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 1
         },
         "confidence": "medium",
-        "basis": "DMO Wiki + patch 27/08/2026",
         "reason": "No LADMO atual não há uma skill nativa de área confirmada para este kit. Farm usa F1/F2 como fallback de alvo único; o builder não assume que F3 seja AoE.",
         "rotation": [
           "F1",
@@ -800,7 +699,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 1
         },
         "confidence": "high",
-        "basis": "Teste comunitário 22/09/2026 + DMO Wiki atual",
         "reason": "Em luta sustentada, F1+F2 alcançam e ultrapassam o ganho de F3 rapidamente. Com F1 usado com maior frequência, 25/15 é a divisão mais consistente.",
         "rotation": [
           "F1",
@@ -811,28 +709,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — AOE",
-        "url": "https://dmowiki.com/Alphamon_Ouryuken_%28Extreme%29"
-      },
-      {
-        "type": "Reddit",
-        "label": "Discussão AOE — 22/09/2026",
-        "url": "https://www.reddit.com/r/DigimonMastersOnline/comments/1wnof06/aoe_skill_dist/"
-      },
-      {
-        "type": "Oficial",
-        "label": "GameKing — rebalanceamento 27/08/2026",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=228"
-      }
-    ],
     "notes": [
-      "Auditoria regional LADMO 28/09/2026: não marcar F3 como AoE. A nota oficial do LADMO de 27/08/2026 registra F3 com recarga 49s→46s e não anuncia conversão para área; a página atual do DMO Wiki também não rotula F3 como AoE. Há uma nota de outra região (GDMO) com numeração/conversão conflitante, por isso o builder prioriza a documentação LADMO."
+      "Nenhuma habilidade nativa em área está confirmada na configuração atual."
     ],
     "overclock": false,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "lilith": {
     "name": "Lilithmon X [Despertado]",
@@ -922,7 +803,6 @@ window.SKILL_BUILDER_DATA = {
           "F5": 1
         },
         "confidence": "high",
-        "basis": "DMO Wiki atual",
         "reason": "F3 e F4 são AoE, mas F4 é a AoE de maior dano e ainda aplica stun; com custo de 4 pts/lv, chega ao Lv.20 usando 76 pontos.",
         "rotation": [
           "F4",
@@ -950,7 +830,6 @@ window.SKILL_BUILDER_DATA = {
           "F5": 11
         },
         "confidence": "high",
-        "basis": "DMO Wiki — recomendação explícita de distribuição",
         "reason": "A própria página atual recomenda F2 24 / F5 11 como a melhor distribuição geral em testes pessoais do autor.",
         "rotation": [
           "F2",
@@ -962,23 +841,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — Lilith X Awaken",
-        "url": "https://dmowiki.com/Lilithmon_%28X-Antibody%29_%28Awaken%29"
-      },
-      {
-        "type": "Oficial",
-        "label": "GameKing — rebalanceamento 27/08/2026",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=228"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: F3, F4. A classificação não é inferida pelo número da skill; cada F1/F2/F3/F4/F5 foi verificada individualmente."
+      "Habilidades em área confirmadas na base: F3, F4."
     ],
     "overclock": false,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "oxe": {
     "name": "Omegamon X [Supremacia]",
@@ -1067,7 +934,6 @@ window.SKILL_BUILDER_DATA = {
           "F5": 1
         },
         "confidence": "high",
-        "basis": "Patch oficial 27/08/2026",
         "reason": "F2 foi convertida oficialmente para ataque em área em linha reta no LADMO; é a prioridade de Farm.",
         "rotation": [
           "F2",
@@ -1095,7 +961,6 @@ window.SKILL_BUILDER_DATA = {
           "F5": 1
         },
         "confidence": "medium",
-        "basis": "Valores atuais + cooldowns pós-rebalance",
         "reason": "F1 tem 2,8s de cooldown e o melhor retorno sustentado por ponto; F2 recebe o restante e também oferece AoE linear.",
         "rotation": [
           "F1",
@@ -1107,33 +972,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — OXE",
-        "url": "https://dmowiki.com/Omegamon_X_Extreme"
-      },
-      {
-        "type": "YouTube",
-        "label": "Showcase e teste de dano — 03/2026",
-        "url": "https://www.youtube.com/watch?v=nmG6RKUzvdY"
-      },
-      {
-        "type": "Oficial",
-        "label": "GameKing — rebalanceamento 27/08/2026",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=228"
-      },
-      {
-        "type": "Oficial",
-        "label": "GameKing — lançamento LADMO",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=204"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: F2. A classificação não é inferida pelo número da skill; cada F1/F2/F3/F4/F5 foi verificada individualmente."
+      "Habilidades em área confirmadas na base: F2."
     ],
     "overclock": false,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "apollomon": {
     "name": "Apollomon",
@@ -1222,7 +1065,6 @@ window.SKILL_BUILDER_DATA = {
           "F5": 1
         },
         "confidence": "high",
-        "basis": "GameKing LADMO 16/07/2026 + DMO Wiki",
         "reason": "F2 atinge inimigos próximos e tem recarga bem menor que F3; F3, também de área, recebe os pontos restantes.",
         "rotation": [
           "F2",
@@ -1250,7 +1092,6 @@ window.SKILL_BUILDER_DATA = {
           "F5": 15
         },
         "confidence": "medium",
-        "basis": "DMO Wiki atual — dano por nível/cooldown",
         "reason": "Para DPS sustentado, F1 sustenta o ciclo curto e F5 aproveita o ganho elevado por nível. F2/F3 são as ferramentas de área e ficam priorizadas no Farm.",
         "rotation": [
           "F1",
@@ -1263,18 +1104,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — Apollomon",
-        "url": "https://dmowiki.com/Apollomon"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: F2, F3. A classificação não é inferida pelo número da skill; cada F1/F2/F3/F4/F5 foi verificada individualmente."
+      "Habilidades em área confirmadas na base: F2, F3."
     ],
     "overclock": false,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "apollomon_whispered": {
     "name": "Apollomon Whispered",
@@ -1364,7 +1198,6 @@ window.SKILL_BUILDER_DATA = {
           "F5": 1
         },
         "confidence": "high",
-        "basis": "GameKing 16/09/2026 — tipos de ataque oficiais",
         "reason": "F2 é AoE linear e F4 é AoE frontal. F2 recebe prioridade por ser a opção de área mais frequente.",
         "rotation": [
           "F2",
@@ -1392,7 +1225,6 @@ window.SKILL_BUILDER_DATA = {
           "F5": 1
         },
         "confidence": "high",
-        "basis": "DMO Wiki atual — ganho por nível/cooldown",
         "reason": "F3 tem ganho de dano por nível excepcional com custo de 2 pontos; F1 completa a build e mantém o ciclo de 2,9s. F4 deve ser usada no Lv.1 para abrir a janela de +30% Skill Damage.",
         "rotation": [
           "F4",
@@ -1405,18 +1237,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — Apollomon Whispered",
-        "url": "https://dmowiki.com/Apollomon_Whispered"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: F2, F4. A classificação não é inferida pelo número da skill; cada F1/F2/F3/F4/F5 foi verificada individualmente."
+      "Habilidades em área confirmadas na base: F2, F4."
     ],
     "overclock": false,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "bloom": {
     "name": "BloomLordmon",
@@ -1487,7 +1312,6 @@ window.SKILL_BUILDER_DATA = {
         ],
         "distribution": null,
         "confidence": "medium",
-        "basis": "DMO Wiki + patch 27/08/2026",
         "reason": "F4 Flower Vine possui efeito em área confirmado (Shadow Bind/AoE). Como os dados públicos de custo/uso do F4 variam entre bases, o builder mantém prioridade qualitativa em vez de inventar uma distribuição numérica.",
         "rotation": [
           "F4",
@@ -1515,7 +1339,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 1
         },
         "confidence": "medium",
-        "basis": "DMO Wiki atual + rebalance 08/2026",
         "reason": "F1 (4s) é o melhor investimento sustentado. F2 recebe o restante; F3 continua útil no Lv.1 pelo buff de Skill/Critical Damage.",
         "rotation": [
           "F3",
@@ -1527,23 +1350,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — BloomLordmon",
-        "url": "https://dmowiki.com/Bloomlordmon"
-      },
-      {
-        "type": "Oficial",
-        "label": "GameKing — rebalanceamento/Overclock",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=228"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: F4. A classificação não é inferida pelo número da skill; cada F1/F2/F3/F4/F5 foi verificada individualmente."
+      "Habilidades em área confirmadas na base: F4."
     ],
     "overclock": true,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "eos": {
     "name": "Eosmon LV6",
@@ -1619,8 +1430,7 @@ window.SKILL_BUILDER_DATA = {
           "F4": 1
         },
         "confidence": "medium",
-        "basis": "Patch 27/08/2026 + custos atuais",
-        "reason": "Nenhuma skill nativa foi confirmada explicitamente como AoE nas fontes atuais. Farm usa o ciclo curto de alvo único como fallback.",
+        "reason": "Nenhuma skill nativa foi confirmada explicitamente como AoE na configuração atual. Farm usa o ciclo curto de alvo único como fallback.",
         "rotation": [
           "F1",
           "F2",
@@ -1646,7 +1456,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 1
         },
         "confidence": "high",
-        "basis": "DMO Wiki atual",
         "reason": "F1 tem o melhor retorno sustentado; F2 recebe o restante e ainda ativa +10% Skill Damage por 10s.",
         "rotation": [
           "F2",
@@ -1658,23 +1467,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — Eosmon LV6",
-        "url": "https://dmowiki.com/Eosmon_LV6"
-      },
-      {
-        "type": "Oficial",
-        "label": "GameKing — balanceamento/Overclock",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=228"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: nenhuma skill nativa explicitamente confirmada. A classificação não é inferida pelo número da skill; cada F1/F2/F3/F4/F5 foi verificada individualmente."
+      "Nenhuma habilidade nativa em área está confirmada na configuração atual."
     ],
     "overclock": true,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "zeed": {
     "name": "ZeedMillenniummon [Despertado]",
@@ -1751,7 +1548,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 20
         },
         "confidence": "high",
-        "basis": "DMO Wiki + patch 27/08/2026",
         "reason": "F4 Destroyer Breath é a skill explicitamente marcada como AoE; custo de 4 pts/lv limita o máximo prático a Lv.20.",
         "rotation": [
           "F4",
@@ -1777,7 +1573,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 1
         },
         "confidence": "high",
-        "basis": "DMO Wiki atual + rebalance 08/2026",
         "reason": "F1/F2 são as skills de baixo cooldown para DPS sustentado. F4 deve continuar entrando na rotação no Lv.1 pelo buff de +30% Skill Damage.",
         "rotation": [
           "F4",
@@ -1789,23 +1584,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — Zeed Awaken",
-        "url": "https://dmowiki.com/ZeedMillenniummon_%28Awaken%29"
-      },
-      {
-        "type": "Oficial",
-        "label": "GameKing — rebalanceamento/Overclock",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=228"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: F4. A classificação não é inferida pelo número da skill; cada F1/F2/F3/F4/F5 foi verificada individualmente."
+      "Habilidades em área confirmadas na base: F4."
     ],
     "overclock": true,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "ipma": {
     "name": "Imperialdramon Paladin Mode [Despertado]",
@@ -1883,7 +1666,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 25
         },
         "confidence": "high",
-        "basis": "Dados atuais + patch 27/08/2026",
         "reason": "F4 Heaven’s Light tem Range: AoE; F3 Omega Blade é explicitamente Range: One Enemy.",
         "rotation": [
           "F4",
@@ -1909,7 +1691,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 1
         },
         "confidence": "medium",
-        "basis": "DMO Wiki atual — custo, ganho e cooldown",
         "reason": "F1/F2 formam o ciclo sustentado. A divisão 24/11 usa os 76 pontos e fica praticamente no ponto de equilíbrio entre frequência da F1 e ganho maior por nível da F2; F4 segue útil no Lv.1 pelo buff.",
         "rotation": [
           "F4",
@@ -1921,23 +1702,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — IPMA",
-        "url": "https://dmowiki.com/Imperialdramon_Paladin_Mode_%28Awaken%29"
-      },
-      {
-        "type": "Oficial",
-        "label": "GameKing — rebalanceamento 27/08/2026",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=228"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: F4. A classificação não é inferida pelo número da skill; cada F1/F2/F3/F4/F5 foi verificada individualmente."
+      "Habilidades em área confirmadas na base: F4."
     ],
     "overclock": false,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "lucemon": {
     "name": "Lucemon: Satan Mode [Supremacia]",
@@ -2014,7 +1783,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 25
         },
         "confidence": "high",
-        "basis": "Patch oficial 27/08/2026",
         "reason": "F4 foi alterada oficialmente no LADMO de alvo único para ataque em área; é a prioridade de Farm.",
         "rotation": [
           "F4",
@@ -2040,7 +1808,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 1
         },
         "confidence": "medium",
-        "basis": "DMO Wiki atual — cooldown + ganho por nível",
         "reason": "F1 e F2 são o núcleo sustentado. Com F1 entrando aproximadamente duas vezes para cada F2, maximizar F1 e colocar o restante em F2 fica ligeiramente à frente; F1 ainda mantém o debuff de dano recebido.",
         "rotation": [
           "F1",
@@ -2051,23 +1818,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — Lucemon Extreme",
-        "url": "https://dmowiki.com/Lucemon%3A_Satan_Mode_%28Extreme%29"
-      },
-      {
-        "type": "Oficial",
-        "label": "GameKing — rebalanceamento 27/08/2026",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=228"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: F4. A classificação não é inferida pelo número da skill; cada F1/F2/F3/F4/F5 foi verificada individualmente."
+      "Habilidades em área confirmadas na base: F4."
     ],
     "overclock": false,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "kizuna": {
     "name": "Last Evolution: Kizuna",
@@ -2143,7 +1898,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 1
         },
         "confidence": "medium",
-        "basis": "Patch 27/08/2026 + DMO Wiki atual",
         "reason": "Nenhuma skill nativa foi confirmada oficialmente como AoE no LADMO. Farm usa a rotação curta como fallback, sem transformar relatos não confirmados em dado do builder.",
         "rotation": [
           "F2",
@@ -2170,7 +1924,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 1
         },
         "confidence": "high",
-        "basis": "DMO Wiki atual + rebalance 08/2026",
         "reason": "F2 de 3,3s é, de longe, o melhor investimento sustentado após o rebalance; F1 recebe os pontos restantes.",
         "rotation": [
           "F2",
@@ -2182,23 +1935,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — Kizuna",
-        "url": "https://dmowiki.com/Last_Evolution%3A_Kizuna"
-      },
-      {
-        "type": "Oficial",
-        "label": "GameKing — rebalanceamento 27/08/2026",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=228"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: há relatos comunitários de efeito em área na skill de congelamento, mas as notas oficiais atuais não classificam explicitamente uma skill nativa de Kizuna como AoE. Mantida como não confirmada para evitar falso positivo."
+      "Nenhuma habilidade nativa em área está confirmada na configuração atual."
     ],
     "overclock": false,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "goddramon": {
     "name": "Goddramon",
@@ -2286,7 +2027,6 @@ window.SKILL_BUILDER_DATA = {
           "F5": 1
         },
         "confidence": "high",
-        "basis": "DMO Wiki atual",
         "reason": "F2 God Flame atinge inimigos em todas as direções; é a skill de área confirmada do Goddramon.",
         "rotation": [
           "F2",
@@ -2314,7 +2054,6 @@ window.SKILL_BUILDER_DATA = {
           "F5": 1
         },
         "confidence": "medium",
-        "basis": "DMO Wiki atual — cooldown/ganho",
         "reason": "F1 tem apenas 3s de cooldown e domina o dano sustentado por ponto. F2 recebe os pontos restantes e oferece AoE situacional.",
         "rotation": [
           "F1",
@@ -2326,18 +2065,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — Goddramon",
-        "url": "https://dmowiki.com/Goddramon"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: F2. A classificação não é inferida pelo número da skill; cada F1/F2/F3/F4/F5 foi verificada individualmente."
+      "Habilidades em área confirmadas na base: F2."
     ],
     "overclock": false,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "holydramon": {
     "name": "Holydramon [Despertado]",
@@ -2413,7 +2145,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 1
         },
         "confidence": "medium",
-        "basis": "DMO Wiki atual",
         "reason": "Nenhuma skill nativa foi confirmada explicitamente como AoE. Farm usa F1/F2 como fallback de alvo único.",
         "rotation": [
           "F1",
@@ -2440,7 +2171,6 @@ window.SKILL_BUILDER_DATA = {
           "F4": 1
         },
         "confidence": "medium",
-        "basis": "DMO Wiki atual — cooldown/ganho",
         "reason": "F1 de 4s é o investimento sustentado principal; F2 recebe os 28 pontos restantes.",
         "rotation": [
           "F1",
@@ -2451,18 +2181,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — Holydramon Awaken",
-        "url": "https://dmowiki.com/Holydramon_%28Awaken%29"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: nenhuma skill nativa explicitamente confirmada. A classificação não é inferida pelo número da skill; cada F1/F2/F3/F4/F5 foi verificada individualmente."
+      "Nenhuma habilidade nativa em área está confirmada na configuração atual."
     ],
     "overclock": false,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "abbadomon_core": {
     "name": "Abbadomon Core",
@@ -2549,7 +2272,6 @@ window.SKILL_BUILDER_DATA = {
           "F5": 1
         },
         "confidence": "medium",
-        "basis": "DMO Wiki + patch 27/08/2026",
         "reason": "Nenhuma skill nativa foi confirmada explicitamente como AoE. Farm usa F1/F2 como fallback de alvo único.",
         "rotation": [
           "F1",
@@ -2578,7 +2300,6 @@ window.SKILL_BUILDER_DATA = {
           "F5": 1
         },
         "confidence": "high",
-        "basis": "DMO Wiki atual — tabela completa de dano/cooldown",
         "reason": "F1 de 4s tem o melhor retorno sustentado; F2 de 7s recebe o restante. Os nukes continuam na rotação no Lv.1 quando disponíveis.",
         "rotation": [
           "F1",
@@ -2590,23 +2311,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — Abbadomon Core",
-        "url": "https://dmowiki.com/Abbadomon_Core"
-      },
-      {
-        "type": "Oficial",
-        "label": "GameKing — rebalanceamento 27/08/2026",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=228"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: nenhuma skill nativa explicitamente confirmada. A classificação não é inferida pelo número da skill; cada F1/F2/F3/F4/F5 foi verificada individualmente."
+      "Nenhuma habilidade nativa em área está confirmada na configuração atual."
     ],
     "overclock": false,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "abbadomon": {
     "name": "Abbadomon",
@@ -2649,7 +2358,7 @@ window.SKILL_BUILDER_DATA = {
         "cooldown": 25,
         "cost": 3,
         "role": "Dano / cura de grupo",
-        "effect": "Corrompe uma área específica com escuridão e ativa Black Sun, que recupera HP do usuário e do grupo. As fontes públicas consultadas não confirmam ataque multi-alvo; por segurança, não é tratada como AoE.",
+        "effect": "Corrompe uma área específica com escuridão e ativa Black Sun, que recupera HP do usuário e do grupo. A configuração atual não confirma ataque multi-alvo; por segurança, não é tratada como AoE.",
         "aoe": false,
         "animation": "3s"
       },
@@ -2693,7 +2402,6 @@ window.SKILL_BUILDER_DATA = {
           "F5": 1
         },
         "confidence": "medium",
-        "basis": "DMO Wiki + GameKing (lançamento do Abbadomon); nenhuma skill com tipo AoE confirmado",
         "reason": "Nenhuma skill teve dano multi-alvo confirmado. F3 descreve uma área, mas isso não basta para classificá-la como AoE; Farm usa F1/F2 como fallback.",
         "rotation": [
           "F1",
@@ -2724,7 +2432,6 @@ window.SKILL_BUILDER_DATA = {
           "F5": 1
         },
         "confidence": "high",
-        "basis": "DMO Wiki atual — tabela completa de dano/cooldown",
         "reason": "Para DPS sustentado, F1 é o investimento mais eficiente e F2 recebe o restante. F3 permanece no Lv.1 como utilidade/cura; não é classificada como AoE sem confirmação explícita.",
         "rotation": [
           "F1",
@@ -2736,18 +2443,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — Abbadomon",
-        "url": "https://dmowiki.com/Abbadomon"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: F3 Darkness Eclipse menciona consumir uma área, mas a documentação consultada não confirma que o dano atinja múltiplos alvos. Não é marcada como AoE apenas pela descrição visual/temática."
+      "Nenhuma habilidade nativa em área está confirmada na configuração atual."
     ],
     "overclock": false,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "done": {
     "name": "DoneDevimon",
@@ -2780,7 +2480,7 @@ window.SKILL_BUILDER_DATA = {
         "cooldown": 13,
         "cost": null,
         "role": "DPS",
-        "effect": "Custo por nível não confirmado na fonte pública usada.",
+        "effect": "Custo por nível não confirmado na configuração atual.",
         "aoe": false,
         "animation": null
       },
@@ -2817,7 +2517,6 @@ window.SKILL_BUILDER_DATA = {
         ],
         "distribution": null,
         "confidence": "review",
-        "basis": "DMO Wiki — custos de pontos ausentes",
         "reason": "Nenhuma skill nativa foi confirmada explicitamente como AoE. A prioridade de Farm permanece qualitativa por falta de dados completos e confiáveis de custo/distribuição.",
         "rotation": [
           "F1",
@@ -2842,7 +2541,6 @@ window.SKILL_BUILDER_DATA = {
         ],
         "distribution": null,
         "confidence": "review",
-        "basis": "DMO Wiki atual — custos por upgrade ainda não publicados",
         "reason": "F1 tem 3s de cooldown e é o núcleo sustentado; F2 é a segunda skill curta. Sem custo oficial por nível, a calculadora não inventa uma distribuição numérica.",
         "rotation": [
           "F1",
@@ -2853,23 +2551,11 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Wiki",
-        "label": "DMO Wiki — DoneDevimon",
-        "url": "https://dmowiki.com/DoneDevimon"
-      },
-      {
-        "type": "Oficial",
-        "label": "GameKing — rebalanceamento 27/08/2026",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=228"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: nenhuma skill nativa explicitamente confirmada. A classificação não é inferida pelo número da skill; cada F1/F2/F3/F4/F5 foi verificada individualmente."
+      "Nenhuma habilidade nativa em área está confirmada na configuração atual."
     ],
     "overclock": false,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   },
   "quantumon": {
     "name": "Quantumon",
@@ -2950,7 +2636,6 @@ window.SKILL_BUILDER_DATA = {
         ],
         "distribution": null,
         "confidence": "review",
-        "basis": "Patch 27/08/2026 — custos/cooldowns ausentes",
         "reason": "Nenhuma skill nativa foi confirmada explicitamente como AoE nas notas públicas atuais. A prioridade de Farm é um fallback de alvo único, sem inventar uma AoE.",
         "rotation": [
           "F3",
@@ -2976,7 +2661,6 @@ window.SKILL_BUILDER_DATA = {
         ],
         "distribution": null,
         "confidence": "review",
-        "basis": "GameKing 05/2026 + rebalance 08/2026; custos por upgrade não confirmados",
         "reason": "Quantumon foi ajustado para combate prolongado e F3 concede +30% Skill Damage. Sem custos oficiais por nível disponíveis, mantemos prioridade em vez de números inventados.",
         "rotation": [
           "F3",
@@ -2988,22 +2672,10 @@ window.SKILL_BUILDER_DATA = {
         "purpose": "dps_sustained"
       }
     },
-    "sources": [
-      {
-        "type": "Oficial",
-        "label": "GameKing — lançamento Quantumon",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=214"
-      },
-      {
-        "type": "Oficial",
-        "label": "GameKing — rebalanceamento 27/08/2026",
-        "url": "https://ptladmo.gameking.com/News/EventView.aspx?idx=228"
-      }
-    ],
     "notes": [
-      "Auditoria AoE 28/09/2026: nenhuma skill nativa explicitamente confirmada. A classificação não é inferida pelo número da skill; cada F1/F2/F3/F4/F5 foi verificada individualmente."
+      "Nenhuma habilidade nativa em área está confirmada na configuração atual."
     ],
     "overclock": false,
-    "reviewed": "2026-09-28 (auditoria de builds v47 — LADMO)"
+    "reviewed": "28/09/2026"
   }
 };

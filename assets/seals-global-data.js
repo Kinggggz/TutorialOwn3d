@@ -7,7 +7,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Guilmon",
     "percent": false,
-    "sourceId": 1
+    "recordId": 1
   },
   {
     "attr": "AT",
@@ -17,7 +17,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Devimon",
     "percent": false,
-    "sourceId": 2
+    "recordId": 2
   },
   {
     "attr": "AT",
@@ -27,7 +27,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Patamon",
     "percent": false,
-    "sourceId": 3
+    "recordId": 3
   },
   {
     "attr": "AT",
@@ -37,7 +37,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Giromon",
     "percent": false,
-    "sourceId": 4
+    "recordId": 4
   },
   {
     "attr": "AT",
@@ -47,7 +47,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Qinglongmon",
     "percent": false,
-    "sourceId": 5
+    "recordId": 5
   },
   {
     "attr": "AT",
@@ -57,7 +57,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Examon",
     "percent": false,
-    "sourceId": 6
+    "recordId": 6
   },
   {
     "attr": "AT",
@@ -67,7 +67,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Tanemon",
     "percent": false,
-    "sourceId": 7
+    "recordId": 7
   },
   {
     "attr": "AT",
@@ -77,7 +77,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Mushroomon",
     "percent": false,
-    "sourceId": 8
+    "recordId": 8
   },
   {
     "attr": "AT",
@@ -87,7 +87,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Chrysalimon",
     "percent": false,
-    "sourceId": 9
+    "recordId": 9
   },
   {
     "attr": "AT",
@@ -97,7 +97,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Garurumon(Black)",
     "percent": false,
-    "sourceId": 10
+    "recordId": 10
   },
   {
     "attr": "AT",
@@ -107,7 +107,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Cherrymon",
     "percent": false,
-    "sourceId": 11
+    "recordId": 11
   },
   {
     "attr": "AT",
@@ -117,7 +117,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Marin Devimon",
     "percent": false,
-    "sourceId": 12
+    "recordId": 12
   },
   {
     "attr": "AT",
@@ -127,7 +127,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dexmon",
     "percent": false,
-    "sourceId": 13
+    "recordId": 13
   },
   {
     "attr": "AT",
@@ -137,7 +137,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Omegamon",
     "percent": false,
-    "sourceId": 14
+    "recordId": 14
   },
   {
     "attr": "AT",
@@ -147,7 +147,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Myotismon",
     "percent": false,
-    "sourceId": 15
+    "recordId": 15
   },
   {
     "attr": "AT",
@@ -157,7 +157,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Venom Vamdemon",
     "percent": false,
-    "sourceId": 16
+    "recordId": 16
   },
   {
     "attr": "AT",
@@ -167,7 +167,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Culumon",
     "percent": false,
-    "sourceId": 17
+    "recordId": 17
   },
   {
     "attr": "AT",
@@ -177,7 +177,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Orochimon",
     "percent": false,
-    "sourceId": 18
+    "recordId": 18
   },
   {
     "attr": "AT",
@@ -187,7 +187,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Monodramon",
     "percent": false,
-    "sourceId": 19
+    "recordId": 19
   },
   {
     "attr": "AT",
@@ -197,7 +197,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Megidramon",
     "percent": false,
-    "sourceId": 20
+    "recordId": 20
   },
   {
     "attr": "AT",
@@ -207,7 +207,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "10 year",
     "percent": false,
-    "sourceId": 21
+    "recordId": 21
   },
   {
     "attr": "AT",
@@ -217,7 +217,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "MugenDramon",
     "percent": false,
-    "sourceId": 22
+    "recordId": 22
   },
   {
     "attr": "AT",
@@ -227,7 +227,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Chaosmon",
     "percent": false,
-    "sourceId": 23
+    "recordId": 23
   },
   {
     "attr": "AT",
@@ -237,7 +237,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "MirageGaogamon BurstMode",
     "percent": false,
-    "sourceId": 24
+    "recordId": 24
   },
   {
     "attr": "AT",
@@ -247,7 +247,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "PassionateSeal",
     "percent": false,
-    "sourceId": 25
+    "recordId": 25
   },
   {
     "attr": "AT",
@@ -257,7 +257,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Boltboutamon",
     "percent": false,
-    "sourceId": 26
+    "recordId": 26
   },
   {
     "attr": "AT",
@@ -267,7 +267,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "11 year Seal",
     "percent": false,
-    "sourceId": 27
+    "recordId": 27
   },
   {
     "attr": "AT",
@@ -277,7 +277,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Greymon",
     "percent": false,
-    "sourceId": 28
+    "recordId": 28
   },
   {
     "attr": "AT",
@@ -287,7 +287,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Alphamon",
     "percent": false,
-    "sourceId": 29
+    "recordId": 29
   },
   {
     "attr": "AT",
@@ -297,7 +297,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "ExV-mon",
     "percent": false,
-    "sourceId": 30
+    "recordId": 30
   },
   {
     "attr": "AT",
@@ -307,7 +307,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "ImperialDramon",
     "percent": false,
-    "sourceId": 31
+    "recordId": 31
   },
   {
     "attr": "AT",
@@ -317,7 +317,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Environment Guardian Seal",
     "percent": false,
-    "sourceId": 32
+    "recordId": 32
   },
   {
     "attr": "AT",
@@ -327,7 +327,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Kuzuhamon",
     "percent": false,
-    "sourceId": 33
+    "recordId": 33
   },
   {
     "attr": "AT",
@@ -337,7 +337,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Silphymon",
     "percent": false,
-    "sourceId": 34
+    "recordId": 34
   },
   {
     "attr": "AT",
@@ -347,7 +347,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "PicoDevimon",
     "percent": false,
-    "sourceId": 35
+    "recordId": 35
   },
   {
     "attr": "AT",
@@ -357,7 +357,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "12th Anniversary Seal",
     "percent": false,
-    "sourceId": 36
+    "recordId": 36
   },
   {
     "attr": "AT",
@@ -367,7 +367,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 300,
     "name": "ImperialDramon Fighter Mode",
     "percent": false,
-    "sourceId": 37
+    "recordId": 37
   },
   {
     "attr": "AT",
@@ -377,7 +377,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 150,
     "name": "Omegamon X",
     "percent": false,
-    "sourceId": 38
+    "recordId": 38
   },
   {
     "attr": "AT",
@@ -387,7 +387,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "New Semester Seal",
     "percent": false,
-    "sourceId": 39
+    "recordId": 39
   },
   {
     "attr": "AT",
@@ -397,7 +397,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 1000,
     "name": "Hawkmon",
     "percent": false,
-    "sourceId": 40
+    "recordId": 40
   },
   {
     "attr": "AT",
@@ -407,7 +407,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 1000,
     "name": "Aquilamon",
     "percent": false,
-    "sourceId": 41
+    "recordId": 41
   },
   {
     "attr": "AT",
@@ -417,7 +417,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 1000,
     "name": "Turuiemon",
     "percent": false,
-    "sourceId": 42
+    "recordId": 42
   },
   {
     "attr": "AT",
@@ -427,7 +427,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 1000,
     "name": "Shurimon",
     "percent": false,
-    "sourceId": 43
+    "recordId": 43
   },
   {
     "attr": "AT",
@@ -437,7 +437,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 700,
     "name": "Piccolomon",
     "percent": false,
-    "sourceId": 44
+    "recordId": 44
   },
   {
     "attr": "AT",
@@ -447,7 +447,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 500,
     "name": "Cres Garurumon",
     "percent": false,
-    "sourceId": 45
+    "recordId": 45
   },
   {
     "attr": "AT",
@@ -457,7 +457,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 500,
     "name": "Gankoomon",
     "percent": false,
-    "sourceId": 46
+    "recordId": 46
   },
   {
     "attr": "AT",
@@ -467,7 +467,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Seal of summer",
     "percent": false,
-    "sourceId": 47
+    "recordId": 47
   },
   {
     "attr": "AT",
@@ -477,7 +477,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Vegiemon Seal",
     "percent": false,
-    "sourceId": 359
+    "recordId": 359
   },
   {
     "attr": "AT",
@@ -487,7 +487,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "MetalGreymon(Black) Seal",
     "percent": false,
-    "sourceId": 360
+    "recordId": 360
   },
   {
     "attr": "AT",
@@ -497,7 +497,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "13th Anniversary AT Seal",
     "percent": false,
-    "sourceId": 374
+    "recordId": 374
   },
   {
     "attr": "AT",
@@ -507,7 +507,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "BetelGammamon",
     "percent": false,
-    "sourceId": 380
+    "recordId": 380
   },
   {
     "attr": "AT",
@@ -517,7 +517,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Siriusmon",
     "percent": false,
-    "sourceId": 384
+    "recordId": 384
   },
   {
     "attr": "AT",
@@ -527,7 +527,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Blue Serpent Seal",
     "percent": false,
-    "sourceId": 391
+    "recordId": 391
   },
   {
     "attr": "AT",
@@ -537,7 +537,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dungeon Masters AT Seal",
     "percent": false,
-    "sourceId": 395
+    "recordId": 395
   },
   {
     "attr": "AT",
@@ -548,7 +548,7 @@ window.SEALS_GLOBAL_DATA = [
     "name": "Season Pass AT Seal",
     "percent": false,
     "rankBonuses": [0, 50, 100, 150, 250, 400, 600],
-    "sourceId": 403
+    "recordId": 403
   },
   {
     "attr": "AT",
@@ -558,7 +558,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dungeon Masters2 AT Seal",
     "percent": false,
-    "sourceId": 412
+    "recordId": 412
   },
   {
     "attr": "AT",
@@ -568,7 +568,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Numemon",
     "percent": false,
-    "sourceId": 418
+    "recordId": 418
   },
   {
     "attr": "AT",
@@ -578,7 +578,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "[Awakening]Ordinemon",
     "percent": false,
-    "sourceId": 419
+    "recordId": 419
   },
   {
     "attr": "AT",
@@ -588,7 +588,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "[Awakening]Imperialdramon Paladin mode",
     "percent": false,
-    "sourceId": 420
+    "recordId": 420
   },
   {
     "attr": "AT",
@@ -598,7 +598,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 100,
     "name": "Takeru Takaishi Seal",
     "percent": false,
-    "sourceId": 440
+    "recordId": 440
   },
   {
     "attr": "AT",
@@ -608,7 +608,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "AT Seal Of The Challenging Tamer",
     "percent": false,
-    "sourceId": 445
+    "recordId": 445
   },
   {
     "attr": "AT",
@@ -618,7 +618,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Hot Summer AT Seal",
     "percent": false,
-    "sourceId": 451
+    "recordId": 451
   },
   {
     "attr": "AT",
@@ -628,7 +628,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Greymon X",
     "percent": false,
-    "sourceId": 454
+    "recordId": 454
   },
   {
     "attr": "AT",
@@ -638,7 +638,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "WarGreymon X",
     "percent": false,
-    "sourceId": 455
+    "recordId": 455
   },
   {
     "attr": "AT",
@@ -648,7 +648,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "UlforceVeedramon X",
     "percent": false,
-    "sourceId": 456
+    "recordId": 456
   },
   {
     "attr": "AT",
@@ -658,7 +658,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Gaiomon",
     "percent": false,
-    "sourceId": 457
+    "recordId": 457
   },
   {
     "attr": "AT",
@@ -668,7 +668,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Medievalgallantmon X",
     "percent": false,
-    "sourceId": 458
+    "recordId": 458
   },
   {
     "attr": "AT",
@@ -678,7 +678,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Jesmon X",
     "percent": false,
-    "sourceId": 459
+    "recordId": 459
   },
   {
     "attr": "AT",
@@ -688,7 +688,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Gankoomon X",
     "percent": false,
-    "sourceId": 460
+    "recordId": 460
   },
   {
     "attr": "AT",
@@ -698,7 +698,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Bountiful Chuseok AT Seal",
     "percent": false,
-    "sourceId": 484
+    "recordId": 484
   },
   {
     "attr": "AT",
@@ -708,7 +708,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "14th Anniversary AT Seal",
     "percent": false,
-    "sourceId": 489
+    "recordId": 489
   },
   {
     "attr": "AT",
@@ -718,7 +718,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Agnimon",
     "percent": false,
-    "sourceId": 496
+    "recordId": 496
   },
   {
     "attr": "AT",
@@ -728,7 +728,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Gigasmon",
     "percent": false,
-    "sourceId": 497
+    "recordId": 497
   },
   {
     "attr": "AT",
@@ -738,7 +738,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Raguelmon",
     "percent": false,
-    "sourceId": 498
+    "recordId": 498
   },
   {
     "attr": "AT",
@@ -748,7 +748,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Last Evolution: Kizuna",
     "percent": false,
-    "sourceId": 499
+    "recordId": 499
   },
   {
     "attr": "AT",
@@ -758,7 +758,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure AT Seal A",
     "percent": false,
-    "sourceId": 528
+    "recordId": 528
   },
   {
     "attr": "AT",
@@ -768,7 +768,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure AT Seal B",
     "percent": false,
-    "sourceId": 536
+    "recordId": 536
   },
   {
     "attr": "AT",
@@ -778,7 +778,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure AT Seal C",
     "percent": false,
-    "sourceId": 544
+    "recordId": 544
   },
   {
     "attr": "AT",
@@ -788,7 +788,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Garbagemon",
     "percent": false,
-    "sourceId": 550
+    "recordId": 550
   },
   {
     "attr": "AT",
@@ -798,7 +798,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Megadramon",
     "percent": false,
-    "sourceId": 551
+    "recordId": 551
   },
   {
     "attr": "AT",
@@ -808,7 +808,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "SkullKnightmon",
     "percent": false,
-    "sourceId": 552
+    "recordId": 552
   },
   {
     "attr": "AT",
@@ -818,7 +818,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Omnimon Ver.B",
     "percent": false,
-    "sourceId": 553
+    "recordId": 553
   },
   {
     "attr": "BL",
@@ -828,7 +828,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Etemon",
     "percent": true,
-    "sourceId": 300
+    "recordId": 300
   },
   {
     "attr": "BL",
@@ -838,7 +838,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Tentomon",
     "percent": true,
-    "sourceId": 301
+    "recordId": 301
   },
   {
     "attr": "BL",
@@ -848,7 +848,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dracmon",
     "percent": true,
-    "sourceId": 302
+    "recordId": 302
   },
   {
     "attr": "BL",
@@ -858,7 +858,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Waspmon",
     "percent": true,
-    "sourceId": 303
+    "recordId": 303
   },
   {
     "attr": "BL",
@@ -868,7 +868,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Sangloupmon",
     "percent": true,
-    "sourceId": 304
+    "recordId": 304
   },
   {
     "attr": "BL",
@@ -878,7 +878,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Vikaralamon",
     "percent": true,
-    "sourceId": 305
+    "recordId": 305
   },
   {
     "attr": "BL",
@@ -888,7 +888,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "MegaSeadramon",
     "percent": true,
-    "sourceId": 306
+    "recordId": 306
   },
   {
     "attr": "BL",
@@ -898,7 +898,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Fanglongmon",
     "percent": true,
-    "sourceId": 307
+    "recordId": 307
   },
   {
     "attr": "BL",
@@ -908,7 +908,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "TankDramon",
     "percent": true,
-    "sourceId": 308
+    "recordId": 308
   },
   {
     "attr": "BL",
@@ -918,7 +918,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Agumon(S)",
     "percent": true,
-    "sourceId": 309
+    "recordId": 309
   },
   {
     "attr": "BL",
@@ -928,7 +928,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "ShineGreymon",
     "percent": true,
-    "sourceId": 310
+    "recordId": 310
   },
   {
     "attr": "BL",
@@ -938,7 +938,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Lilamon",
     "percent": true,
-    "sourceId": 311
+    "recordId": 311
   },
   {
     "attr": "BL",
@@ -948,7 +948,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Falcomon",
     "percent": true,
-    "sourceId": 312
+    "recordId": 312
   },
   {
     "attr": "BL",
@@ -958,7 +958,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Gabumon(Black)",
     "percent": true,
-    "sourceId": 313
+    "recordId": 313
   },
   {
     "attr": "BL",
@@ -968,7 +968,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Firm Seal",
     "percent": true,
-    "sourceId": 314
+    "recordId": 314
   },
   {
     "attr": "BL",
@@ -978,7 +978,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Gomamon",
     "percent": true,
-    "sourceId": 315
+    "recordId": 315
   },
   {
     "attr": "BL",
@@ -988,7 +988,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Shakkoumon",
     "percent": true,
-    "sourceId": 316
+    "recordId": 316
   },
   {
     "attr": "BL",
@@ -998,7 +998,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Gallantmon Crimson Mode",
     "percent": true,
-    "sourceId": 317
+    "recordId": 317
   },
   {
     "attr": "BL",
@@ -1008,7 +1008,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Friendship Seal",
     "percent": true,
-    "sourceId": 318
+    "recordId": 318
   },
   {
     "attr": "BL",
@@ -1018,7 +1018,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 300,
     "name": "Ophanimon",
     "percent": true,
-    "sourceId": 319
+    "recordId": 319
   },
   {
     "attr": "BL",
@@ -1028,7 +1028,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 150,
     "name": "Alphamon Ouryuken (Awaken)",
     "percent": true,
-    "sourceId": 320
+    "recordId": 320
   },
   {
     "attr": "BL",
@@ -1038,7 +1038,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 1000,
     "name": "Doggymon",
     "percent": true,
-    "sourceId": 321
+    "recordId": 321
   },
   {
     "attr": "BL",
@@ -1048,7 +1048,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 700,
     "name": "SkullMeramon",
     "percent": true,
-    "sourceId": 322
+    "recordId": 322
   },
   {
     "attr": "BL",
@@ -1058,7 +1058,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 500,
     "name": "Z'dGarurumon",
     "percent": true,
-    "sourceId": 323
+    "recordId": 323
   },
   {
     "attr": "BL",
@@ -1068,7 +1068,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 500,
     "name": "MagnaGarurumon",
     "percent": true,
-    "sourceId": 324
+    "recordId": 324
   },
   {
     "attr": "BL",
@@ -1078,7 +1078,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 50,
     "name": "Shoutmon X7:superiormode",
     "percent": true,
-    "sourceId": 325
+    "recordId": 325
   },
   {
     "attr": "BL",
@@ -1088,7 +1088,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Seal of Spring",
     "percent": true,
-    "sourceId": 326
+    "recordId": 326
   },
   {
     "attr": "BL",
@@ -1098,7 +1098,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Angoramon",
     "percent": true,
-    "sourceId": 377
+    "recordId": 377
   },
   {
     "attr": "BL",
@@ -1108,7 +1108,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "13th Anniversary BL Seal",
     "percent": true,
-    "sourceId": 388
+    "recordId": 388
   },
   {
     "attr": "BL",
@@ -1118,7 +1118,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dungeon Masters BL Seal",
     "percent": true,
-    "sourceId": 399
+    "recordId": 399
   },
   {
     "attr": "BL",
@@ -1129,7 +1129,7 @@ window.SEALS_GLOBAL_DATA = [
     "name": "Season Pass BL Seal",
     "percent": true,
     "rankBonuses": [0, 0.5, 1, 1.5, 3, 4, 7],
-    "sourceId": 407
+    "recordId": 407
   },
   {
     "attr": "BL",
@@ -1139,7 +1139,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dungeon Masters2 BL Seal",
     "percent": true,
-    "sourceId": 416
+    "recordId": 416
   },
   {
     "attr": "BL",
@@ -1149,7 +1149,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Amphimon",
     "percent": true,
-    "sourceId": 433
+    "recordId": 433
   },
   {
     "attr": "BL",
@@ -1159,7 +1159,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "[Awakening]Sakuyamon",
     "percent": true,
-    "sourceId": 434
+    "recordId": 434
   },
   {
     "attr": "BL",
@@ -1169,7 +1169,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "XrosUp Mervamon",
     "percent": true,
-    "sourceId": 435
+    "recordId": 435
   },
   {
     "attr": "BL",
@@ -1179,7 +1179,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "BL Seal Of The Challenging Tamer",
     "percent": true,
-    "sourceId": 449
+    "recordId": 449
   },
   {
     "attr": "BL",
@@ -1189,7 +1189,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Barbamon X",
     "percent": true,
-    "sourceId": 476
+    "recordId": 476
   },
   {
     "attr": "BL",
@@ -1199,7 +1199,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Gallantmon X",
     "percent": true,
-    "sourceId": 477
+    "recordId": 477
   },
   {
     "attr": "BL",
@@ -1209,7 +1209,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "14th Anniversary BL Seal",
     "percent": true,
-    "sourceId": 493
+    "recordId": 493
   },
   {
     "attr": "BL",
@@ -1219,7 +1219,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Bolgmon",
     "percent": true,
-    "sourceId": 500
+    "recordId": 500
   },
   {
     "attr": "BL",
@@ -1229,7 +1229,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Mercurymon",
     "percent": true,
-    "sourceId": 501
+    "recordId": 501
   },
   {
     "attr": "BL",
@@ -1239,7 +1239,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Arbormon",
     "percent": true,
-    "sourceId": 502
+    "recordId": 502
   },
   {
     "attr": "BL",
@@ -1249,7 +1249,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Loewemon",
     "percent": true,
-    "sourceId": 503
+    "recordId": 503
   },
   {
     "attr": "BL",
@@ -1259,7 +1259,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure BL Seal A",
     "percent": true,
-    "sourceId": 532
+    "recordId": 532
   },
   {
     "attr": "BL",
@@ -1269,7 +1269,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure BL Seal B",
     "percent": true,
-    "sourceId": 540
+    "recordId": 540
   },
   {
     "attr": "BL",
@@ -1279,7 +1279,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure BL Seal C",
     "percent": true,
-    "sourceId": 548
+    "recordId": 548
   },
   {
     "attr": "BL",
@@ -1289,7 +1289,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Scorpiomon",
     "percent": true,
-    "sourceId": 554
+    "recordId": 554
   },
   {
     "attr": "BL",
@@ -1299,7 +1299,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Ballistamon",
     "percent": true,
-    "sourceId": 555
+    "recordId": 555
   },
   {
     "attr": "CT",
@@ -1309,7 +1309,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Sharmamon",
     "percent": true,
-    "sourceId": 64
+    "recordId": 64
   },
   {
     "attr": "CT",
@@ -1319,7 +1319,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Koromon",
     "percent": true,
-    "sourceId": 65
+    "recordId": 65
   },
   {
     "attr": "CT",
@@ -1329,7 +1329,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Kunemon",
     "percent": true,
-    "sourceId": 66
+    "recordId": 66
   },
   {
     "attr": "CT",
@@ -1339,7 +1339,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Kyubimon",
     "percent": true,
-    "sourceId": 67
+    "recordId": 67
   },
   {
     "attr": "CT",
@@ -1349,7 +1349,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Togemon",
     "percent": true,
-    "sourceId": 68
+    "recordId": 68
   },
   {
     "attr": "CT",
@@ -1359,7 +1359,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Volcamon",
     "percent": true,
-    "sourceId": 69
+    "recordId": 69
   },
   {
     "attr": "CT",
@@ -1369,7 +1369,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Nanomon",
     "percent": true,
-    "sourceId": 70
+    "recordId": 70
   },
   {
     "attr": "CT",
@@ -1379,7 +1379,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "SaberLeomon",
     "percent": true,
-    "sourceId": 71
+    "recordId": 71
   },
   {
     "attr": "CT",
@@ -1389,7 +1389,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "ChaosPiedmon",
     "percent": true,
-    "sourceId": 72
+    "recordId": 72
   },
   {
     "attr": "CT",
@@ -1399,7 +1399,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Tylomon",
     "percent": true,
-    "sourceId": 73
+    "recordId": 73
   },
   {
     "attr": "CT",
@@ -1409,7 +1409,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Vajramon",
     "percent": true,
-    "sourceId": 74
+    "recordId": 74
   },
   {
     "attr": "CT",
@@ -1419,7 +1419,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Prince Mamemon",
     "percent": true,
-    "sourceId": 75
+    "recordId": 75
   },
   {
     "attr": "CT",
@@ -1429,7 +1429,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "CommanDramon",
     "percent": true,
-    "sourceId": 76
+    "recordId": 76
   },
   {
     "attr": "CT",
@@ -1439,7 +1439,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "MetalGarurumon",
     "percent": true,
-    "sourceId": 77
+    "recordId": 77
   },
   {
     "attr": "CT",
@@ -1449,7 +1449,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Omegamon Zwart",
     "percent": true,
-    "sourceId": 78
+    "recordId": 78
   },
   {
     "attr": "CT",
@@ -1459,7 +1459,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "RizeGreymon",
     "percent": true,
-    "sourceId": 79
+    "recordId": 79
   },
   {
     "attr": "CT",
@@ -1469,7 +1469,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Gaogamon",
     "percent": true,
-    "sourceId": 80
+    "recordId": 80
   },
   {
     "attr": "CT",
@@ -1479,7 +1479,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Lalamon",
     "percent": true,
-    "sourceId": 81
+    "recordId": 81
   },
   {
     "attr": "CT",
@@ -1489,7 +1489,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Ravemon Burst Mode",
     "percent": true,
-    "sourceId": 82
+    "recordId": 82
   },
   {
     "attr": "CT",
@@ -1499,7 +1499,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Phantomon",
     "percent": true,
-    "sourceId": 83
+    "recordId": 83
   },
   {
     "attr": "CT",
@@ -1509,7 +1509,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Jesmon",
     "percent": true,
-    "sourceId": 84
+    "recordId": 84
   },
   {
     "attr": "CT",
@@ -1519,7 +1519,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "MagnaAngelmon",
     "percent": true,
-    "sourceId": 85
+    "recordId": 85
   },
   {
     "attr": "CT",
@@ -1529,7 +1529,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Conversion Seal",
     "percent": true,
-    "sourceId": 86
+    "recordId": 86
   },
   {
     "attr": "CT",
@@ -1539,7 +1539,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "PawnChessmon B",
     "percent": true,
-    "sourceId": 87
+    "recordId": 87
   },
   {
     "attr": "CT",
@@ -1549,7 +1549,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "ShadowSeraphimon",
     "percent": true,
-    "sourceId": 88
+    "recordId": 88
   },
   {
     "attr": "CT",
@@ -1559,7 +1559,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Hope Seal",
     "percent": true,
-    "sourceId": 89
+    "recordId": 89
   },
   {
     "attr": "CT",
@@ -1569,7 +1569,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "ShoutmonX2",
     "percent": true,
-    "sourceId": 90
+    "recordId": 90
   },
   {
     "attr": "CT",
@@ -1579,7 +1579,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 700,
     "name": "Lucemon",
     "percent": true,
-    "sourceId": 91
+    "recordId": 91
   },
   {
     "attr": "CT",
@@ -1589,7 +1589,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 300,
     "name": "Alphamon X",
     "percent": true,
-    "sourceId": 92
+    "recordId": 92
   },
   {
     "attr": "CT",
@@ -1599,7 +1599,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 150,
     "name": "Alphamon Ouryuken X",
     "percent": true,
-    "sourceId": 93
+    "recordId": 93
   },
   {
     "attr": "CT",
@@ -1609,7 +1609,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Last Seal of 2023",
     "percent": true,
-    "sourceId": 94
+    "recordId": 94
   },
   {
     "attr": "CT",
@@ -1619,7 +1619,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Seal of Dragon",
     "percent": true,
-    "sourceId": 95
+    "recordId": 95
   },
   {
     "attr": "CT",
@@ -1629,7 +1629,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 1000,
     "name": "Kiwimon",
     "percent": true,
-    "sourceId": 96
+    "recordId": 96
   },
   {
     "attr": "CT",
@@ -1639,7 +1639,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 700,
     "name": "Mamemon",
     "percent": true,
-    "sourceId": 97
+    "recordId": 97
   },
   {
     "attr": "CT",
@@ -1649,7 +1649,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 500,
     "name": "Big Mamemon",
     "percent": true,
-    "sourceId": 98
+    "recordId": 98
   },
   {
     "attr": "CT",
@@ -1659,7 +1659,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 500,
     "name": "AncientTroiamon",
     "percent": true,
-    "sourceId": 99
+    "recordId": 99
   },
   {
     "attr": "CT",
@@ -1669,7 +1669,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 400,
     "name": "ShoutmonX7",
     "percent": true,
-    "sourceId": 100
+    "recordId": 100
   },
   {
     "attr": "CT",
@@ -1679,7 +1679,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 50,
     "name": "Omegamon Merciful Mode",
     "percent": true,
-    "sourceId": 101
+    "recordId": 101
   },
   {
     "attr": "CT",
@@ -1689,7 +1689,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Deltamon Seal",
     "percent": true,
-    "sourceId": 361
+    "recordId": 361
   },
   {
     "attr": "CT",
@@ -1699,7 +1699,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "13th Anniversary CT Seal",
     "percent": true,
-    "sourceId": 375
+    "recordId": 375
   },
   {
     "attr": "CT",
@@ -1709,7 +1709,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "KausGammamon",
     "percent": true,
-    "sourceId": 378
+    "recordId": 378
   },
   {
     "attr": "CT",
@@ -1719,7 +1719,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Kuzuhamon Mikomode",
     "percent": true,
-    "sourceId": 385
+    "recordId": 385
   },
   {
     "attr": "CT",
@@ -1729,7 +1729,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Last Seal of 2024",
     "percent": true,
-    "sourceId": 390
+    "recordId": 390
   },
   {
     "attr": "CT",
@@ -1739,7 +1739,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dungeon Masters CT Seal",
     "percent": true,
-    "sourceId": 396
+    "recordId": 396
   },
   {
     "attr": "CT",
@@ -1750,7 +1750,7 @@ window.SEALS_GLOBAL_DATA = [
     "name": "Season Pass CT Seal",
     "percent": true,
     "rankBonuses": [0, 0.5, 1, 1.5, 3, 5, 10],
-    "sourceId": 404
+    "recordId": 404
   },
   {
     "attr": "CT",
@@ -1760,7 +1760,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dungeon Masters2 CT Seal",
     "percent": true,
-    "sourceId": 413
+    "recordId": 413
   },
   {
     "attr": "CT",
@@ -1770,7 +1770,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Greymon©",
     "percent": true,
-    "sourceId": 424
+    "recordId": 424
   },
   {
     "attr": "CT",
@@ -1780,7 +1780,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "DarknessBagramon",
     "percent": true,
-    "sourceId": 425
+    "recordId": 425
   },
   {
     "attr": "CT",
@@ -1790,7 +1790,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Eosmon",
     "percent": true,
-    "sourceId": 426
+    "recordId": 426
   },
   {
     "attr": "CT",
@@ -1800,7 +1800,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 100,
     "name": "Kari Kamiya Seal",
     "percent": true,
-    "sourceId": 441
+    "recordId": 441
   },
   {
     "attr": "CT",
@@ -1810,7 +1810,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "CT Seal Of The Challenging Tamer",
     "percent": true,
-    "sourceId": 446
+    "recordId": 446
   },
   {
     "attr": "CT",
@@ -1820,7 +1820,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Hot Summer CT Seal",
     "percent": true,
-    "sourceId": 453
+    "recordId": 453
   },
   {
     "attr": "CT",
@@ -1830,7 +1830,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Garurumon X",
     "percent": true,
-    "sourceId": 465
+    "recordId": 465
   },
   {
     "attr": "CT",
@@ -1840,7 +1840,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "MetalGarurumon X",
     "percent": true,
-    "sourceId": 466
+    "recordId": 466
   },
   {
     "attr": "CT",
@@ -1850,7 +1850,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Magnamon X",
     "percent": true,
-    "sourceId": 467
+    "recordId": 467
   },
   {
     "attr": "CT",
@@ -1860,7 +1860,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Minervamon X",
     "percent": true,
-    "sourceId": 468
+    "recordId": 468
   },
   {
     "attr": "CT",
@@ -1870,7 +1870,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Craniamon X",
     "percent": true,
-    "sourceId": 469
+    "recordId": 469
   },
   {
     "attr": "CT",
@@ -1880,7 +1880,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Bountiful Chuseok CT Seal",
     "percent": true,
-    "sourceId": 486
+    "recordId": 486
   },
   {
     "attr": "CT",
@@ -1890,7 +1890,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "14th Anniversary CT Seal",
     "percent": true,
-    "sourceId": 490
+    "recordId": 490
   },
   {
     "attr": "CT",
@@ -1900,7 +1900,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Vritramon",
     "percent": true,
-    "sourceId": 504
+    "recordId": 504
   },
   {
     "attr": "CT",
@@ -1910,7 +1910,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Chakmon",
     "percent": true,
-    "sourceId": 505
+    "recordId": 505
   },
   {
     "attr": "CT",
@@ -1920,7 +1920,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Grottomon",
     "percent": true,
-    "sourceId": 506
+    "recordId": 506
   },
   {
     "attr": "CT",
@@ -1930,7 +1930,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "KaiserGreymon",
     "percent": true,
-    "sourceId": 507
+    "recordId": 507
   },
   {
     "attr": "CT",
@@ -1940,7 +1940,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Agumon -Bond of Courage-",
     "percent": true,
-    "sourceId": 508
+    "recordId": 508
   },
   {
     "attr": "CT",
@@ -1950,7 +1950,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure CT Seal A",
     "percent": true,
-    "sourceId": 529
+    "recordId": 529
   },
   {
     "attr": "CT",
@@ -1960,7 +1960,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure CT Seal B",
     "percent": true,
-    "sourceId": 537
+    "recordId": 537
   },
   {
     "attr": "CT",
@@ -1970,7 +1970,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure CT Seal C",
     "percent": true,
-    "sourceId": 545
+    "recordId": 545
   },
   {
     "attr": "CT",
@@ -1980,7 +1980,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "LadyDevimon",
     "percent": true,
-    "sourceId": 556
+    "recordId": 556
   },
   {
     "attr": "CT",
@@ -1990,7 +1990,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Birdramon",
     "percent": true,
-    "sourceId": 557
+    "recordId": 557
   },
   {
     "attr": "CT",
@@ -2000,7 +2000,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "DeadlyAxemon",
     "percent": true,
-    "sourceId": 558
+    "recordId": 558
   },
   {
     "attr": "CT",
@@ -2010,7 +2010,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "[Awakened] Lilithmon (Resistance)",
     "percent": true,
-    "sourceId": 559
+    "recordId": 559
   },
   {
     "attr": "DE",
@@ -2020,7 +2020,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Goblimon",
     "percent": false,
-    "sourceId": 265
+    "recordId": 265
   },
   {
     "attr": "DE",
@@ -2030,7 +2030,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Leomon",
     "percent": false,
-    "sourceId": 266
+    "recordId": 266
   },
   {
     "attr": "DE",
@@ -2040,7 +2040,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Upamon",
     "percent": false,
-    "sourceId": 267
+    "recordId": 267
   },
   {
     "attr": "DE",
@@ -2050,7 +2050,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Renamon",
     "percent": false,
-    "sourceId": 268
+    "recordId": 268
   },
   {
     "attr": "DE",
@@ -2060,7 +2060,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Elecmon",
     "percent": false,
-    "sourceId": 269
+    "recordId": 269
   },
   {
     "attr": "DE",
@@ -2070,7 +2070,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Flymon",
     "percent": false,
-    "sourceId": 270
+    "recordId": 270
   },
   {
     "attr": "DE",
@@ -2080,7 +2080,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Meramon",
     "percent": false,
-    "sourceId": 271
+    "recordId": 271
   },
   {
     "attr": "DE",
@@ -2090,7 +2090,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Meteomon",
     "percent": false,
-    "sourceId": 272
+    "recordId": 272
   },
   {
     "attr": "DE",
@@ -2100,7 +2100,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Chimairamon",
     "percent": false,
-    "sourceId": 273
+    "recordId": 273
   },
   {
     "attr": "DE",
@@ -2110,7 +2110,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "WaruMonzaemon",
     "percent": false,
-    "sourceId": 274
+    "recordId": 274
   },
   {
     "attr": "DE",
@@ -2120,7 +2120,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Sleipmon",
     "percent": false,
-    "sourceId": 275
+    "recordId": 275
   },
   {
     "attr": "DE",
@@ -2130,7 +2130,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Rockmon",
     "percent": false,
-    "sourceId": 276
+    "recordId": 276
   },
   {
     "attr": "DE",
@@ -2140,7 +2140,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Monochromon",
     "percent": false,
-    "sourceId": 277
+    "recordId": 277
   },
   {
     "attr": "DE",
@@ -2150,7 +2150,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Metaltyranomon",
     "percent": false,
-    "sourceId": 278
+    "recordId": 278
   },
   {
     "attr": "DE",
@@ -2160,7 +2160,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Kamemon",
     "percent": false,
-    "sourceId": 279
+    "recordId": 279
   },
   {
     "attr": "DE",
@@ -2170,7 +2170,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Ankylomon",
     "percent": false,
-    "sourceId": 280
+    "recordId": 280
   },
   {
     "attr": "DE",
@@ -2180,7 +2180,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Shakomon",
     "percent": false,
-    "sourceId": 281
+    "recordId": 281
   },
   {
     "attr": "DE",
@@ -2190,7 +2190,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Shellmon",
     "percent": false,
-    "sourceId": 282
+    "recordId": 282
   },
   {
     "attr": "DE",
@@ -2200,7 +2200,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Palmon",
     "percent": false,
-    "sourceId": 283
+    "recordId": 283
   },
   {
     "attr": "DE",
@@ -2210,7 +2210,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "HerculesKabuterimon",
     "percent": false,
-    "sourceId": 284
+    "recordId": 284
   },
   {
     "attr": "DE",
@@ -2220,7 +2220,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Thunderballmon",
     "percent": false,
-    "sourceId": 285
+    "recordId": 285
   },
   {
     "attr": "DE",
@@ -2230,7 +2230,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "BaoHackmon",
     "percent": false,
-    "sourceId": 286
+    "recordId": 286
   },
   {
     "attr": "DE",
@@ -2240,7 +2240,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Salamon",
     "percent": false,
-    "sourceId": 287
+    "recordId": 287
   },
   {
     "attr": "DE",
@@ -2250,7 +2250,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Armor Seal",
     "percent": false,
-    "sourceId": 288
+    "recordId": 288
   },
   {
     "attr": "DE",
@@ -2260,7 +2260,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "PawnChessmon W",
     "percent": false,
-    "sourceId": 289
+    "recordId": 289
   },
   {
     "attr": "DE",
@@ -2270,7 +2270,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 700,
     "name": "Labramon",
     "percent": false,
-    "sourceId": 290
+    "recordId": 290
   },
   {
     "attr": "DE",
@@ -2280,7 +2280,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 500,
     "name": "JewelBeemon",
     "percent": false,
-    "sourceId": 291
+    "recordId": 291
   },
   {
     "attr": "DE",
@@ -2290,7 +2290,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 300,
     "name": "Seraphimon",
     "percent": false,
-    "sourceId": 292
+    "recordId": 292
   },
   {
     "attr": "DE",
@@ -2300,7 +2300,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 1000,
     "name": "Gotsumon",
     "percent": false,
-    "sourceId": 293
+    "recordId": 293
   },
   {
     "attr": "DE",
@@ -2310,7 +2310,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 1000,
     "name": "Icemon",
     "percent": false,
-    "sourceId": 294
+    "recordId": 294
   },
   {
     "attr": "DE",
@@ -2320,7 +2320,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 1000,
     "name": "Flybeemon",
     "percent": false,
-    "sourceId": 295
+    "recordId": 295
   },
   {
     "attr": "DE",
@@ -2330,7 +2330,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 700,
     "name": "SuperStarmon",
     "percent": false,
-    "sourceId": 296
+    "recordId": 296
   },
   {
     "attr": "DE",
@@ -2340,7 +2340,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 700,
     "name": "OmegaShoutmon",
     "percent": false,
-    "sourceId": 297
+    "recordId": 297
   },
   {
     "attr": "DE",
@@ -2350,7 +2350,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 500,
     "name": "JumboGamemon",
     "percent": false,
-    "sourceId": 298
+    "recordId": 298
   },
   {
     "attr": "DE",
@@ -2360,7 +2360,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 400,
     "name": "ShoutmonDX",
     "percent": false,
-    "sourceId": 299
+    "recordId": 299
   },
   {
     "attr": "DE",
@@ -2370,7 +2370,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Mojyamon Seal",
     "percent": false,
-    "sourceId": 371
+    "recordId": 371
   },
   {
     "attr": "DE",
@@ -2380,7 +2380,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "WezenGammamon",
     "percent": false,
-    "sourceId": 379
+    "recordId": 379
   },
   {
     "attr": "DE",
@@ -2390,7 +2390,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "13th Anniversary DE Seal",
     "percent": false,
-    "sourceId": 387
+    "recordId": 387
   },
   {
     "attr": "DE",
@@ -2400,7 +2400,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dungeon Masters DE Seal",
     "percent": false,
-    "sourceId": 398
+    "recordId": 398
   },
   {
     "attr": "DE",
@@ -2411,7 +2411,7 @@ window.SEALS_GLOBAL_DATA = [
     "name": "Season Pass DE Seal",
     "percent": false,
     "rankBonuses": [0, 50, 100, 200, 300, 400, 700],
-    "sourceId": 406
+    "recordId": 406
   },
   {
     "attr": "DE",
@@ -2421,7 +2421,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dungeon Masters2 DE Seal",
     "percent": false,
-    "sourceId": 415
+    "recordId": 415
   },
   {
     "attr": "DE",
@@ -2431,7 +2431,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Diarbbitmon",
     "percent": false,
-    "sourceId": 430
+    "recordId": 430
   },
   {
     "attr": "DE",
@@ -2441,7 +2441,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "[Awakening]Dukemon",
     "percent": false,
-    "sourceId": 431
+    "recordId": 431
   },
   {
     "attr": "DE",
@@ -2451,7 +2451,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "BloomLordmon",
     "percent": false,
-    "sourceId": 432
+    "recordId": 432
   },
   {
     "attr": "DE",
@@ -2461,7 +2461,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "DE Seal Of The Challenging Tamer",
     "percent": false,
-    "sourceId": 448
+    "recordId": 448
   },
   {
     "attr": "DE",
@@ -2471,7 +2471,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "MetalGreymon X",
     "percent": false,
-    "sourceId": 470
+    "recordId": 470
   },
   {
     "attr": "DE",
@@ -2481,7 +2481,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Duftmon X",
     "percent": false,
-    "sourceId": 471
+    "recordId": 471
   },
   {
     "attr": "DE",
@@ -2491,7 +2491,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "LordKnightmon X",
     "percent": false,
-    "sourceId": 472
+    "recordId": 472
   },
   {
     "attr": "DE",
@@ -2501,7 +2501,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Chaosdramon X",
     "percent": false,
-    "sourceId": 473
+    "recordId": 473
   },
   {
     "attr": "DE",
@@ -2511,7 +2511,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "14th Anniversary DE Seal",
     "percent": false,
-    "sourceId": 492
+    "recordId": 492
   },
   {
     "attr": "DE",
@@ -2521,7 +2521,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Garmmon",
     "percent": false,
-    "sourceId": 509
+    "recordId": 509
   },
   {
     "attr": "DE",
@@ -2531,7 +2531,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Blitzmon",
     "percent": false,
-    "sourceId": 510
+    "recordId": 510
   },
   {
     "attr": "DE",
@@ -2541,7 +2541,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Calamaramon",
     "percent": false,
-    "sourceId": 511
+    "recordId": 511
   },
   {
     "attr": "DE",
@@ -2551,7 +2551,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "KaiserLeomon",
     "percent": false,
-    "sourceId": 512
+    "recordId": 512
   },
   {
     "attr": "DE",
@@ -2561,7 +2561,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure DE Seal A",
     "percent": false,
-    "sourceId": 531
+    "recordId": 531
   },
   {
     "attr": "DE",
@@ -2571,7 +2571,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure DE Seal B",
     "percent": false,
-    "sourceId": 539
+    "recordId": 539
   },
   {
     "attr": "DE",
@@ -2581,7 +2581,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure DE Seal C",
     "percent": false,
-    "sourceId": 547
+    "recordId": 547
   },
   {
     "attr": "DE",
@@ -2591,7 +2591,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Okuwamon",
     "percent": false,
-    "sourceId": 560
+    "recordId": 560
   },
   {
     "attr": "DE",
@@ -2601,7 +2601,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Spiderrimon",
     "percent": false,
-    "sourceId": 561
+    "recordId": 561
   },
   {
     "attr": "DE",
@@ -2611,7 +2611,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dorulumon",
     "percent": false,
-    "sourceId": 562
+    "recordId": 562
   },
   {
     "attr": "DS",
@@ -2621,7 +2621,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Diablomon",
     "percent": false,
-    "sourceId": 228
+    "recordId": 228
   },
   {
     "attr": "DS",
@@ -2631,7 +2631,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Agumon",
     "percent": false,
-    "sourceId": 229
+    "recordId": 229
   },
   {
     "attr": "DS",
@@ -2641,7 +2641,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Coredramon(Green)",
     "percent": false,
-    "sourceId": 230
+    "recordId": 230
   },
   {
     "attr": "DS",
@@ -2651,7 +2651,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Zhuqiaomon",
     "percent": false,
-    "sourceId": 231
+    "recordId": 231
   },
   {
     "attr": "DS",
@@ -2661,7 +2661,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "DemiMeramon",
     "percent": false,
-    "sourceId": 232
+    "recordId": 232
   },
   {
     "attr": "DS",
@@ -2671,7 +2671,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Candlemon",
     "percent": false,
-    "sourceId": 233
+    "recordId": 233
   },
   {
     "attr": "DS",
@@ -2681,7 +2681,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Woodmon",
     "percent": false,
-    "sourceId": 234
+    "recordId": 234
   },
   {
     "attr": "DS",
@@ -2691,7 +2691,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "SkullGreymon",
     "percent": false,
-    "sourceId": 235
+    "recordId": 235
   },
   {
     "attr": "DS",
@@ -2701,7 +2701,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Asuramon",
     "percent": false,
-    "sourceId": 236
+    "recordId": 236
   },
   {
     "attr": "DS",
@@ -2711,7 +2711,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "WereGarurumon",
     "percent": false,
-    "sourceId": 237
+    "recordId": 237
   },
   {
     "attr": "DS",
@@ -2721,7 +2721,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Toy Agumon",
     "percent": false,
-    "sourceId": 238
+    "recordId": 238
   },
   {
     "attr": "DS",
@@ -2731,7 +2731,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dorumon",
     "percent": false,
-    "sourceId": 239
+    "recordId": 239
   },
   {
     "attr": "DS",
@@ -2741,7 +2741,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Gesomon",
     "percent": false,
-    "sourceId": 240
+    "recordId": 240
   },
   {
     "attr": "DS",
@@ -2751,7 +2751,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Kabuterimon",
     "percent": false,
-    "sourceId": 241
+    "recordId": 241
   },
   {
     "attr": "DS",
@@ -2761,7 +2761,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Yukidarumon",
     "percent": false,
-    "sourceId": 242
+    "recordId": 242
   },
   {
     "attr": "DS",
@@ -2771,7 +2771,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Mikemon",
     "percent": false,
-    "sourceId": 243
+    "recordId": 243
   },
   {
     "attr": "DS",
@@ -2781,7 +2781,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Piyomon",
     "percent": false,
-    "sourceId": 244
+    "recordId": 244
   },
   {
     "attr": "DS",
@@ -2791,7 +2791,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Puppetmon",
     "percent": false,
-    "sourceId": 245
+    "recordId": 245
   },
   {
     "attr": "DS",
@@ -2801,7 +2801,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "MachGaogamon",
     "percent": false,
-    "sourceId": 246
+    "recordId": 246
   },
   {
     "attr": "DS",
@@ -2811,7 +2811,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Peckmon",
     "percent": false,
-    "sourceId": 247
+    "recordId": 247
   },
   {
     "attr": "DS",
@@ -2821,7 +2821,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Heat Wave Seal",
     "percent": false,
-    "sourceId": 248
+    "recordId": 248
   },
   {
     "attr": "DS",
@@ -2831,7 +2831,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Angemon",
     "percent": false,
-    "sourceId": 249
+    "recordId": 249
   },
   {
     "attr": "DS",
@@ -2841,7 +2841,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Piedmon",
     "percent": false,
-    "sourceId": 250
+    "recordId": 250
   },
   {
     "attr": "DS",
@@ -2851,7 +2851,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Gawappamon",
     "percent": false,
-    "sourceId": 251
+    "recordId": 251
   },
   {
     "attr": "DS",
@@ -2861,7 +2861,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Happiness Seal",
     "percent": false,
-    "sourceId": 252
+    "recordId": 252
   },
   {
     "attr": "DS",
@@ -2871,7 +2871,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "GrandisKuwagamon",
     "percent": false,
-    "sourceId": 253
+    "recordId": 253
   },
   {
     "attr": "DS",
@@ -2881,7 +2881,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Gladimon",
     "percent": false,
-    "sourceId": 254
+    "recordId": 254
   },
   {
     "attr": "DS",
@@ -2891,7 +2891,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 700,
     "name": "Kudamon",
     "percent": false,
-    "sourceId": 255
+    "recordId": 255
   },
   {
     "attr": "DS",
@@ -2901,7 +2901,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 500,
     "name": "Tyilinmon",
     "percent": false,
-    "sourceId": 256
+    "recordId": 256
   },
   {
     "attr": "DS",
@@ -2911,7 +2911,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 300,
     "name": "Anubimon",
     "percent": false,
-    "sourceId": 257
+    "recordId": 257
   },
   {
     "attr": "DS",
@@ -2921,7 +2921,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Beginning Seal",
     "percent": false,
-    "sourceId": 258
+    "recordId": 258
   },
   {
     "attr": "DS",
@@ -2931,7 +2931,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 1000,
     "name": "Psychemon",
     "percent": false,
-    "sourceId": 259
+    "recordId": 259
   },
   {
     "attr": "DS",
@@ -2941,7 +2941,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 1000,
     "name": "Wizardmon",
     "percent": false,
-    "sourceId": 260
+    "recordId": 260
   },
   {
     "attr": "DS",
@@ -2951,7 +2951,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 1000,
     "name": "Toucanmon",
     "percent": false,
-    "sourceId": 261
+    "recordId": 261
   },
   {
     "attr": "DS",
@@ -2961,7 +2961,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 700,
     "name": "Taomon",
     "percent": false,
-    "sourceId": 262
+    "recordId": 262
   },
   {
     "attr": "DS",
@@ -2971,7 +2971,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 500,
     "name": "Lotusmon",
     "percent": false,
-    "sourceId": 263
+    "recordId": 263
   },
   {
     "attr": "DS",
@@ -2981,7 +2981,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 500,
     "name": "Plesiomon",
     "percent": false,
-    "sourceId": 264
+    "recordId": 264
   },
   {
     "attr": "DS",
@@ -2991,7 +2991,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Gekomon Seal",
     "percent": false,
-    "sourceId": 368
+    "recordId": 368
   },
   {
     "attr": "DS",
@@ -3001,7 +3001,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Betamon Seal",
     "percent": false,
-    "sourceId": 369
+    "recordId": 369
   },
   {
     "attr": "DS",
@@ -3011,7 +3011,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Bakemon Seal",
     "percent": false,
-    "sourceId": 370
+    "recordId": 370
   },
   {
     "attr": "DS",
@@ -3021,7 +3021,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "13th Anniversary DS Seal",
     "percent": false,
-    "sourceId": 373
+    "recordId": 373
   },
   {
     "attr": "DS",
@@ -3031,7 +3031,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Baalmon",
     "percent": false,
-    "sourceId": 381
+    "recordId": 381
   },
   {
     "attr": "DS",
@@ -3041,7 +3041,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dungeon Masters DS Seal",
     "percent": false,
-    "sourceId": 394
+    "recordId": 394
   },
   {
     "attr": "DS",
@@ -3052,7 +3052,7 @@ window.SEALS_GLOBAL_DATA = [
     "name": "Season Pass DS Seal",
     "percent": false,
     "rankBonuses": [0, 50, 100, 200, 500, 700, 1500],
-    "sourceId": 402
+    "recordId": 402
   },
   {
     "attr": "DS",
@@ -3062,7 +3062,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dungeon Masters2 DS Seal",
     "percent": false,
-    "sourceId": 411
+    "recordId": 411
   },
   {
     "attr": "DS",
@@ -3072,7 +3072,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "GulusGammamon",
     "percent": false,
-    "sourceId": 438
+    "recordId": 438
   },
   {
     "attr": "DS",
@@ -3082,7 +3082,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "[Awakening]Susanoomon",
     "percent": false,
-    "sourceId": 439
+    "recordId": 439
   },
   {
     "attr": "DS",
@@ -3092,7 +3092,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "DS Seal Of The Challenging Tamer",
     "percent": false,
-    "sourceId": 444
+    "recordId": 444
   },
   {
     "attr": "DS",
@@ -3102,7 +3102,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Lillymon X",
     "percent": false,
-    "sourceId": 480
+    "recordId": 480
   },
   {
     "attr": "DS",
@@ -3112,7 +3112,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Rosemon X",
     "percent": false,
-    "sourceId": 481
+    "recordId": 481
   },
   {
     "attr": "DS",
@@ -3122,7 +3122,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Lilithmon X",
     "percent": false,
-    "sourceId": 482
+    "recordId": 482
   },
   {
     "attr": "DS",
@@ -3132,7 +3132,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Demon X",
     "percent": false,
-    "sourceId": 483
+    "recordId": 483
   },
   {
     "attr": "DS",
@@ -3142,7 +3142,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "14th Anniversary DS Seal",
     "percent": false,
-    "sourceId": 488
+    "recordId": 488
   },
   {
     "attr": "DS",
@@ -3152,7 +3152,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Fairymon",
     "percent": false,
-    "sourceId": 514
+    "recordId": 514
   },
   {
     "attr": "DS",
@@ -3162,7 +3162,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Ranamon",
     "percent": false,
-    "sourceId": 515
+    "recordId": 515
   },
   {
     "attr": "DS",
@@ -3172,7 +3172,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "MarineAngemon",
     "percent": false,
-    "sourceId": 516
+    "recordId": 516
   },
   {
     "attr": "DS",
@@ -3182,7 +3182,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure DS Seal A",
     "percent": false,
-    "sourceId": 527
+    "recordId": 527
   },
   {
     "attr": "DS",
@@ -3192,7 +3192,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure DS Seal B",
     "percent": false,
-    "sourceId": 535
+    "recordId": 535
   },
   {
     "attr": "DS",
@@ -3202,7 +3202,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure DS Seal C",
     "percent": false,
-    "sourceId": 543
+    "recordId": 543
   },
   {
     "attr": "DS",
@@ -3212,7 +3212,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Eosmon (Perfect)",
     "percent": false,
-    "sourceId": 563
+    "recordId": 563
   },
   {
     "attr": "DS",
@@ -3222,7 +3222,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "TeslaJellymon",
     "percent": false,
-    "sourceId": 564
+    "recordId": 564
   },
   {
     "attr": "EV",
@@ -3232,7 +3232,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Lillymon",
     "percent": true,
-    "sourceId": 327
+    "recordId": 327
   },
   {
     "attr": "EV",
@@ -3242,7 +3242,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Impmon",
     "percent": true,
-    "sourceId": 328
+    "recordId": 328
   },
   {
     "attr": "EV",
@@ -3252,7 +3252,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Armadimon",
     "percent": true,
-    "sourceId": 329
+    "recordId": 329
   },
   {
     "attr": "EV",
@@ -3262,7 +3262,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Digmon",
     "percent": true,
-    "sourceId": 330
+    "recordId": 330
   },
   {
     "attr": "EV",
@@ -3272,7 +3272,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Veedramon",
     "percent": true,
-    "sourceId": 331
+    "recordId": 331
   },
   {
     "attr": "EV",
@@ -3282,7 +3282,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Mystimon",
     "percent": true,
-    "sourceId": 332
+    "recordId": 332
   },
   {
     "attr": "EV",
@@ -3292,7 +3292,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "NeoDevimon",
     "percent": true,
-    "sourceId": 333
+    "recordId": 333
   },
   {
     "attr": "EV",
@@ -3302,7 +3302,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dynasmon",
     "percent": true,
-    "sourceId": 334
+    "recordId": 334
   },
   {
     "attr": "EV",
@@ -3312,7 +3312,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "DexDorugoramon",
     "percent": true,
-    "sourceId": 335
+    "recordId": 335
   },
   {
     "attr": "EV",
@@ -3322,7 +3322,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Gatomon",
     "percent": true,
-    "sourceId": 336
+    "recordId": 336
   },
   {
     "attr": "EV",
@@ -3332,7 +3332,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Allomon",
     "percent": true,
-    "sourceId": 337
+    "recordId": 337
   },
   {
     "attr": "EV",
@@ -3342,7 +3342,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Growmon",
     "percent": true,
-    "sourceId": 338
+    "recordId": 338
   },
   {
     "attr": "EV",
@@ -3352,7 +3352,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Bokomon",
     "percent": true,
-    "sourceId": 339
+    "recordId": 339
   },
   {
     "attr": "EV",
@@ -3362,7 +3362,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Yaksamon",
     "percent": true,
-    "sourceId": 340
+    "recordId": 340
   },
   {
     "attr": "EV",
@@ -3372,7 +3372,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Blackgatomon",
     "percent": true,
-    "sourceId": 341
+    "recordId": 341
   },
   {
     "attr": "EV",
@@ -3382,7 +3382,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Rapidmon",
     "percent": true,
-    "sourceId": 342
+    "recordId": 342
   },
   {
     "attr": "EV",
@@ -3392,7 +3392,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "MirageGaogamon",
     "percent": true,
-    "sourceId": 343
+    "recordId": 343
   },
   {
     "attr": "EV",
@@ -3402,7 +3402,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Rosemon Burst Mode",
     "percent": true,
-    "sourceId": 344
+    "recordId": 344
   },
   {
     "attr": "EV",
@@ -3412,7 +3412,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Ravemon",
     "percent": true,
-    "sourceId": 345
+    "recordId": 345
   },
   {
     "attr": "EV",
@@ -3422,7 +3422,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "SaviorHackmon",
     "percent": true,
-    "sourceId": 346
+    "recordId": 346
   },
   {
     "attr": "EV",
@@ -3432,7 +3432,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Seal of Coolness",
     "percent": true,
-    "sourceId": 347
+    "recordId": 347
   },
   {
     "attr": "EV",
@@ -3442,7 +3442,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "MegaKabuterimon",
     "percent": true,
-    "sourceId": 348
+    "recordId": 348
   },
   {
     "attr": "EV",
@@ -3452,7 +3452,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Marsmon",
     "percent": true,
-    "sourceId": 349
+    "recordId": 349
   },
   {
     "attr": "EV",
@@ -3462,7 +3462,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Hagurumon",
     "percent": true,
-    "sourceId": 350
+    "recordId": 350
   },
   {
     "attr": "EV",
@@ -3472,7 +3472,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Knowledge Seal",
     "percent": true,
-    "sourceId": 351
+    "recordId": 351
   },
   {
     "attr": "EV",
@@ -3482,7 +3482,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 700,
     "name": "Reppamon",
     "percent": true,
-    "sourceId": 352
+    "recordId": 352
   },
   {
     "attr": "EV",
@@ -3492,7 +3492,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 300,
     "name": "Justimon",
     "percent": true,
-    "sourceId": 353
+    "recordId": 353
   },
   {
     "attr": "EV",
@@ -3502,7 +3502,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Mastemon",
     "percent": true,
-    "sourceId": 354
+    "recordId": 354
   },
   {
     "attr": "EV",
@@ -3512,7 +3512,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 1000,
     "name": "Lopmon",
     "percent": true,
-    "sourceId": 355
+    "recordId": 355
   },
   {
     "attr": "EV",
@@ -3522,7 +3522,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 1000,
     "name": "Jellymon",
     "percent": true,
-    "sourceId": 356
+    "recordId": 356
   },
   {
     "attr": "EV",
@@ -3532,7 +3532,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 1000,
     "name": "Holsmon",
     "percent": true,
-    "sourceId": 357
+    "recordId": 357
   },
   {
     "attr": "EV",
@@ -3542,7 +3542,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Family Seal",
     "percent": true,
-    "sourceId": 358
+    "recordId": 358
   },
   {
     "attr": "EV",
@@ -3552,7 +3552,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Bastemon",
     "percent": true,
-    "sourceId": 382
+    "recordId": 382
   },
   {
     "attr": "EV",
@@ -3562,7 +3562,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "13th Anniversary EV Seal",
     "percent": true,
-    "sourceId": 389
+    "recordId": 389
   },
   {
     "attr": "EV",
@@ -3572,7 +3572,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dungeon Masters EV Seal",
     "percent": true,
-    "sourceId": 400
+    "recordId": 400
   },
   {
     "attr": "EV",
@@ -3583,7 +3583,7 @@ window.SEALS_GLOBAL_DATA = [
     "name": "Season Pass EV Seal",
     "percent": true,
     "rankBonuses": [0, 0.5, 1, 1.5, 3, 4, 7],
-    "sourceId": 408
+    "recordId": 408
   },
   {
     "attr": "EV",
@@ -3593,7 +3593,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Afterimage Seal",
     "percent": true,
-    "sourceId": 409
+    "recordId": 409
   },
   {
     "attr": "EV",
@@ -3603,7 +3603,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dungeon Masters2 EV Seal",
     "percent": true,
-    "sourceId": 417
+    "recordId": 417
   },
   {
     "attr": "EV",
@@ -3613,7 +3613,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "[Awakening]SaintGalgomon",
     "percent": true,
-    "sourceId": 436
+    "recordId": 436
   },
   {
     "attr": "EV",
@@ -3623,7 +3623,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Armagemon",
     "percent": true,
-    "sourceId": 437
+    "recordId": 437
   },
   {
     "attr": "EV",
@@ -3633,7 +3633,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "EV Seal Of The Challenging Tamer",
     "percent": true,
-    "sourceId": 450
+    "recordId": 450
   },
   {
     "attr": "EV",
@@ -3643,7 +3643,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "WereGarurumon X",
     "percent": true,
-    "sourceId": 478
+    "recordId": 478
   },
   {
     "attr": "EV",
@@ -3653,7 +3653,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Beelzebumon X",
     "percent": true,
-    "sourceId": 479
+    "recordId": 479
   },
   {
     "attr": "EV",
@@ -3663,7 +3663,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "14th Anniversary EV Seal",
     "percent": true,
-    "sourceId": 494
+    "recordId": 494
   },
   {
     "attr": "EV",
@@ -3673,7 +3673,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Shutumon",
     "percent": true,
-    "sourceId": 517
+    "recordId": 517
   },
   {
     "attr": "EV",
@@ -3683,7 +3683,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Mervamon",
     "percent": true,
-    "sourceId": 518
+    "recordId": 518
   },
   {
     "attr": "EV",
@@ -3693,7 +3693,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure EV Seal A",
     "percent": true,
-    "sourceId": 533
+    "recordId": 533
   },
   {
     "attr": "EV",
@@ -3703,7 +3703,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure EV Seal B",
     "percent": true,
-    "sourceId": 541
+    "recordId": 541
   },
   {
     "attr": "EV",
@@ -3713,7 +3713,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure EV Seal C",
     "percent": true,
-    "sourceId": 549
+    "recordId": 549
   },
   {
     "attr": "EV",
@@ -3723,7 +3723,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "MetalEtemon",
     "percent": true,
-    "sourceId": 565
+    "recordId": 565
   },
   {
     "attr": "HP",
@@ -3733,7 +3733,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "V-mon",
     "percent": false,
-    "sourceId": 190
+    "recordId": 190
   },
   {
     "attr": "HP",
@@ -3743,7 +3743,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Soulmon",
     "percent": false,
-    "sourceId": 191
+    "recordId": 191
   },
   {
     "attr": "HP",
@@ -3753,7 +3753,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Xuanwumon",
     "percent": false,
-    "sourceId": 192
+    "recordId": 192
   },
   {
     "attr": "HP",
@@ -3763,7 +3763,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Tsunomon",
     "percent": false,
-    "sourceId": 193
+    "recordId": 193
   },
   {
     "attr": "HP",
@@ -3773,7 +3773,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Keramon",
     "percent": false,
-    "sourceId": 194
+    "recordId": 194
   },
   {
     "attr": "HP",
@@ -3783,7 +3783,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Gazimon",
     "percent": false,
-    "sourceId": 195
+    "recordId": 195
   },
   {
     "attr": "HP",
@@ -3793,7 +3793,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Gardromon",
     "percent": false,
-    "sourceId": 196
+    "recordId": 196
   },
   {
     "attr": "HP",
@@ -3803,7 +3803,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Centalmon",
     "percent": false,
-    "sourceId": 197
+    "recordId": 197
   },
   {
     "attr": "HP",
@@ -3813,7 +3813,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "SkullSatamon",
     "percent": false,
-    "sourceId": 198
+    "recordId": 198
   },
   {
     "attr": "HP",
@@ -3823,7 +3823,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "DexDoruGreymon",
     "percent": false,
-    "sourceId": 199
+    "recordId": 199
   },
   {
     "attr": "HP",
@@ -3833,7 +3833,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Sinduramon",
     "percent": false,
-    "sourceId": 200
+    "recordId": 200
   },
   {
     "attr": "HP",
@@ -3843,7 +3843,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "UlforceVeedramon",
     "percent": false,
-    "sourceId": 201
+    "recordId": 201
   },
   {
     "attr": "HP",
@@ -3853,7 +3853,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Reptiledramon",
     "percent": false,
-    "sourceId": 202
+    "recordId": 202
   },
   {
     "attr": "HP",
@@ -3863,7 +3863,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Raremon",
     "percent": false,
-    "sourceId": 203
+    "recordId": 203
   },
   {
     "attr": "HP",
@@ -3873,7 +3873,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Omegamon Alter-S",
     "percent": false,
-    "sourceId": 204
+    "recordId": 204
   },
   {
     "attr": "HP",
@@ -3883,7 +3883,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "WarGreymon",
     "percent": false,
-    "sourceId": 205
+    "recordId": 205
   },
   {
     "attr": "HP",
@@ -3893,7 +3893,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Ikkakumon",
     "percent": false,
-    "sourceId": 206
+    "recordId": 206
   },
   {
     "attr": "HP",
@@ -3903,7 +3903,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Lucemon: Wild 2nd Mode",
     "percent": false,
-    "sourceId": 207
+    "recordId": 207
   },
   {
     "attr": "HP",
@@ -3913,7 +3913,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "ShineGreymon BurstMode",
     "percent": false,
-    "sourceId": 208
+    "recordId": 208
   },
   {
     "attr": "HP",
@@ -3923,7 +3923,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Gaomon",
     "percent": false,
-    "sourceId": 209
+    "recordId": 209
   },
   {
     "attr": "HP",
@@ -3933,7 +3933,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "SunFlowmon",
     "percent": false,
-    "sourceId": 210
+    "recordId": 210
   },
   {
     "attr": "HP",
@@ -3943,7 +3943,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "BanchoLeomon",
     "percent": false,
-    "sourceId": 211
+    "recordId": 211
   },
   {
     "attr": "HP",
@@ -3953,7 +3953,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Grow Well",
     "percent": false,
-    "sourceId": 212
+    "recordId": 212
   },
   {
     "attr": "HP",
@@ -3963,7 +3963,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Whamon",
     "percent": false,
-    "sourceId": 213
+    "recordId": 213
   },
   {
     "attr": "HP",
@@ -3973,7 +3973,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "MetalSeadramon",
     "percent": false,
-    "sourceId": 214
+    "recordId": 214
   },
   {
     "attr": "HP",
@@ -3983,7 +3983,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Garurumon",
     "percent": false,
-    "sourceId": 215
+    "recordId": 215
   },
   {
     "attr": "HP",
@@ -3993,7 +3993,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Ogremon",
     "percent": false,
-    "sourceId": 216
+    "recordId": 216
   },
   {
     "attr": "HP",
@@ -4003,7 +4003,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Sakuyamon",
     "percent": false,
-    "sourceId": 217
+    "recordId": 217
   },
   {
     "attr": "HP",
@@ -4013,7 +4013,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Sincerity Seal",
     "percent": false,
-    "sourceId": 218
+    "recordId": 218
   },
   {
     "attr": "HP",
@@ -4023,7 +4023,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 500,
     "name": "Angewomon",
     "percent": false,
-    "sourceId": 219
+    "recordId": 219
   },
   {
     "attr": "HP",
@@ -4033,7 +4033,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 300,
     "name": "Cherubimon White",
     "percent": false,
-    "sourceId": 220
+    "recordId": 220
   },
   {
     "attr": "HP",
@@ -4043,7 +4043,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 300,
     "name": "Valdurmon",
     "percent": false,
-    "sourceId": 221
+    "recordId": 221
   },
   {
     "attr": "HP",
@@ -4053,7 +4053,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Susanoomon",
     "percent": false,
-    "sourceId": 222
+    "recordId": 222
   },
   {
     "attr": "HP",
@@ -4063,7 +4063,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 1000,
     "name": "Kokuwamon",
     "percent": false,
-    "sourceId": 223
+    "recordId": 223
   },
   {
     "attr": "HP",
@@ -4073,7 +4073,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 1000,
     "name": "Seadramon",
     "percent": false,
-    "sourceId": 224
+    "recordId": 224
   },
   {
     "attr": "HP",
@@ -4083,7 +4083,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 700,
     "name": "Pumpkinmon",
     "percent": false,
-    "sourceId": 225
+    "recordId": 225
   },
   {
     "attr": "HP",
@@ -4093,7 +4093,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 500,
     "name": "Boltmon",
     "percent": false,
-    "sourceId": 226
+    "recordId": 226
   },
   {
     "attr": "HP",
@@ -4103,7 +4103,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Seal of Heat",
     "percent": false,
-    "sourceId": 227
+    "recordId": 227
   },
   {
     "attr": "HP",
@@ -4113,7 +4113,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dokunemon Seal",
     "percent": false,
-    "sourceId": 365
+    "recordId": 365
   },
   {
     "attr": "HP",
@@ -4123,7 +4123,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Roachmon Seal",
     "percent": false,
-    "sourceId": 366
+    "recordId": 366
   },
   {
     "attr": "HP",
@@ -4133,7 +4133,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Otamamon Seal",
     "percent": false,
-    "sourceId": 367
+    "recordId": 367
   },
   {
     "attr": "HP",
@@ -4143,7 +4143,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "13th Anniversary HP Seal",
     "percent": false,
-    "sourceId": 372
+    "recordId": 372
   },
   {
     "attr": "HP",
@@ -4153,7 +4153,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Canoweissmon",
     "percent": false,
-    "sourceId": 383
+    "recordId": 383
   },
   {
     "attr": "HP",
@@ -4163,7 +4163,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dungeon Masters HP Seal",
     "percent": false,
-    "sourceId": 393
+    "recordId": 393
   },
   {
     "attr": "HP",
@@ -4174,7 +4174,7 @@ window.SEALS_GLOBAL_DATA = [
     "name": "Season Pass HP Seal",
     "percent": false,
     "rankBonuses": [0, 50, 100, 200, 300, 500, 1000],
-    "sourceId": 401
+    "recordId": 401
   },
   {
     "attr": "HP",
@@ -4184,7 +4184,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dungeon Masters2 HP Seal",
     "percent": false,
-    "sourceId": 410
+    "recordId": 410
   },
   {
     "attr": "HP",
@@ -4194,7 +4194,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "MailBirdramon",
     "percent": false,
-    "sourceId": 427
+    "recordId": 427
   },
   {
     "attr": "HP",
@@ -4204,7 +4204,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Lucemon: Chaos Mode",
     "percent": false,
-    "sourceId": 428
+    "recordId": 428
   },
   {
     "attr": "HP",
@@ -4214,7 +4214,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "[Awakening]Dukemon Crimson Mode",
     "percent": false,
-    "sourceId": 429
+    "recordId": 429
   },
   {
     "attr": "HP",
@@ -4224,7 +4224,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "HP Seal Of The Challenging Tamer",
     "percent": false,
-    "sourceId": 443
+    "recordId": 443
   },
   {
     "attr": "HP",
@@ -4234,7 +4234,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Tigervespamon",
     "percent": false,
-    "sourceId": 474
+    "recordId": 474
   },
   {
     "attr": "HP",
@@ -4244,7 +4244,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Megidramon X",
     "percent": false,
-    "sourceId": 475
+    "recordId": 475
   },
   {
     "attr": "HP",
@@ -4254,7 +4254,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "14th Anniversary HP Seal",
     "percent": false,
-    "sourceId": 487
+    "recordId": 487
   },
   {
     "attr": "HP",
@@ -4264,7 +4264,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "14th Anniversary Cake Seal",
     "percent": false,
-    "sourceId": 495
+    "recordId": 495
   },
   {
     "attr": "HP",
@@ -4274,7 +4274,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Blizzarmon",
     "percent": false,
-    "sourceId": 519
+    "recordId": 519
   },
   {
     "attr": "HP",
@@ -4284,7 +4284,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Sefirotmon",
     "percent": false,
-    "sourceId": 520
+    "recordId": 520
   },
   {
     "attr": "HP",
@@ -4294,7 +4294,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Ophanimon Falldown Mode",
     "percent": false,
-    "sourceId": 521
+    "recordId": 521
   },
   {
     "attr": "HP",
@@ -4304,7 +4304,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure HP Seal A",
     "percent": false,
-    "sourceId": 526
+    "recordId": 526
   },
   {
     "attr": "HP",
@@ -4314,7 +4314,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure HP Seal B",
     "percent": false,
-    "sourceId": 534
+    "recordId": 534
   },
   {
     "attr": "HP",
@@ -4324,7 +4324,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure HP Seal C",
     "percent": false,
-    "sourceId": 542
+    "recordId": 542
   },
   {
     "attr": "HP",
@@ -4334,7 +4334,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Groundramon",
     "percent": false,
-    "sourceId": 566
+    "recordId": 566
   },
   {
     "attr": "HT",
@@ -4344,7 +4344,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Fanbeemon",
     "percent": false,
-    "sourceId": 127
+    "recordId": 127
   },
   {
     "attr": "HT",
@@ -4354,7 +4354,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Coredramon(Blue)",
     "percent": false,
-    "sourceId": 128
+    "recordId": 128
   },
   {
     "attr": "HT",
@@ -4364,7 +4364,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Drimongemon",
     "percent": false,
-    "sourceId": 129
+    "recordId": 129
   },
   {
     "attr": "HT",
@@ -4374,7 +4374,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dorugamon",
     "percent": false,
-    "sourceId": 130
+    "recordId": 130
   },
   {
     "attr": "HT",
@@ -4384,7 +4384,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Knightmon",
     "percent": false,
-    "sourceId": 131
+    "recordId": 131
   },
   {
     "attr": "HT",
@@ -4394,7 +4394,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Garudamon",
     "percent": false,
-    "sourceId": 132
+    "recordId": 132
   },
   {
     "attr": "HT",
@@ -4404,7 +4404,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Parasimon",
     "percent": false,
-    "sourceId": 133
+    "recordId": 133
   },
   {
     "attr": "HT",
@@ -4414,7 +4414,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Baihumon",
     "percent": false,
-    "sourceId": 134
+    "recordId": 134
   },
   {
     "attr": "HT",
@@ -4424,7 +4424,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "LordKnightmon",
     "percent": false,
-    "sourceId": 135
+    "recordId": 135
   },
   {
     "attr": "HT",
@@ -4434,7 +4434,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Craniamon",
     "percent": false,
-    "sourceId": 136
+    "recordId": 136
   },
   {
     "attr": "HT",
@@ -4444,7 +4444,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Gabumon",
     "percent": false,
-    "sourceId": 137
+    "recordId": 137
   },
   {
     "attr": "HT",
@@ -4454,7 +4454,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Darktyranomon",
     "percent": false,
-    "sourceId": 138
+    "recordId": 138
   },
   {
     "attr": "HT",
@@ -4464,7 +4464,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "TyrantKabuterimon",
     "percent": false,
-    "sourceId": 139
+    "recordId": 139
   },
   {
     "attr": "HT",
@@ -4474,7 +4474,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Witchmon",
     "percent": false,
-    "sourceId": 140
+    "recordId": 140
   },
   {
     "attr": "HT",
@@ -4484,7 +4484,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Floramon",
     "percent": false,
-    "sourceId": 141
+    "recordId": 141
   },
   {
     "attr": "HT",
@@ -4494,7 +4494,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Beelzebumon",
     "percent": false,
-    "sourceId": 142
+    "recordId": 142
   },
   {
     "attr": "HT",
@@ -4504,7 +4504,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "WereGarurumon(Black)",
     "percent": false,
-    "sourceId": 143
+    "recordId": 143
   },
   {
     "attr": "HT",
@@ -4514,7 +4514,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "GeoGreymon",
     "percent": false,
-    "sourceId": 144
+    "recordId": 144
   },
   {
     "attr": "HT",
@@ -4524,7 +4524,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Rosemon",
     "percent": false,
-    "sourceId": 145
+    "recordId": 145
   },
   {
     "attr": "HT",
@@ -4534,7 +4534,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Crownmon",
     "percent": false,
-    "sourceId": 146
+    "recordId": 146
   },
   {
     "attr": "HT",
@@ -4544,7 +4544,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Hackmon",
     "percent": false,
-    "sourceId": 147
+    "recordId": 147
   },
   {
     "attr": "HT",
@@ -4554,7 +4554,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Marksman Seal",
     "percent": false,
-    "sourceId": 148
+    "recordId": 148
   },
   {
     "attr": "HT",
@@ -4564,7 +4564,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "MetalGreymon",
     "percent": false,
-    "sourceId": 149
+    "recordId": 149
   },
   {
     "attr": "HT",
@@ -4574,7 +4574,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Apocalymon",
     "percent": false,
-    "sourceId": 150
+    "recordId": 150
   },
   {
     "attr": "HT",
@@ -4584,7 +4584,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Exploration Seal",
     "percent": false,
-    "sourceId": 151
+    "recordId": 151
   },
   {
     "attr": "HT",
@@ -4594,7 +4594,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Belial Vamdemon",
     "percent": false,
-    "sourceId": 152
+    "recordId": 152
   },
   {
     "attr": "HT",
@@ -4604,7 +4604,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Antylamon",
     "percent": false,
-    "sourceId": 153
+    "recordId": 153
   },
   {
     "attr": "HT",
@@ -4614,7 +4614,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Blossomon",
     "percent": false,
-    "sourceId": 154
+    "recordId": 154
   },
   {
     "attr": "HT",
@@ -4624,7 +4624,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Brave Seal",
     "percent": false,
-    "sourceId": 155
+    "recordId": 155
   },
   {
     "attr": "HT",
@@ -4634,7 +4634,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 300,
     "name": "MagnaDramon",
     "percent": false,
-    "sourceId": 156
+    "recordId": 156
   },
   {
     "attr": "HT",
@@ -4644,7 +4644,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 200,
     "name": "Alphamon Ouryuken",
     "percent": false,
-    "sourceId": 157
+    "recordId": 157
   },
   {
     "attr": "HT",
@@ -4654,7 +4654,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 1000,
     "name": "Starmon",
     "percent": false,
-    "sourceId": 158
+    "recordId": 158
   },
   {
     "attr": "HT",
@@ -4664,7 +4664,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 700,
     "name": "Paildramon",
     "percent": false,
-    "sourceId": 159
+    "recordId": 159
   },
   {
     "attr": "HT",
@@ -4674,7 +4674,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 500,
     "name": "Gryphonmon",
     "percent": false,
-    "sourceId": 160
+    "recordId": 160
   },
   {
     "attr": "HT",
@@ -4684,7 +4684,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 500,
     "name": "Duftmon",
     "percent": false,
-    "sourceId": 161
+    "recordId": 161
   },
   {
     "attr": "HT",
@@ -4694,7 +4694,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 400,
     "name": "Rafflesimon",
     "percent": false,
-    "sourceId": 162
+    "recordId": 162
   },
   {
     "attr": "HT",
@@ -4704,7 +4704,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Grand Prix Seal",
     "percent": false,
-    "sourceId": 362
+    "recordId": 362
   },
   {
     "attr": "HT",
@@ -4714,7 +4714,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Tonosama Gekomon Seal",
     "percent": false,
-    "sourceId": 363
+    "recordId": 363
   },
   {
     "attr": "HT",
@@ -4724,7 +4724,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "PowerDigimon Seal",
     "percent": false,
-    "sourceId": 364
+    "recordId": 364
   },
   {
     "attr": "HT",
@@ -4734,7 +4734,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Gammamon",
     "percent": false,
-    "sourceId": 376
+    "recordId": 376
   },
   {
     "attr": "HT",
@@ -4744,7 +4744,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "13th Anniversary HT Seal",
     "percent": false,
-    "sourceId": 386
+    "recordId": 386
   },
   {
     "attr": "HT",
@@ -4754,7 +4754,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Sprout Seal",
     "percent": false,
-    "sourceId": 392
+    "recordId": 392
   },
   {
     "attr": "HT",
@@ -4764,7 +4764,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dungeon Masters HT Seal",
     "percent": false,
-    "sourceId": 397
+    "recordId": 397
   },
   {
     "attr": "HT",
@@ -4775,7 +4775,7 @@ window.SEALS_GLOBAL_DATA = [
     "name": "Season Pass HT Seal",
     "percent": false,
     "rankBonuses": [0, 50, 100, 150, 250, 400, 600],
-    "sourceId": 405
+    "recordId": 405
   },
   {
     "attr": "HT",
@@ -4785,7 +4785,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dungeon Masters2 HT Seal",
     "percent": false,
-    "sourceId": 414
+    "recordId": 414
   },
   {
     "attr": "HT",
@@ -4795,7 +4795,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Shoutmon",
     "percent": false,
-    "sourceId": 421
+    "recordId": 421
   },
   {
     "attr": "HT",
@@ -4805,7 +4805,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "MoonMillenniumon",
     "percent": false,
-    "sourceId": 422
+    "recordId": 422
   },
   {
     "attr": "HT",
@@ -4815,7 +4815,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "[Awakening]ZeedMillenniumon",
     "percent": false,
-    "sourceId": 423
+    "recordId": 423
   },
   {
     "attr": "HT",
@@ -4825,7 +4825,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 100,
     "name": "Mimi Tachikawa Seal",
     "percent": false,
-    "sourceId": 442
+    "recordId": 442
   },
   {
     "attr": "HT",
@@ -4835,7 +4835,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "HT Seal Of The Challenging Tamer",
     "percent": false,
-    "sourceId": 447
+    "recordId": 447
   },
   {
     "attr": "HT",
@@ -4845,7 +4845,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Hot Summer HT Seal",
     "percent": false,
-    "sourceId": 452
+    "recordId": 452
   },
   {
     "attr": "HT",
@@ -4855,7 +4855,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Togemon X",
     "percent": false,
-    "sourceId": 461
+    "recordId": 461
   },
   {
     "attr": "HT",
@@ -4865,7 +4865,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Dynasmon X",
     "percent": false,
-    "sourceId": 462
+    "recordId": 462
   },
   {
     "attr": "HT",
@@ -4875,7 +4875,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Sleipmon X",
     "percent": false,
-    "sourceId": 463
+    "recordId": 463
   },
   {
     "attr": "HT",
@@ -4885,7 +4885,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Examon X",
     "percent": false,
-    "sourceId": 464
+    "recordId": 464
   },
   {
     "attr": "HT",
@@ -4895,7 +4895,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Bountiful Chuseok HT Seal",
     "percent": false,
-    "sourceId": 485
+    "recordId": 485
   },
   {
     "attr": "HT",
@@ -4905,7 +4905,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "14th Anniversary HT Seal",
     "percent": false,
-    "sourceId": 491
+    "recordId": 491
   },
   {
     "attr": "HT",
@@ -4915,7 +4915,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Wolfmon",
     "percent": false,
-    "sourceId": 522
+    "recordId": 522
   },
   {
     "attr": "HT",
@@ -4925,7 +4925,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Petaldramon",
     "percent": false,
-    "sourceId": 523
+    "recordId": 523
   },
   {
     "attr": "HT",
@@ -4935,7 +4935,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "JetMervamon",
     "percent": false,
-    "sourceId": 524
+    "recordId": 524
   },
   {
     "attr": "HT",
@@ -4945,7 +4945,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Gabumon -Bond of Friendship-",
     "percent": false,
-    "sourceId": 525
+    "recordId": 525
   },
   {
     "attr": "HT",
@@ -4955,7 +4955,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure HT Seal A",
     "percent": false,
-    "sourceId": 530
+    "recordId": 530
   },
   {
     "attr": "HT",
@@ -4965,7 +4965,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure HT Seal B",
     "percent": false,
-    "sourceId": 538
+    "recordId": 538
   },
   {
     "attr": "HT",
@@ -4975,7 +4975,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Adventure HT Seal C",
     "percent": false,
-    "sourceId": 546
+    "recordId": 546
   },
   {
     "attr": "HT",
@@ -4985,7 +4985,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Wendimon",
     "percent": false,
-    "sourceId": 567
+    "recordId": 567
   },
   {
     "attr": "HT",
@@ -4995,7 +4995,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "JinbaAngoramon",
     "percent": false,
-    "sourceId": 568
+    "recordId": 568
   },
   {
     "attr": "HT",
@@ -5005,7 +5005,7 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 3000,
     "name": "Omnimon Ver.Z/D",
     "percent": false,
-    "sourceId": 569
+    "recordId": 569
   },
   {
     "attr": "CT",
@@ -5015,6 +5015,6 @@ window.SEALS_GLOBAL_DATA = [
     "maxSeals": 100,
     "name": "Demon Lord of Greed Barbamon",
     "percent": true,
-    "sourceId": "gameking-4191-barbamon"
+    "recordId": "regional-4191-barbamon"
   }
 ];

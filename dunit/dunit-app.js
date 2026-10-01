@@ -187,11 +187,23 @@
 
   function normalizeOfficialProgress(raw) {
     const stepMap = new Map();
+    const normalizeStoredId = (rawId) => {
+      const id = String(rawId);
+      if (officialData.some((group) => group.id === id)) return id;
+      const match = id.match(/(\d+)/);
+      if (!match) return id;
+      const base = `grupo-${Number(match[1])}`;
+      const candidates = officialData.filter((group) => group.id === base || group.id.startsWith(`${base}-`));
+      if (!candidates.length) return id;
+      const suffix = id.slice((match.index || 0) + match[0].length).replace(/^[^a-z]+/i, '');
+      if (suffix) return candidates.find((group) => group.id.endsWith('-alternativo'))?.id || candidates[0].id;
+      return candidates.find((group) => group.id === base)?.id || candidates[0].id;
+    };
     if (Array.isArray(raw)) {
-      for (const item of raw) if (item && item.id) stepMap.set(String(item.id), clampStep(item.steps));
+      for (const item of raw) if (item && item.id) stepMap.set(normalizeStoredId(item.id), clampStep(item.steps));
     } else if (raw && typeof raw === 'object') {
-      const source = raw.officialSteps && typeof raw.officialSteps === 'object' ? raw.officialSteps : {};
-      for (const [id, step] of Object.entries(source)) stepMap.set(id, clampStep(step));
+      const savedSteps = raw.officialSteps && typeof raw.officialSteps === 'object' ? raw.officialSteps : {};
+      for (const [id, step] of Object.entries(savedSteps)) stepMap.set(normalizeStoredId(id), clampStep(step));
     }
     return stepMap;
   }
@@ -217,7 +229,7 @@
     const idCandidate = String(raw.id || '');
     const id = /^custom-[A-Za-z0-9_-]{1,80}$/.test(idCandidate) ? idCandidate : fallbackId;
     return {
-      id, name, digimons, rewards, difficulty, date: 'Manual', source: '', official: false,
+      id, name, digimons, rewards, difficulty, date: 'Manual', official: false,
       conditions: ['Condição 1','Condição 2','Condição 3','Condição 4'], memberCount: digimons.length, steps: clampStep(raw.steps)
     };
   }
@@ -236,8 +248,7 @@
 
   function applyProgress(stepMap) {
     for (const group of officialData) {
-      const idsToCheck = [group.id, group.previousId, ...(group.legacyIds || [])].filter(Boolean);
-      group.steps = Math.max(0, ...idsToCheck.map((id) => stepMap.get(String(id)) || 0));
+      group.steps = Math.max(0, stepMap.get(String(group.id)) || 0);
     }
   }
 
@@ -534,7 +545,7 @@
     }
     groups.push({
       id: `custom-${Date.now()}`, name, digimons, rewards, difficulty: el.newDifficulty.value,
-      date: 'Manual', source: '', official: false, conditions: ['Condição 1','Condição 2','Condição 3','Condição 4'],
+      date: 'Manual', official: false, conditions: ['Condição 1','Condição 2','Condição 3','Condição 4'],
       memberCount: digimons.length, steps: 0
     });
     save();

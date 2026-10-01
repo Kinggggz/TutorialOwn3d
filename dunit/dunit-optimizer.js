@@ -32,7 +32,7 @@
   function unresolvedComposition(group) {
     const digimons = Array.isArray(group?.digimons) ? group.digimons : [];
     const declaredMembers = Number(group?.memberCount) || 0;
-    return declaredMembers > digimons.length || digimons.some((name) => /Digimon\(s\).*nomes em validação|não confirmada|nomes em validação|composição exibida no vídeo/i.test(String(name)));
+    return declaredMembers > digimons.length || digimons.some((name) => /Digimon\(s\).*nomes em validação|não confirmada|nomes em validação|composição ainda não validada/i.test(String(name)));
   }
 
   function addVector(a, b) {

@@ -157,9 +157,9 @@
   // mesmo selo. Os nomes globais originais permanecem disponíveis na busca.
   const LADMO_ATTRIBUTE_SEQUENCE = ['HP', 'DS', 'AT', 'CT', 'HT', 'DE', 'BL', 'EV'];
 
-  function setRegionalName(sourceId, name, aliases = []) {
-    const current = GLOBAL_LADMO_OVERRIDES[sourceId] || {};
-    GLOBAL_LADMO_OVERRIDES[sourceId] = {
+  function setRegionalName(recordId, name, aliases = []) {
+    const current = GLOBAL_LADMO_OVERRIDES[recordId] || {};
+    GLOBAL_LADMO_OVERRIDES[recordId] = {
       ...current,
       name,
       aliases: [...(current.aliases || []), ...aliases]
@@ -252,7 +252,7 @@
   setRegionalName(451, 'Selo de Inverno — AT', ['Selo de Verão — AT']);
   setRegionalName(452, 'Selo de Inverno — HT', ['Selo de Verão — HT']);
   setRegionalName(453, 'Selo de Inverno — CT', ['Selo de Verão — CT']);
-  setRegionalName('gameking-4191-barbamon', 'Selo de Barbamon, Rei Demônio da Ganância', ['Demon Lord of Greed Barbamon']);
+  setRegionalName('regional-4191-barbamon', 'Selo de Barbamon, Rei Demônio da Ganância', ['Demon Lord of Greed Barbamon']);
 
   function localizeSealName(seal) {
     const translatedName = SEAL_NAME_TRANSLATIONS[seal.name];
@@ -269,14 +269,13 @@
 
   function buildUnifiedSeals(ladmoSeals, globalSeals, updates) {
     const rows = globalSeals.map(seal => {
-      const override = GLOBAL_LADMO_OVERRIDES[seal.sourceId] || {};
+      const override = GLOBAL_LADMO_OVERRIDES[seal.recordId] || {};
       const updated = {...seal, ...override};
       const overrideAliases = Array.isArray(override.aliases) ? override.aliases : [];
       return {
         ...updated,
         aliases: [seal.name, ...overrideAliases].filter((name, index, names) => normalizeSearch(name) !== normalizeSearch(updated.name) && names.indexOf(name) === index),
-        ticketVerified: override.ticketVerified === true,
-        source: 'ladmo-catalog'
+        ticketVerified: override.ticketVerified === true
       };
     });
     const byKey = new Map();
@@ -308,8 +307,7 @@
           exchange: ladmoSeal.exchange !== 'N/D' ? ladmoSeal.exchange : globalSeal.exchange,
           ticketVerified: (Boolean(ladmoSeal.exchange) && ladmoSeal.exchange !== 'N/D') || globalSeal.ticketVerified === true,
           aliases: [globalName, ladmoSeal.name, ...(ladmoSeal.aliases || []), ...(globalSeal.aliases || [])].filter((name, index, names) => normalizeSearch(name) !== normalizeSearch(displayName) && names.indexOf(name) === index),
-          regionalDifference: globalSeal.master !== ladmoSeal.master,
-          source: 'ladmo'
+          regionalDifference: globalSeal.master !== ladmoSeal.master
         };
         rows[rows.indexOf(globalSeal)] = merged;
         indexSeal(merged);
@@ -323,8 +321,7 @@
         aliases: Array.isArray(ladmoSeal.aliases) ? ladmoSeal.aliases : [],
         ticketVerified: ladmoSeal.ticketVerified === true || (Boolean(ladmoSeal.exchange) && ladmoSeal.exchange !== 'N/D'),
         maxSeals: ladmoSeal.maxSeals || 3000,
-        source: 'ladmo',
-        sourceId: ladmoSeal.sourceId || `ladmo-${normalizeSearch(ladmoSeal.name)}`
+        recordId: ladmoSeal.recordId || `ladmo-${normalizeSearch(ladmoSeal.name)}`
       };
       rows.push(ladmoOnly);
       indexSeal(ladmoOnly);
@@ -501,7 +498,7 @@
     return selectedSeals().reduce((sum, seal) => sum + bonusAt(seal, levelIndex(seal, progressValue(seal))), 0);
   }
 
-  function updateSourceUI() {
+  function updateDatabaseUI() {
     const seals = activeSeals();
     $('databaseCount').textContent = formatInt(seals.length);
     $('databaseLabel').textContent = 'selos ativos';
@@ -755,6 +752,6 @@
     }
   });
 
-  updateSourceUI();
+  updateDatabaseUI();
   renderSeals();
 })();

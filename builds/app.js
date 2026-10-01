@@ -70,39 +70,11 @@
   };
 
   function portraitCandidates(key) {
-    const files = portraitFiles[key] || [];
-    const urls = [];
-    const seen = new Set();
     const localPortraits = {
       apollomon: '../assets/img/apollomon.png',
       apollomon_whispered: '../assets/img/apollomon_whispered.png'
     };
-    const add = (url) => {
-      if (url && !seen.has(url)) {
-        seen.add(url);
-        urls.push(url);
-      }
-    };
-
-    add(localPortraits[key]);
-
-    for (const file of files) {
-      const normalized = file.replace(/\s+/g, '_');
-
-      // Fonte principal: CDN usado pelo DMO Knowledge Base.
-      // O optimizer do próprio site costuma ser mais tolerante a hotlink do que a URL crua.
-      const kbMedia = `https://cms.dmokb.info/media/${encodeURIComponent(normalized).replace(/%2F/gi, '/')}`;
-      add(`https://dmokb.info/_next/image?url=${encodeURIComponent(kbMedia)}&w=640&q=75`);
-      add(kbMedia);
-      add(`https://images.weserv.nl/?url=${encodeURIComponent(`cms.dmokb.info/media/${normalized}`)}&output=webp&w=640&h=640&fit=contain`);
-
-      // Fallbacks: arquivo do DMO Wiki e proxy de imagem.
-      const wikiEncoded = encodeURIComponent(normalized);
-      const wikiDirect = `https://dmowiki.com/Special:Redirect/file/${wikiEncoded}`;
-      add(wikiDirect);
-      add(`https://images.weserv.nl/?url=${encodeURIComponent(`dmowiki.com/Special:Redirect/file/${wikiEncoded}`)}&output=webp&w=640&h=640&fit=contain`);
-    }
-    return urls;
+    return localPortraits[key] ? [localPortraits[key]] : [];
   }
 
   function setPortrait(img, key, fallbackContainer) {
